@@ -1,1 +1,117 @@
-<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PNL | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css"></head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page "><div class="title"><h1>Plano Nacional de Leitura</h1><p>O Plano Nacional de Leitura tem como objetivo central elevar os níveis de literacia dos portugueses e colocar o país a par dos nossos parceiros europeus. Deixamos aqui os links para que possas saber mais sobre os seus projetos e leituras recomendadas!</p></div><div class="link-panels"><a href="https://www.pnl2027.gov.pt/" target="_blank">Iniciativas</a><a href="https://www.pnl2027.gov.pt/" target="_blank">Concursos</a><a href="https://www.pnl2027.gov.pt/" target="_blank">Listas PNL</a></div><h2>Biblioteca digital do PNL</h2></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plano Nacional de Leitura | BEMA</title>
+<meta name="description" content="Recursos, projetos, leituras e iniciativas do Plano Nacional de Leitura para alunos, professores e famílias.">
+<link rel="stylesheet" href="css/estilo.css">
+<style>
+.pnl-hero{position:relative;overflow:hidden;margin:0 0 28px;padding:42px clamp(24px,5vw,70px);border-radius:0 0 22px 22px;background:linear-gradient(110deg,#075936,#087a43 52%,#d9eee1);color:#fff}
+.pnl-hero:after{content:"📚";position:absolute;right:6%;bottom:-42px;font-size:12rem;opacity:.14;transform:rotate(-8deg)}
+.pnl-hero-inner{position:relative;z-index:1;max-width:820px}
+.pnl-kicker{display:inline-block;margin-bottom:10px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.15);font-size:.9rem;font-weight:700}
+.pnl-hero h1{margin:0 0 10px;color:#fff;font-size:clamp(2rem,4vw,3.2rem);line-height:1.08}
+.pnl-hero p{margin:0;max-width:680px;color:#fff;font-size:1.12rem;line-height:1.55}
+.pnl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:26px}
+.pnl-card{display:flex;flex-direction:column;min-height:285px;padding:24px;background:#fff;border:1px solid #e4eee8;border-radius:18px;box-shadow:0 5px 18px rgba(0,0,0,.07)}
+.pnl-icon{width:62px;height:62px;display:grid;place-items:center;margin-bottom:16px;border-radius:16px;background:#e9f7ef;font-size:2rem}
+.pnl-card h2{margin:0 0 8px;color:#084f35;font-size:1.22rem}
+.pnl-card p{margin:0 0 18px;color:#4a5550;line-height:1.48}
+.pnl-btn{display:inline-flex;align-items:center;justify-content:center;margin-top:auto;padding:10px 15px;border-radius:999px;background:#087a43;color:#fff!important;text-decoration:none!important;font-weight:700}
+.pnl-btn:hover{background:#075936}
+.pnl-section-title{margin:30px 0 14px;color:#084f35;font-size:1.45rem}
+.pnl-highlight{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin-bottom:26px}
+.pnl-panel{padding:24px;border-radius:18px;background:linear-gradient(100deg,#e5f6ec,#f6fbf8);border:1px solid #cde9d8}
+.pnl-panel h2{margin:0 0 8px;color:#084f35}
+.pnl-panel p{margin:0 0 16px;color:#46534c;line-height:1.5}
+.pnl-note{padding:16px 18px;border-left:4px solid #f0b53a;background:#fff8e8;border-radius:10px;color:#5d5137;margin-bottom:30px}
+@media(max-width:900px){.pnl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pnl-highlight{grid-template-columns:1fr}}
+@media(max-width:600px){.pnl-grid{grid-template-columns:1fr}.pnl-hero{border-radius:0 0 16px 16px;padding:34px 22px}.pnl-hero:after{right:-10px;font-size:8rem}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="topbar">
+    <a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a>
+    <button class="hamb" aria-label="Abrir menu">☰</button>
+  </div>
+  <div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div>
+  <nav class="mainnav"><ul>
+    <li><a href="index.html">Início</a></li>
+    <li class="drop"><a href="recursos.html">Recursos Educativos</a><ul>
+      <li><a href="ferramentas.html">Ferramentas Digitais</a></li>
+      <li><a href="guioes.html">Guiões/Colaboração Alunos</a></li>
+      <li><a href="rea.html">Páginas de interesse/REA</a></li>
+      <li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li>
+    </ul></li>
+    <li class="drop"><a href="leituras.html">Livros e leituras</a><ul>
+      <li><a href="pnl.html">PNL</a></li>
+      <li><a href="digitais.html">Livros digitais online</a></li>
+      <li><a href="guioes-leitura.html">Guiões de leitura</a></li>
+      <li><a href="revistas.html">Revistas e jornais</a></li>
+    </ul></li>
+    <li><a href="contactos.html">Contactos</a></li>
+    <li class="drop more"><a href="#">Mais</a><ul>
+      <li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li>
+      <li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li>
+      <li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li>
+      <li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li>
+      <li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li>
+    </ul></li>
+  </ul></nav>
+</header>
+
+<main class="page">
+<section class="pnl-hero">
+  <div class="pnl-hero-inner">
+    <span class="pnl-kicker">BEMA · PLANO NACIONAL DE LEITURA</span>
+    <h1>Plano Nacional de Leitura</h1>
+    <p>Descobre livros, recursos, projetos e iniciativas para ler mais, ler melhor e descobrir novas formas de leitura.</p>
+  </div>
+</section>
+
+<h2 class="pnl-section-title">📚 Recursos e projetos</h2>
+<section class="pnl-grid">
+  <article class="pnl-card"><div class="pnl-icon">📖</div><h2>LER — Leitura e Escrita</h2><p>Informação científica e recursos para o ensino da leitura e da escrita, com materiais para diferentes etapas de aprendizagem.</p><a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/plataforma_ler.html" target="_blank" rel="noopener">Explorar LER →</a></article>
+  <article class="pnl-card"><div class="pnl-icon">🧩</div><h2>PICCLE</h2><p>Plano de Intervenção Cidadãos Competentes em Leitura e Escrita, com recursos e propostas para promover competências de leitura e escrita.</p><a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/recursos" target="_blank" rel="noopener">Conhecer PICCLE →</a></article>
+  <article class="pnl-card"><div class="pnl-icon">📰</div><h2>ENTRELER</h2><p>Revista digital, anual, livre e gratuita, dedicada à leitura, à escrita e às literacias.</p><a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/recursos" target="_blank" rel="noopener">Ler ENTRELER →</a></article>
+  <article class="pnl-card"><div class="pnl-icon">📘</div><h2>Leitura Orientada</h2><p>Recursos destinados à recuperação e ao reforço das aprendizagens no Ensino Básico através da leitura.</p><a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/recursos" target="_blank" rel="noopener">Ver recursos →</a></article>
+  <article class="pnl-card"><div class="pnl-icon">👨‍👩‍👧</div><h2>Leitura em Família</h2><p>Materiais e propostas para criar momentos de leitura partilhada entre crianças e famílias.</p><a class="pnl-btn" href="https://pnl2027.gov.pt/np4/jaseiler.html" target="_blank" rel="noopener">Descobrir →</a></article>
+  <article class="pnl-card"><div class="pnl-icon">👥</div><h2>Clubes de Leitura</h2><p>Ideias, materiais e experiências para dinamizar clubes de leitura e comunidades leitoras.</p><a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/3858.html" target="_blank" rel="noopener">Explorar →</a></article>
+</section>
+
+<h2 class="pnl-section-title">🎯 Projetos e iniciativas</h2>
+<section class="pnl-grid">
+  <article class="pnl-card"><div class="pnl-icon">⏱️</div><h2>10 Minutos a Ler</h2><p>Projeto que promove momentos regulares de leitura nas escolas. Consulta materiais e o guião de implementação.</p><a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/recursos" target="_blank" rel="noopener">Ver projeto →</a></article>
+  <article class="pnl-card"><div class="pnl-icon">🏆</div><h2>Concursos</h2><p>Desafios e concursos do PNL2027 para estimular a leitura, a escrita e a participação dos alunos.</p><a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/3858.html" target="_blank" rel="noopener">Ver concursos →</a></article>
+  <article class="pnl-card"><div class="pnl-icon">📅</div><h2>Agenda PNL2027</h2><p>Consulta as iniciativas, eventos, novidades e oportunidades atualmente divulgadas pelo Plano Nacional de Leitura.</p><a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/np4/home" target="_blank" rel="noopener">Ver agenda →</a></article>
+</section>
+
+<section class="pnl-highlight">
+  <div class="pnl-panel">
+    <h2>🔎 Procuras uma leitura?</h2>
+    <p>Consulta o catálogo e as recomendações do PNL2027 para descobrir livros adequados a diferentes leitores e interesses.</p>
+    <a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/livrospnl" target="_blank" rel="noopener">Consultar livros PNL →</a>
+  </div>
+  <div class="pnl-panel">
+    <h2>♿ Leitura + Acessível</h2>
+    <p>Livros em Braille, áudio, LGP, pictogramas e outros formatos acessíveis.</p>
+    <a class="pnl-btn" href="https://www.pnl2027.gov.pt/np4/leituraacessivel_livros.html" target="_blank" rel="noopener">Ver recursos →</a>
+  </div>
+</section>
+
+<div class="pnl-note"><strong>ℹ️ Nota:</strong> O portal do PNL2027 está em atualização contínua. Os recursos e iniciativas apresentados nesta página apontam diretamente para áreas do portal oficial.</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div>
+    <div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div>
+    <div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div>
+  </div>
+  <div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
