@@ -1,1 +1,1526 @@
-<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Revistas e jornais | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css"></head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page "><div class="title"><h1>Revistas e jornais</h1></div><div class="empty-art"><img src="imagens/334394356_736748241447733_2908067094495759630_n.jpg" alt="Revistas e jornais"><p>Acesso a revistas e jornais recomendados pela Biblioteca Escolar.</p></div></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+<!doctype html>
+<html lang="pt-PT">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport"
+      content="width=device-width,initial-scale=1">
+
+<title>Revistas & Jornais | BEMA</title>
+
+<meta name="description"
+      content="Revistas, jornais e recursos de informação da BEMA — Biblioteca Escolar de Manhente">
+
+<link rel="stylesheet" href="css/estilo.css">
+
+
+<style>
+
+/* =========================================================
+   CABEÇALHO BEMA + EB MANHENTE
+   COPIADO DO INDEX
+   ========================================================= */
+
+.bema-topbar{
+  max-width:1180px !important;
+  padding:14px 24px !important;
+  gap:24px !important;
+}
+
+.bema-brand{
+  display:flex !important;
+  align-items:center;
+  min-width:0;
+}
+
+.bema-brand img{
+  display:block;
+  width:235px;
+  height:auto;
+  max-height:88px;
+  object-fit:contain;
+}
+
+
+/* BOTÃO EB DE MANHENTE */
+
+.school-identity{
+
+  margin-left:auto;
+
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  padding:7px 13px 7px 9px;
+
+  border:1px solid #dfe9e6;
+
+  border-radius:16px;
+
+  background:#fbfdfc;
+
+  color:#245e58;
+
+  text-decoration:none;
+
+  transition:.18s;
+}
+
+
+.school-identity:hover{
+
+  text-decoration:none;
+
+  transform:translateY(-1px);
+
+  box-shadow:
+    0 6px 18px rgba(33,62,58,.08);
+
+  border-color:#b9d9d3;
+}
+
+
+.school-identity img{
+
+  width:62px;
+  height:62px;
+
+  object-fit:contain;
+
+  flex:none;
+}
+
+
+.school-identity span{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:2px;
+}
+
+
+.school-identity strong{
+
+  font-size:1rem;
+
+  line-height:1.1;
+}
+
+
+.school-identity small{
+
+  font-size:.72rem;
+
+  color:#66706e;
+
+  line-height:1.2;
+}
+
+
+/* =========================================================
+   BEMA — GARANTIR VISIBILIDADE
+   ========================================================= */
+
+.bema-brand{
+  display:flex!important;
+  align-items:center!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+.bema-brand img{
+
+  display:block!important;
+
+  width:235px!important;
+
+  height:auto!important;
+
+  max-height:88px!important;
+
+  object-fit:contain!important;
+
+  visibility:visible!important;
+
+  opacity:1!important;
+}
+
+
+/* =========================================================
+   TELEMÓVEL
+   ========================================================= */
+
+@media(max-width:800px){
+
+  .bema-topbar{
+
+    padding:10px 16px !important;
+
+    gap:10px !important;
+
+  }
+
+
+  .bema-brand img{
+
+    width:190px;
+
+    max-height:72px;
+
+  }
+
+
+  .school-identity{
+
+    padding:5px 8px;
+
+    gap:7px;
+
+    border-radius:12px;
+
+  }
+
+
+  .school-identity img{
+
+    width:45px;
+
+    height:45px;
+
+  }
+
+
+  .school-identity strong{
+
+    font-size:.82rem;
+
+  }
+
+
+  .school-identity small{
+
+    display:none;
+
+  }
+
+}
+
+
+/* =========================================================
+   TELEMÓVEL PEQUENO
+   ========================================================= */
+
+@media(max-width:520px){
+
+  .bema-brand img{
+
+    width:155px;
+
+    max-height:60px;
+
+  }
+
+
+  .school-identity img{
+
+    width:38px;
+
+    height:38px;
+
+  }
+
+
+  .school-identity strong{
+
+    font-size:.7rem;
+
+  }
+
+
+  .school-identity{
+
+    padding:4px;
+
+  }
+
+}
+
+
+/* =========================================================
+   PÁGINA REVISTAS
+   ========================================================= */
+
+.revistas-page{
+
+  max-width:1180px;
+
+  margin:auto;
+
+  padding:
+    0 24px 70px;
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.revistas-hero{
+
+  margin:
+    0 0 45px;
+
+  padding:
+    58px clamp(25px,6vw,70px);
+
+  border-radius:
+    0 0 28px 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #245e58,
+      #397f76
+    );
+
+  color:#fff;
+
+}
+
+
+.revistas-hero .bema-overline{
+
+  color:#d9f1ec;
+
+}
+
+
+.revistas-hero h1{
+
+  font-size:
+    clamp(2.3rem,5vw,4rem);
+
+  line-height:1;
+
+  margin:
+    0 0 15px;
+
+}
+
+
+.revistas-hero p{
+
+  max-width:720px;
+
+  font-size:1.08rem;
+
+  line-height:1.6;
+
+  margin:0;
+
+  color:
+    rgba(255,255,255,.92);
+
+}
+
+
+/* =========================================================
+   SECÇÕES
+   ========================================================= */
+
+.revistas-section{
+
+  margin:
+    45px 0;
+
+}
+
+
+.revistas-section-head{
+
+  margin-bottom:22px;
+
+}
+
+
+.revistas-section-head h2{
+
+  margin:
+    0 0 7px;
+
+  color:var(--ink);
+
+  font-size:2rem;
+
+}
+
+
+.revistas-section-head p{
+
+  margin:0;
+
+  color:var(--muted);
+
+}
+
+
+/* =========================================================
+   GRELHA
+   ========================================================= */
+
+.revistas-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+
+}
+
+
+/* =========================================================
+   CARTÕES
+   ========================================================= */
+
+.revistas-card{
+
+  background:#fff;
+
+  border:
+    1px solid #e1e8e6;
+
+  border-radius:20px;
+
+  padding:24px;
+
+  box-shadow:
+    0 7px 22px rgba(33,62,58,.05);
+
+  display:flex;
+
+  flex-direction:column;
+
+  min-height:235px;
+
+  transition:.18s;
+
+}
+
+
+.revistas-card:hover{
+
+  transform:
+    translateY(-3px);
+
+  border-color:#b9d9d3;
+
+  box-shadow:
+    0 12px 28px
+    rgba(33,62,58,.09);
+
+}
+
+
+/* ÍCONE */
+
+.revistas-icon{
+
+  width:52px;
+
+  height:52px;
+
+  border-radius:15px;
+
+  background:
+    var(--bema-light);
+
+  display:grid;
+
+  place-items:center;
+
+  font-size:25px;
+
+  margin-bottom:15px;
+
+}
+
+
+/* TÍTULO */
+
+.revistas-card h3{
+
+  margin:
+    0 0 8px;
+
+  color:var(--ink);
+
+  font-size:1.25rem;
+
+}
+
+
+/* TEXTO */
+
+.revistas-card p{
+
+  margin:
+    0 0 18px;
+
+  color:var(--muted);
+
+  line-height:1.55;
+
+  flex:1;
+
+}
+
+
+/* BOTÃO */
+
+.revistas-card a{
+
+  align-self:flex-start;
+
+  padding:
+    10px 15px;
+
+  border-radius:10px;
+
+  background:
+    var(--bema-dark);
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  transition:.18s;
+
+}
+
+
+.revistas-card a:hover{
+
+  background:
+    var(--bema);
+
+  text-decoration:none;
+
+}
+
+
+/* =========================================================
+   CAIXA FINAL
+   ========================================================= */
+
+.revistas-tip{
+
+  margin-top:45px;
+
+  padding:28px;
+
+  border-radius:20px;
+
+  background:var(--cream);
+
+  border-left:
+    5px solid var(--bema);
+
+}
+
+
+.revistas-tip h2{
+
+  margin:
+    0 0 10px;
+
+  color:var(--ink);
+
+}
+
+
+.revistas-tip p{
+
+  margin:0;
+
+  color:var(--muted);
+
+  line-height:1.6;
+
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media(max-width:800px){
+
+  .revistas-page{
+
+    padding:
+      0 14px 45px;
+
+  }
+
+  .revistas-grid{
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+}
+
+
+@media(max-width:520px){
+
+  .revistas-hero{
+
+    padding:
+      42px 23px;
+
+  }
+
+  .revistas-hero h1{
+
+    font-size:2.6rem;
+
+  }
+
+  .revistas-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .revistas-card{
+
+    min-height:0;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     CABEÇALHO ORIGINAL DO INDEX
+     ===================================================== -->
+
+<header class="site-header">
+
+
+  <div class="topbar bema-topbar">
+
+
+    <!-- LOGO BEMA -->
+
+    <a
+      class="brand bema-brand"
+      href="index.html"
+      aria-label="BEMA — Biblioteca Escolar de Manhente">
+
+      <img
+        src="imagens/logo-bema.jpg"
+        alt="BEMA — Biblioteca Escolar de Manhente">
+
+    </a>
+
+
+    <!-- EB DE MANHENTE -->
+
+    <a
+      class="school-identity"
+      href="https://ebmanhente.github.io/ebm/"
+      target="_blank"
+      rel="noopener"
+      aria-label="Ir para o site da EB de Manhente">
+
+
+      <img
+        src="imagens/logo-eb-manhente.png"
+        alt="Escola Básica de Manhente">
+
+
+      <span>
+
+        <strong>
+          EB de Manhente
+        </strong>
+
+        <small>
+          Uma Escola Para a Vida ↗
+        </small>
+
+      </span>
+
+
+    </a>
+
+
+    <!-- MENU MOBILE -->
+
+    <button
+      class="hamb"
+      aria-label="Abrir menu">
+
+      ☰
+
+    </button>
+
+
+  </div>
+
+
+
+  <!-- PESQUISA -->
+
+  <div class="searchbar">
+
+    <input
+      id="siteSearch"
+      type="search"
+      placeholder="Pesquisa">
+
+    <button onclick="searchSite()">
+      Pesquisar
+    </button>
+
+  </div>
+
+
+
+  <!-- MENU PRINCIPAL -->
+
+  <nav class="mainnav">
+
+    <ul>
+
+
+      <li>
+
+        <a href="index.html">
+          Início
+        </a>
+
+      </li>
+
+
+      <!-- RECURSOS EDUCATIVOS -->
+
+      <li class="drop">
+
+        <a href="recursos.html">
+          Recursos Educativos
+        </a>
+
+
+        <ul>
+
+          <li>
+            <a href="ferramentas.html">
+              Ferramentas Digitais
+            </a>
+          </li>
+
+          <li>
+            <a href="guioes.html">
+              Guiões/Colaboração Alunos
+            </a>
+          </li>
+
+          <li>
+            <a href="rea.html">
+              Páginas de interesse/REA
+            </a>
+          </li>
+
+          <li>
+            <a href="cidadania.html">
+              Cidadania e Desenvolvimento
+            </a>
+          </li>
+
+        </ul>
+
+      </li>
+
+
+      <!-- LIVROS E LEITURAS -->
+
+      <li class="drop">
+
+        <a href="leituras.html">
+          Livros e leituras
+        </a>
+
+
+        <ul>
+
+          <li>
+            <a href="pnl.html">
+              PNL
+            </a>
+          </li>
+
+          <li>
+            <a href="digitais.html">
+              Livros digitais online
+            </a>
+          </li>
+
+          <li>
+            <a href="guioes-leitura.html">
+              Guiões de leitura
+            </a>
+          </li>
+
+          <li>
+            <a href="revistas.html">
+              Revistas e jornais
+            </a>
+          </li>
+
+        </ul>
+
+      </li>
+
+
+      <!-- CONTACTOS -->
+
+      <li>
+
+        <a href="contactos.html">
+          Contactos
+        </a>
+
+      </li>
+
+
+      <!-- MAIS -->
+
+      <li class="drop more">
+
+        <a href="#">
+          Mais
+        </a>
+
+
+        <ul>
+
+          <li>
+            <a href="sobre.html">
+              Sobre nós / Serviços
+            </a>
+          </li>
+
+          <li>
+            <a href="agenda.html">
+              Agenda
+            </a>
+          </li>
+
+          <li>
+            <a href="documentos.html">
+              Documentos
+            </a>
+          </li>
+
+          <li>
+            <a href="atividades.html">
+              Atividades/Notícias
+            </a>
+          </li>
+
+          <li>
+            <a href="projetos.html">
+              Projetos
+            </a>
+          </li>
+
+          <li>
+            <a href="atrevete.html">
+              Atreve-te!
+            </a>
+          </li>
+
+          <li>
+            <a href="cultura.html">
+              + Cultura
+            </a>
+          </li>
+
+          <li>
+            <a href="arquivo.html">
+              Arquivo
+            </a>
+          </li>
+
+          <li>
+            <a href="faq.html">
+              FAQ
+            </a>
+          </li>
+
+          <li>
+
+            <span
+              class="bema-link bema-link-disabled">
+
+              Galeria
+
+            </span>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+
+    </ul>
+
+  </nav>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     CONTEÚDO
+     ===================================================== -->
+
+<main class="revistas-page">
+
+
+  <!-- HERO -->
+
+  <section class="revistas-hero">
+
+    <span class="bema-overline">
+      LIVROS E LEITURAS
+    </span>
+
+
+    <h1>
+      Revistas &amp; jornais
+    </h1>
+
+
+    <p>
+      Notícias, revistas, ciência e informação
+      para descobrir o mundo — com propostas
+      para jovens e recursos úteis para pais
+      e famílias.
+    </p>
+
+  </section>
+
+
+
+  <!-- =================================================
+       JOVENS
+       ================================================= -->
+
+  <section class="revistas-section">
+
+
+    <div class="revistas-section-head">
+
+      <h2>
+        🧑‍🎓 Para jovens
+      </h2>
+
+      <p>
+        Conteúdos para aprender, descobrir
+        e acompanhar o mundo.
+      </p>
+
+    </div>
+
+
+
+    <div class="revistas-grid">
+
+
+      <!-- VISÃO JÚNIOR -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          🔎
+        </div>
+
+
+        <h3>
+          VISÃO Júnior
+        </h3>
+
+
+        <p>
+          Notícias e conteúdos pensados para
+          crianças e jovens, com temas de
+          atualidade, ciência, cultura e sociedade.
+        </p>
+
+
+        <a
+          href="https://visao.pt/visaojunior/"
+          target="_blank"
+          rel="noopener">
+
+          Visitar →
+
+        </a>
+
+      </article>
+
+
+
+      <!-- CIÊNCIA VIVA -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          🔬
+        </div>
+
+
+        <h3>
+          Ciência Viva
+        </h3>
+
+
+        <p>
+          Ciência, atividades, notícias e recursos
+          para despertar a curiosidade e explorar
+          o conhecimento científico.
+        </p>
+
+
+        <a
+          href="https://www.cienciaviva.pt/"
+          target="_blank"
+          rel="noopener">
+
+          Visitar →
+
+        </a>
+
+      </article>
+
+
+
+      <!-- PORDATA -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          📊
+        </div>
+
+
+        <h3>
+          PORDATA
+        </h3>
+
+
+        <p>
+          Dados e estatísticas que ajudam a
+          conhecer melhor Portugal e a interpretar
+          informação.
+        </p>
+
+
+        <a
+          href="https://www.pordata.pt/"
+          target="_blank"
+          rel="noopener">
+
+          Explorar →
+
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================================
+       JORNAIS
+       ================================================= -->
+
+  <section class="revistas-section">
+
+
+    <div class="revistas-section-head">
+
+      <h2>
+        🗞️ Lê o mundo
+      </h2>
+
+
+      <p>
+        Jornais portugueses para acompanhar
+        a atualidade e comparar diferentes fontes.
+      </p>
+
+    </div>
+
+
+
+    <div class="revistas-grid">
+
+
+      <!-- PÚBLICO -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          📰
+        </div>
+
+
+        <h3>
+          PÚBLICO
+        </h3>
+
+
+        <p>
+          Atualidade nacional e internacional,
+          sociedade, ciência, cultura e educação.
+        </p>
+
+
+        <a
+          href="https://www.publico.pt/"
+          target="_blank"
+          rel="noopener">
+
+          Ler →
+
+        </a>
+
+      </article>
+
+
+
+      <!-- JN -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          📰
+        </div>
+
+
+        <h3>
+          Jornal de Notícias
+        </h3>
+
+
+        <p>
+          Notícias de Portugal e do mundo,
+          com informação nacional e regional.
+        </p>
+
+
+        <a
+          href="https://www.jn.pt/"
+          target="_blank"
+          rel="noopener">
+
+          Ler →
+
+        </a>
+
+      </article>
+
+
+
+      <!-- EXPRESSO -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          📰
+        </div>
+
+
+        <h3>
+          Expresso
+        </h3>
+
+
+        <p>
+          Atualidade, sociedade, economia,
+          cultura e opinião.
+        </p>
+
+
+        <a
+          href="https://expresso.pt/"
+          target="_blank"
+          rel="noopener">
+
+          Ler →
+
+        </a>
+
+      </article>
+
+
+
+      <!-- DN -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          📰
+        </div>
+
+
+        <h3>
+          Diário de Notícias
+        </h3>
+
+
+        <p>
+          Notícias e informação sobre a atualidade
+          portuguesa e internacional.
+        </p>
+
+
+        <a
+          href="https://www.dn.pt/"
+          target="_blank"
+          rel="noopener">
+
+          Ler →
+
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================================
+       PAIS E FAMÍLIAS
+       ================================================= -->
+
+  <section class="revistas-section">
+
+
+    <div class="revistas-section-head">
+
+      <h2>
+        👨‍👩‍👧 Para pais e famílias
+      </h2>
+
+
+      <p>
+        Informação e recursos para acompanhar
+        o percurso escolar e a vida digital
+        dos mais novos.
+      </p>
+
+    </div>
+
+
+
+    <div class="revistas-grid">
+
+
+      <!-- PAIS E ALUNOS -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          🏫
+        </div>
+
+
+        <h3>
+          Pais &amp; Alunos
+        </h3>
+
+
+        <p>
+          Informação e orientações para
+          encarregados de educação e diferentes
+          etapas escolares.
+        </p>
+
+
+        <a
+          href="https://www.portoeditora.pt/paisealunos/"
+          target="_blank"
+          rel="noopener">
+
+          Visitar →
+
+        </a>
+
+      </article>
+
+
+
+      <!-- DGE -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          🌐
+        </div>
+
+
+        <h3>
+          Educação para os Media
+        </h3>
+
+
+        <p>
+          Recursos da Direção-Geral da Educação
+          para uma utilização crítica, segura e
+          responsável dos media e da Internet.
+        </p>
+
+
+        <a
+          href="https://www.dge.mec.pt/educacao-para-os-media"
+          target="_blank"
+          rel="noopener">
+
+          Explorar →
+
+        </a>
+
+      </article>
+
+
+
+      <!-- MILD -->
+
+      <article class="revistas-card">
+
+        <div class="revistas-icon">
+          💻
+        </div>
+
+
+        <h3>
+          MILD
+        </h3>
+
+
+        <p>
+          Recursos da Rede de Bibliotecas Escolares
+          sobre leitura, literacia dos media e
+          cidadania digital.
+        </p>
+
+
+        <a
+          href="https://mild.rbe.mec.pt/quem-somos/"
+          target="_blank"
+          rel="noopener">
+
+          Explorar →
+
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================================
+       LITERACIA MEDIÁTICA
+       ================================================= -->
+
+  <section class="revistas-tip">
+
+    <h2>
+      🔎 Antes de partilhares, verifica.
+    </h2>
+
+
+    <p>
+      Procura a fonte, confirma a data e compara
+      a informação com outras fontes. Saber distinguir
+      informação, opinião e publicidade também faz
+      parte de ler o mundo.
+    </p>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER ORIGINAL
+     ===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div>
+
+      <h3>
+        Biblioteca Escolar de Manhente
+      </h3>
+
+
+      <p>
+
+        Telefone:
+        <a href="tel:253849410">
+          253 849 410
+        </a>
+
+        <br>
+
+        Rua Manuel Maria Barbosa du Bocage nº 67
+
+        <br>
+
+        4750-547 Manhente,
+        Barcelos, Portugal
+
+      </p>
+
+    </div>
+
+
+
+    <div>
+
+      <h3>
+        Contactos
+      </h3>
+
+
+      <p>
+
+        <a
+          href="mailto:bibliotecademanhente@aeaf.edu.pt">
+
+          bibliotecademanhente@aeaf.edu.pt
+
+        </a>
+
+        <br>
+
+        <a
+          href="https://www.aeaf.edu.pt/"
+          target="_blank"
+          rel="noopener">
+
+          Agrupamento de Escolas Alcaides de Faria
+
+        </a>
+
+      </p>
+
+    </div>
+
+
+
+    <div>
+
+      <h3>
+        Links úteis
+      </h3>
+
+
+      <p>
+
+        <a href="contactos.html">
+          Contacte-nos
+        </a>
+
+        <br>
+
+        <a href="faq.html">
+          FAQs
+        </a>
+
+        <br>
+
+        <a href="arquivo.html">
+          Arquivo
+        </a>
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="copy">
+
+    BEMA · Biblioteca Escolar de Manhente ·
+
+    <a
+      href="https://ebmanhente.github.io/ebm/"
+      target="_blank"
+      rel="noopener">
+
+      EB de Manhente
+
+    </a>
+
+    ·
+
+    <span id="ano"></span>
+
+  </div>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
