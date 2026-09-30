@@ -28,91 +28,134 @@
 @media(max-width:800px){.school-link{margin-left:auto;margin-right:8px;padding:7px 10px;font-size:.85rem}.brand span{display:none}.bema-home{padding:0 14px 45px}.bema-hero{min-height:560px;border-radius:0 0 22px 22px}.bema-hero-content{padding:40px 25px}.bema-intro,.bema-feature,.bema-bottom{grid-template-columns:1fr}.bema-grid{grid-template-columns:1fr 1fr}.bema-tools{grid-template-columns:1fr 1fr}.bema-section-head{display:block}.bema-section-head p{text-align:left;margin-top:7px}}
 @media(max-width:520px){.bema-hero h1{font-size:2.75rem}.bema-hero p{font-size:1rem}.bema-grid{grid-template-columns:1fr}.bema-tools{grid-template-columns:1fr 1fr}.bema-tool{padding:18px 14px}.bema-feature-content{padding:28px}.bema-intro-card,.bema-quote{padding:25px}}
 
-/* ===== IDENTIDADE VISUAL BEMA + EB DE MANHENTE ===== */
-.bema-topbar{max-width:1180px !important;padding:14px 24px !important;gap:24px !important;}
-.bema-brand{display:flex !important;align-items:center;min-width:0;}
-.bema-brand img{display:block;width:235px;height:auto;max-height:88px;object-fit:contain;}
-.school-identity{margin-left:auto;display:flex;align-items:center;gap:12px;padding:7px 13px 7px 9px;border:1px solid #dfe9e6;border-radius:16px;background:#fbfdfc;color:#245e58;text-decoration:none;transition:.18s;}
-.school-identity:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 6px 18px rgba(33,62,58,.08);border-color:#b9d9d3;}
-.school-identity img{width:62px;height:62px;object-fit:contain;flex:none;}
-.school-identity span{display:flex;flex-direction:column;gap:2px;}
-.school-identity strong{font-size:1rem;line-height:1.1;}
-.school-identity small{font-size:.72rem;color:#66706e;line-height:1.2;}
+/* ===== HOME BEMA — versão visual e sem repetição de menus ===== */
+.bema-minimal-home{max-width:1180px;margin:auto;padding:0 24px 65px}
+.bema-overline{font-size:.72rem;letter-spacing:.14em;font-weight:800;color:var(--bema);display:block;margin-bottom:9px}
+.bema-welcome{display:grid;grid-template-columns:1fr 180px;align-items:center;gap:35px;padding:58px 25px 45px}
+.bema-welcome h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.05;margin:0 0 12px;color:var(--ink)}
+.bema-welcome p{max-width:700px;color:var(--muted);font-size:1.08rem;line-height:1.65;margin:0}
+.bema-welcome img{width:160px;height:110px;object-fit:contain;justify-self:end}
+.bema-three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bema-photo-card{position:relative;display:block;height:365px;border-radius:22px;overflow:hidden;color:#fff;text-decoration:none;background:#365;box-shadow:0 12px 30px rgba(33,62,58,.10)}
+.bema-photo-card:hover{text-decoration:none}
+.bema-photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.bema-photo-card:hover img{transform:scale(1.05)}
+.bema-photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 35%,rgba(0,0,0,.78) 100%)}
+.bema-photo-card div{position:absolute;z-index:2;left:25px;right:25px;bottom:23px}
+.bema-photo-card span{font-size:.72rem;letter-spacing:.12em;opacity:.8}
+.bema-photo-card h2{font-size:2rem;margin:5px 0 5px}
+.bema-photo-card p{font-size:.92rem;margin:0;opacity:.92}
+.bema-gallery-strip{margin-top:65px;display:grid;grid-template-columns:.8fr 1.7fr;gap:30px;align-items:center}
+.bema-gallery-title h2{font-size:2rem;margin:0 0 10px;color:var(--ink)}
+.bema-gallery-title p{color:var(--muted);line-height:1.55;margin:0 0 15px}
+.bema-gallery{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:150px 150px;gap:10px}
+.bema-gallery img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.bema-gallery img:first-child{grid-row:1 / 3}
+.bema-info-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:55px}
+.bema-info-row>div{padding:30px;border-radius:20px;background:var(--cream)}
+.bema-info-row>div+div{background:var(--bema-light)}
+.bema-info-row h2{margin:0 0 8px;font-size:1.45rem;color:var(--ink)}
+.bema-info-row p{margin:0 0 14px;color:var(--muted);line-height:1.5}
 @media(max-width:800px){
- .bema-topbar{padding:10px 16px !important;gap:10px !important;}
- .bema-brand img{width:190px;max-height:72px;}
- .school-identity{padding:5px 8px;gap:7px;border-radius:12px;}
- .school-identity img{width:45px;height:45px;}
- .school-identity strong{font-size:.82rem;}
- .school-identity small{display:none;}
+ .bema-minimal-home{padding:0 14px 45px}
+ .bema-welcome{grid-template-columns:1fr;padding:42px 12px 32px}
+ .bema-welcome img{justify-self:start;width:150px;height:90px}
+ .bema-three{grid-template-columns:1fr}
+ .bema-photo-card{height:280px}
+ .bema-gallery-strip,.bema-info-row{grid-template-columns:1fr}
+ .bema-gallery{height:300px;grid-template-rows:145px 145px}
 }
 @media(max-width:520px){
- .bema-brand img{width:155px;max-height:60px;}
- .school-identity img{width:38px;height:38px;}
- .school-identity strong{font-size:.7rem;}
- .school-identity{padding:4px;}
+ .bema-hero h1{font-size:2.7rem}
+ .bema-hero p{font-size:1rem}
+ .bema-hero-content{padding:40px 23px}
+ .bema-photo-card{height:250px}
+ .bema-gallery{height:240px;grid-template-rows:115px 115px}
 }
+
+.bema-link-disabled{opacity:.42;cursor:default;text-decoration:none!important;pointer-events:none;}
 </style>
 </head>
 <body>
 <header class="site-header">
- <div class="topbar bema-topbar">
-  <a class="brand bema-brand" href="index.html" aria-label="BEMA — Biblioteca Escolar de Manhente">
-    <img src="imagens/logo-bema.jpg" alt="BEMA — Biblioteca Escolar de Manhente">
-  </a>
-  <a class="school-identity" href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener" aria-label="Ir para o site da EB de Manhente">
-    <img src="imagens/logo-eb-manhente.png" alt="Escola Básica de Manhente">
-    <span><strong>EB de Manhente</strong><small>Uma Escola Para a Vida ↗</small></span>
-  </a>
-  <button class="hamb" aria-label="Abrir menu">☰</button>
- </div>
+ <div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo BEMA"><span>Biblioteca Escolar de Manhente</span></a><a class="school-link" href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener">🏫 EB de Manhente</a><button class="hamb" aria-label="Abrir menu">☰</button></div>
  <div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div>
  <nav class="mainnav"><ul>
   <li><a href="index.html">Início</a></li>
   <li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li>
   <li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li>
   <li><a href="contactos.html">Contactos</a></li>
-  <li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li>
+  <li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><span class="bema-link bema-link-disabled">Galeria</span></li></ul></li>
  </ul></nav>
 </header>
 
-<main class="bema-home">
- <section class="bema-hero">
-  <div class="bema-hero-content">
-   <div class="bema-kicker">📚 BIBLIOTECA ESCOLAR DE MANHENTE</div>
-   <h1>Um lugar para <span>ler, descobrir e criar.</span></h1>
-   <p>Entra, explora, encontra uma história, uma ideia ou uma ferramenta. A BEMA também acontece online.</p>
-   <div class="bema-actions"><a class="bema-btn" href="leituras.html">📖 Explorar leituras</a><a class="bema-btn alt" href="atividades.html">✨ Ver atividades</a></div>
-  </div>
- </section>
+<main class="bema-home bema-minimal-home">
 
- <section class="bema-intro">
-  <div class="bema-intro-card"><h2>Bem-vindo à BEMA</h2><p>A Biblioteca Escolar de Manhente é um espaço de leitura, aprendizagem, criatividade e descoberta. Aqui encontras livros, recursos educativos, ferramentas digitais, atividades e muitas oportunidades para aprender de formas diferentes.</p><a class="bema-link" href="sobre.html">Conhece a BEMA e os seus serviços →</a></div>
-  <div class="bema-quote"><img src="imagens/logo-bema.jpg" alt="BEMA"><blockquote>“Ler é abrir uma porta para outros mundos.”</blockquote><small>Explora. Escolhe. Descobre.</small></div>
- </section>
+  <section class="bema-hero">
+    <div class="bema-hero-content">
+      <div class="bema-kicker">📚 BIBLIOTECA ESCOLAR DE MANHENTE</div>
+      <h1>Um lugar para <span>ler, descobrir e criar.</span></h1>
+      <p>Um espaço da escola onde podes encontrar histórias, ideias, conhecimento e inspiração.</p>
+      <div class="bema-actions">
+        <a class="bema-btn" href="leituras.html">📖 Descobrir leituras</a>
+        <a class="bema-btn alt" href="atividades.html">O que acontece na BEMA →</a>
+      </div>
+    </div>
+  </section>
 
- <div class="bema-section-head"><h2>O que acontece por aqui?</h2><p>Alguns dos espaços e propostas que podes explorar na BEMA.</p></div>
- <section class="bema-grid">
-  <article class="bema-tile"><img src="imagens/IMG_20190124_111713.jpg" alt="Livros e leituras"><div class="bema-tile-content"><h3>Livros & Leituras</h3><p>Encontra novas histórias e sugestões de leitura.</p><a href="leituras.html">Explorar →</a></div></article>
-  <article class="bema-tile"><img src="imagens/IMG_20190605_112728.jpg" alt="Criatividade e Makerspace"><div class="bema-tile-content"><h3>Criar & Experimentar</h3><p>Ideias, projetos e atividades para pôr a criatividade em ação.</p><a href="projetos.html">Descobrir →</a></div></article>
-  <article class="bema-tile"><img src="imagens/dia do Pi.jpg" alt="Atividades na biblioteca"><div class="bema-tile-content"><h3>Atividades & Notícias</h3><p>Vê o que tem acontecido na nossa biblioteca.</p><a href="atividades.html">Ver novidades →</a></div></article>
- </section>
+  <section class="bema-welcome">
+    <div>
+      <span class="bema-overline">BEM-VINDO</span>
+      <h2>A BEMA é mais do que uma biblioteca.</h2>
+      <p>É um espaço para ler, pesquisar, aprender, criar e partilhar. Entra, fica à vontade e descobre o que temos para ti.</p>
+    </div>
+    <img src="imagens/logo-bema.jpg" alt="BEMA — Biblioteca Escolar de Manhente">
+  </section>
 
- <div class="bema-section-head"><h2>Explora também</h2><p>Recursos rápidos para estudar, pesquisar, aprender e divertir-te.</p></div>
- <section class="bema-tools">
-  <a class="bema-tool" href="ferramentas.html"><div class="bema-icon">💻</div><h3>Ferramentas digitais</h3><p>Aplicações e ferramentas úteis.</p></a>
-  <a class="bema-tool" href="digitais.html"><div class="bema-icon">📱</div><h3>Livros digitais</h3><p>Lê online, onde estiveres.</p></a>
-  <a class="bema-tool" href="atrevete.html"><div class="bema-icon">🎮</div><h3>Atreve-te!</h3><p>Jogos, desafios e curiosidades.</p></a>
-  <a class="bema-tool" href="cultura.html"><div class="bema-icon">🎨</div><h3>+ Cultura</h3><p>Arte, museus e cultura para descobrir.</p></a>
- </section>
+  <section class="bema-three">
+    <a class="bema-photo-card" href="leituras.html">
+      <img src="imagens/IMG_20190124_111713.jpg" alt="Livros e leituras">
+      <div><span>01</span><h2>Ler</h2><p>Livros, histórias e sugestões para descobrir.</p></div>
+    </a>
+    <a class="bema-photo-card" href="projetos.html">
+      <img src="imagens/IMG_20190605_112728.jpg" alt="Projetos e criatividade">
+      <div><span>02</span><h2>Criar</h2><p>Projetos, ideias e experiências que ganham vida.</p></div>
+    </a>
+    <a class="bema-photo-card" href="atividades.html">
+      <img src="imagens/dia do Pi.jpg" alt="Atividades da BEMA">
+      <div><span>03</span><h2>Acontecer</h2><p>Atividades, desafios e momentos vividos na BEMA.</p></div>
+    </a>
+  </section>
 
- <section class="bema-feature"><img src="imagens/IMG_20190315_212418.jpg" alt="Atividade de leitura na BEMA"><div class="bema-feature-content"><h2>A BEMA acontece!</h2><p>Ao longo do ano há leituras, encontros, desafios, exposições, projetos e atividades em articulação com a escola.</p><p>Consulta a agenda e acompanha as notícias para não perderes o que está a acontecer.</p><a class="bema-btn" href="agenda.html">Ver agenda →</a></div></section>
+  <section class="bema-gallery-strip">
+    <div class="bema-gallery-title">
+      <span class="bema-overline">POR CÁ</span>
+      <h2>A BEMA acontece.</h2>
+      <p>Leitura, criatividade, encontros e muitos momentos partilhados.</p>
+      <span class="bema-link bema-link-disabled">Ver galeria →</span>
+    </div>
+    <div class="bema-gallery">
+      <img src="imagens/IMG_20190315_212418.jpg" alt="Atividade na BEMA">
+      <img src="imagens/20230313_174515.jpg" alt="Espaço da BEMA">
+      <img src="imagens/IMG_20190605_112728.jpg" alt="Projeto na BEMA">
+    </div>
+  </section>
 
- <section class="bema-bottom">
-  <div class="bema-small"><h2>🕒 Quando nos podes visitar?</h2><p>Consulta o horário de funcionamento da BEMA e planeia a tua visita.</p><a class="bema-link" href="imagens/Hor%23U00e1rioBEMA.jpg" target="_blank">Ver horário →</a></div>
-  <div class="bema-small"><h2>💬 A tua opinião conta</h2><p>Tens uma sugestão, uma ideia ou um livro que gostarias de encontrar na biblioteca?</p><a class="bema-link" href="contactos.html">Fala connosco →</a></div>
- </section>
- <div class="bema-footer-note">BEMA · Biblioteca Escolar de Manhente · Uma porta aberta para aprender, imaginar e descobrir.</div>
+  <section class="bema-info-row">
+    <div>
+      <span class="bema-overline">INFORMAÇÃO ÚTIL</span>
+      <h2>Quando nos podes visitar?</h2>
+      <p>Consulta o horário da BEMA e planeia a tua visita.</p>
+      <a class="bema-link" href="imagens/Hor%23U00e1rioBEMA.jpg" target="_blank">Ver horário →</a>
+    </div>
+    <div>
+      <span class="bema-overline">FALA CONNOSCO</span>
+      <h2>Tens uma ideia?</h2>
+      <p>Sugere um livro, deixa uma mensagem ou entra em contacto com a biblioteca.</p>
+      <a class="bema-link" href="contactos.html">Contactar a BEMA →</a>
+    </div>
+  </section>
+
 </main>
 
 <footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <a href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener">EB de Manhente</a> · <span id="ano"></span></div></footer>
