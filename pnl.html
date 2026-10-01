@@ -52,6 +52,96 @@ main [class*="hero"] h6 {
   color: #ffffff !important;
 }
 </style>
+<style id="bema-header-uniform">
+/* BEMA — sistema visual dos cabeçalhos baseado em recursos.html */
+main .revistas-hero,
+main .student-hero,
+main .pnl-hero,
+main .leitura-hero,
+main .ft-hero,
+main .rea-hero,
+main .hero {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 245px !important;
+  border-radius: 26px !important;
+  box-sizing: border-box !important;
+  padding: 42px 48px !important;
+  background: linear-gradient(135deg,#0b6b50,#15966d) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 35px rgba(0,0,0,.12) !important;
+}
+main .revistas-hero::after,
+main .student-hero::after,
+main .pnl-hero::after,
+main .leitura-hero::after,
+main .ft-hero::after,
+main .rea-hero::after,
+main .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 340px !important;
+  height: 340px !important;
+  border-radius: 50% !important;
+  right: -110px !important;
+  top: -150px !important;
+  background: rgba(255,255,255,.09) !important;
+  pointer-events: none !important;
+}
+main .revistas-hero > *,
+main .student-hero > *,
+main .pnl-hero > *,
+main .leitura-hero > *,
+main .ft-hero > *,
+main .rea-hero > *,
+main .hero > * {
+  position: relative;
+  z-index: 2;
+}
+main .revistas-hero h1, main .revistas-hero h2,
+main .student-hero h1, main .student-hero h2,
+main .pnl-hero h1, main .pnl-hero h2,
+main .leitura-hero h1, main .leitura-hero h2,
+main .ft-hero h1, main .ft-hero h2,
+main .rea-hero h1, main .rea-hero h2,
+main .hero h1, main .hero h2 { color:#fff !important; }
+main .revistas-hero p, main .student-hero p, main .pnl-hero p,
+main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
+  color: rgba(255,255,255,.92) !important;
+}
+@media (max-width: 700px) {
+  main .revistas-hero, main .student-hero, main .pnl-hero, main .leitura-hero,
+  main .ft-hero, main .rea-hero, main .hero {
+    min-height: 220px !important;
+    padding: 32px 24px !important;
+    border-radius: 22px !important;
+  }
+}
+</style>
+
+<style id="bema-recursos-header-fix">
+/* Cabeçalho BEMA — mesma linguagem visual de recursos.html */
+.cid-hero, .pnl-hero {
+  position:relative; overflow:hidden; min-height:245px;
+  margin:0 0 30px; border-radius:26px; padding:42px 48px;
+  display:flex; align-items:center; justify-content:space-between;
+  background:linear-gradient(135deg,#0b6b50,#15966d);
+  color:#fff; box-shadow:0 14px 35px rgba(0,0,0,.12);
+}
+.cid-hero:after, .pnl-hero:after {
+  content:""; position:absolute; width:340px; height:340px;
+  border-radius:50%; right:-110px; top:-150px;
+  background:rgba(255,255,255,.09);
+  font-size:0; transform:none; opacity:1;
+}
+.cid-hero > div, .pnl-hero-inner { position:relative; z-index:2; max-width:720px; }
+.cid-hero h1, .pnl-hero h1 { color:#fff !important; line-height:1.03; }
+.cid-hero p, .pnl-hero p { color:rgba(255,255,255,.92); }
+@media(max-width:560px){
+  .cid-hero, .pnl-hero { min-height:0; border-radius:20px; padding:30px 23px; }
+  .cid-hero:after, .pnl-hero:after { width:250px; height:250px; right:-100px; top:-110px; }
+}
+</style>
 </head>
 <body>
 <header class="site-header">

@@ -52,6 +52,72 @@ main [class*="hero"] h6 {
   color: #ffffff !important;
 }
 </style>
+<style id="bema-header-uniform">
+/* BEMA — sistema visual dos cabeçalhos baseado em recursos.html */
+main .revistas-hero,
+main .student-hero,
+main .pnl-hero,
+main .leitura-hero,
+main .ft-hero,
+main .rea-hero,
+main .hero {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 245px !important;
+  border-radius: 26px !important;
+  box-sizing: border-box !important;
+  padding: 42px 48px !important;
+  background: linear-gradient(135deg,#0b6b50,#15966d) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 35px rgba(0,0,0,.12) !important;
+}
+main .revistas-hero::after,
+main .student-hero::after,
+main .pnl-hero::after,
+main .leitura-hero::after,
+main .ft-hero::after,
+main .rea-hero::after,
+main .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 340px !important;
+  height: 340px !important;
+  border-radius: 50% !important;
+  right: -110px !important;
+  top: -150px !important;
+  background: rgba(255,255,255,.09) !important;
+  pointer-events: none !important;
+}
+main .revistas-hero > *,
+main .student-hero > *,
+main .pnl-hero > *,
+main .leitura-hero > *,
+main .ft-hero > *,
+main .rea-hero > *,
+main .hero > * {
+  position: relative;
+  z-index: 2;
+}
+main .revistas-hero h1, main .revistas-hero h2,
+main .student-hero h1, main .student-hero h2,
+main .pnl-hero h1, main .pnl-hero h2,
+main .leitura-hero h1, main .leitura-hero h2,
+main .ft-hero h1, main .ft-hero h2,
+main .rea-hero h1, main .rea-hero h2,
+main .hero h1, main .hero h2 { color:#fff !important; }
+main .revistas-hero p, main .student-hero p, main .pnl-hero p,
+main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
+  color: rgba(255,255,255,.92) !important;
+}
+@media (max-width: 700px) {
+  main .revistas-hero, main .student-hero, main .pnl-hero, main .leitura-hero,
+  main .ft-hero, main .rea-hero, main .hero {
+    min-height: 220px !important;
+    padding: 32px 24px !important;
+    border-radius: 22px !important;
+  }
+}
+</style>
 </head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img alt="Logo da BEMA" src="imagens/logo2.jpg"/><span>Biblioteca Escolar de Manhente</span></a><button aria-label="Abrir menu" class="hamb">☰</button></div><div class="searchbar"><input id="siteSearch" placeholder="Pesquisa" type="search"/><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="ferramentas-page">
 
   <section class="ft-hero">

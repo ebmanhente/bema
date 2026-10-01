@@ -50,6 +50,30 @@ main [class*="hero"] h6 {
   color: #ffffff !important;
 }
 </style>
+
+<style id="bema-recursos-header-fix">
+/* Cabeçalho BEMA — mesma linguagem visual de recursos.html */
+.cid-hero, .pnl-hero {
+  position:relative; overflow:hidden; min-height:245px;
+  margin:0 0 30px; border-radius:26px; padding:42px 48px;
+  display:flex; align-items:center; justify-content:space-between;
+  background:linear-gradient(135deg,#0b6b50,#15966d);
+  color:#fff; box-shadow:0 14px 35px rgba(0,0,0,.12);
+}
+.cid-hero:after, .pnl-hero:after {
+  content:""; position:absolute; width:340px; height:340px;
+  border-radius:50%; right:-110px; top:-150px;
+  background:rgba(255,255,255,.09);
+  font-size:0; transform:none; opacity:1;
+}
+.cid-hero > div, .pnl-hero-inner { position:relative; z-index:2; max-width:720px; }
+.cid-hero h1, .pnl-hero h1 { color:#fff !important; line-height:1.03; }
+.cid-hero p, .pnl-hero p { color:rgba(255,255,255,.92); }
+@media(max-width:560px){
+  .cid-hero, .pnl-hero { min-height:0; border-radius:20px; padding:30px 23px; }
+  .cid-hero:after, .pnl-hero:after { width:250px; height:250px; right:-100px; top:-110px; }
+}
+</style>
 </head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="cidadania-page">
 
   <section class="cid-hero">
