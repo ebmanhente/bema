@@ -15,8 +15,31 @@
 .sobre-final{display:flex;align-items:center;gap:21px;border-radius:22px;padding:27px 31px;background:linear-gradient(120deg,#eff7f3,#f5f8e9);border:1px solid #dce9e3}.final-icon{font-size:2.3rem}.sobre-final span{font-size:.65rem;font-weight:800;letter-spacing:.13em;color:#16835f}.sobre-final h2{font-size:1.45rem;color:#21473b;margin:6px 0}.sobre-final p{color:#687570;margin:0;font-size:.9rem}
 @media(max-width:850px){.paula-card{grid-template-columns:240px 1fr;gap:28px}.paula-photo img{height:330px}.service-grid{grid-template-columns:1fr}.hero-mark{margin-right:0;font-size:5.5rem}}
 @media(max-width:650px){.sobre-page{padding:18px 14px 50px}.sobre-hero{min-height:270px;padding:34px 25px;border-radius:22px}.hero-mark{display:none}.sobre-hero h1{font-size:2.7rem}.sobre-hero p{font-size:.97rem}.sobre-intro{padding-top:42px}.paula-card{grid-template-columns:1fr;gap:25px}.paula-photo img{height:auto;max-height:440px}.paula-info h2{font-size:2rem}.service-card{grid-template-columns:52px 1fr;padding:19px}.service-icon{width:50px;height:50px;font-size:1.45rem}.sobre-final{align-items:flex-start;padding:23px 20px}.sobre-final h2{font-size:1.2rem}}
+
+/* BEMA — hierarquia visual dos cabeçalhos */
+main h1, main h2, main h3 { color:#245e58 !important; }
+/* Títulos dentro dos blocos HERO: branco para garantir contraste */
+main .hero h1, main .student-hero h1, main .revistas-hero h1, main .leituras-hero h1, main .contact-hero h1, main .sobre-hero h1, main .recursos-hero h1, main .ferramentas-hero h1, main .cidadania-hero h1, main .rea-hero h1, main .digital-hero h1, main .pnl-hero h1, main .student-hero h2 { color:#ffffff !important; }
 </style>
 
+
+<!-- BEMA: normalização visual dos cabeçalhos -->
+<style id="bema-heading-system">
+/* Todos os cabeçalhos do conteúdo seguem a mesma cor BEMA */
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #245e58 !important;
+}
+
+/* Nos HERO, o título principal é sempre branco */
+main [class*="hero"] h1,
+main [class*="hero"] h2,
+main [class*="hero"] h3,
+main [class*="hero"] h4,
+main [class*="hero"] h5,
+main [class*="hero"] h6 {
+  color: #ffffff !important;
+}
+</style>
 </head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page sobre-page">
 
   <section class="sobre-hero">

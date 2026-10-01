@@ -137,8 +137,31 @@
   .steps{grid-template-columns:1fr 1fr}
   .student-card{padding:18px}
 }
+
+/* BEMA — hierarquia visual dos cabeçalhos */
+main h1, main h2, main h3 { color:#245e58 !important; }
+/* Títulos dentro dos blocos HERO: branco para garantir contraste */
+main .hero h1, main .student-hero h1, main .revistas-hero h1, main .leituras-hero h1, main .contact-hero h1, main .sobre-hero h1, main .recursos-hero h1, main .ferramentas-hero h1, main .cidadania-hero h1, main .rea-hero h1, main .digital-hero h1, main .pnl-hero h1, main .student-hero h2 { color:#ffffff !important; }
 </style>
 
+
+<!-- BEMA: normalização visual dos cabeçalhos -->
+<style id="bema-heading-system">
+/* Todos os cabeçalhos do conteúdo seguem a mesma cor BEMA */
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #245e58 !important;
+}
+
+/* Nos HERO, o título principal é sempre branco */
+main [class*="hero"] h1,
+main [class*="hero"] h2,
+main [class*="hero"] h3,
+main [class*="hero"] h4,
+main [class*="hero"] h5,
+main [class*="hero"] h6 {
+  color: #ffffff !important;
+}
+</style>
 </head>
 <body>
 <header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header>
