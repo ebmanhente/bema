@@ -1,1 +1,108 @@
-<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recursos Educativos | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css"></head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page "><div class="title"><h1>Recursos Educativos</h1><p>Os recursos educativos são fundamentais tanto para alunos como para professores e são especialmente relevantes no contexto atual, em que a tecnologia desempenha um papel cada vez mais importante na educação.</p></div><p>Os Recursos Educacionais Abertos (REA) são materiais de ensino, aprendizagem ou pesquisa disponíveis gratuitamente na internet, que podem ser usados, adaptados e distribuídos livremente.</p><p>Os recursos educativos digitais, como vídeos, infográficos e jogos educativos, proporcionam uma forma mais atraente e interativa de aprender.</p><p>A curadoria de conteúdos envolve selecionar, avaliar e organizar recursos educativos de forma a maximizar a sua relevância e utilidade para alunos e professores.</p><div class="link-panels"><a href="ferramentas.html">Ferramentas digitais</a><a href="guioes.html">Guiões / Colaboração alunos</a><a href="rea.html">Páginas de interesse / REA</a><a href="cidadania.html">Cidadania e Desenvolvimento</a></div></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recursos Educativos | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css">
+<style>
+.recursos-page{max-width:1180px;margin:0 auto;padding:34px 22px 60px}
+.recursos-hero{position:relative;overflow:hidden;min-height:245px;border-radius:26px;padding:42px 48px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#0b6b50,#15966d);color:#fff;box-shadow:0 14px 35px rgba(0,0,0,.12)}
+.recursos-hero:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:-110px;top:-150px;background:rgba(255,255,255,.09)}
+.hero-content{position:relative;z-index:2;max-width:720px}.eyebrow,.section-kicker{font-size:.75rem;font-weight:800;letter-spacing:.14em}
+.recursos-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:9px 0 12px;line-height:1}
+.recursos-hero p{font-size:1.08rem;line-height:1.6;margin:0;max-width:680px;color:rgba(255,255,255,.92)}
+.hero-symbol{position:relative;z-index:2;font-size:6rem;filter:drop-shadow(0 10px 10px rgba(0,0,0,.15));transform:rotate(-5deg)}
+.recursos-texto{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;padding:54px 6px 30px}
+.section-kicker{color:#16835f}.recursos-texto h2,.escolha-heading h2{font-size:clamp(1.7rem,3vw,2.35rem);margin:8px 0 0;color:#18352d;line-height:1.15}
+.texto-principal{border-left:4px solid #16835f;padding-left:27px}.texto-principal p{margin:0;color:#586761;font-size:1.03rem;line-height:1.75}
+.conceitos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:8px 0 58px}
+.conceito{border-radius:21px;padding:25px 23px;display:flex;gap:17px;border:1px solid #e2ebe7;background:#fff;box-shadow:0 7px 22px rgba(20,50,40,.07)}
+.conceito-icon{font-size:2.2rem;line-height:1}.conceito span{font-size:.67rem;font-weight:800;letter-spacing:.09em;color:#16835f}.conceito h3{font-size:1.2rem;color:#18352d;margin:7px 0 9px}.conceito p{font-size:.9rem;line-height:1.58;color:#64716d;margin:0}
+.conceito-rea{background:#f2f8f4}.conceito-digitais{background:#f2f6fa}.conceito-curadoria{background:#f7f8ef}
+.recursos-escolha{padding-top:4px}.escolha-heading{text-align:center;margin-bottom:28px}.escolha-heading p{color:#687570;margin:9px 0 0}
+.recursos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.recurso-card{position:relative;display:flex;min-height:245px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;border:1px solid #e5ebe8;border-radius:22px;box-shadow:0 8px 24px rgba(20,50,40,.08);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.recurso-card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(20,50,40,.14);border-color:#b9d9cd}
+.card-image{width:38%;min-width:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;color:#fff}
+.card-tools .card-image{background:linear-gradient(145deg,#0d7b5b,#39a878)}.card-guides .card-image{background:linear-gradient(145deg,#376c9b,#5e9bc9)}.card-rea .card-image{background:linear-gradient(145deg,#267c86,#54b7a4)}.card-cidadania .card-image{background:linear-gradient(145deg,#557d3d,#89ae55)}
+.card-icon{font-size:4rem;line-height:1;margin-bottom:18px;filter:drop-shadow(0 5px 5px rgba(0,0,0,.12))}.card-tag{font-size:.66rem;font-weight:800;letter-spacing:.08em;text-align:center;padding:6px 9px;border:1px solid rgba(255,255,255,.5);border-radius:99px}
+.card-body{padding:28px 27px;display:flex;flex-direction:column;justify-content:center;flex:1}.card-body h3{font-size:1.4rem;margin:0 0 10px;color:#18352d}.card-body p{font-size:.94rem;line-height:1.55;color:#687570;margin:0 0 20px}.card-link{margin-top:auto;color:#087451;font-weight:800;font-size:.88rem}.card-link b{font-size:1rem;margin-left:4px}
+@media(max-width:850px){.recursos-texto{grid-template-columns:1fr;gap:18px}.conceitos-grid{grid-template-columns:1fr}.recursos-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.recursos-page{padding:20px 14px 45px}.recursos-hero{border-radius:20px;padding:30px 23px}.hero-symbol{display:none}.recursos-hero p{font-size:.98rem}.recursos-texto{padding-top:40px}.texto-principal{padding-left:19px}.recurso-card{min-height:205px}.card-image{width:32%;min-width:105px}.card-icon{font-size:3rem}.card-tag{font-size:.56rem;padding:5px 6px}.card-body{padding:21px 18px}.card-body h3{font-size:1.15rem}.card-body p{font-size:.86rem}.card-link{font-size:.8rem}}
+</style>
+
+</head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page recursos-page">
+  <section class="recursos-hero">
+    <div class="hero-content">
+      <span class="eyebrow">BEMA · RECURSOS</span>
+      <h1>Recursos Educativos</h1>
+      <p>Encontra ferramentas, guiões e páginas úteis para aprender, pesquisar, criar e trabalhar melhor.</p>
+    </div>
+    <div class="hero-symbol" aria-hidden="true">📚</div>
+  </section>
+
+  <section class="recursos-texto">
+    <div class="texto-intro">
+      <span class="section-kicker">PORQUE SÃO IMPORTANTES?</span>
+      <h2>Recursos educativos ao serviço da aprendizagem</h2>
+    </div>
+
+    <div class="texto-principal">
+      <p>Os recursos educativos são fundamentais tanto para alunos como para professores e são especialmente relevantes no contexto atual, em que a tecnologia desempenha um papel cada vez mais importante na educação.</p>
+    </div>
+  </section>
+
+  <section class="conceitos-grid">
+    <article class="conceito conceito-rea">
+      <div class="conceito-icon">🔓</div>
+      <div>
+        <span>01 · REA</span>
+        <h3>Recursos Educacionais Abertos</h3>
+        <p>Os Recursos Educacionais Abertos (REA) são materiais de ensino, aprendizagem ou pesquisa disponíveis gratuitamente na internet, que podem ser usados, adaptados e distribuídos livremente.</p>
+      </div>
+    </article>
+
+    <article class="conceito conceito-digitais">
+      <div class="conceito-icon">💻</div>
+      <div>
+        <span>02 · DIGITAL</span>
+        <h3>Recursos educativos digitais</h3>
+        <p>Os recursos educativos digitais, como vídeos, infográficos e jogos educativos, proporcionam uma forma mais atraente e interativa de aprender.</p>
+      </div>
+    </article>
+
+    <article class="conceito conceito-curadoria">
+      <div class="conceito-icon">🧭</div>
+      <div>
+        <span>03 · CURADORIA</span>
+        <h3>Curadoria de conteúdos</h3>
+        <p>A curadoria de conteúdos envolve selecionar, avaliar e organizar recursos educativos de forma a maximizar a sua relevância e utilidade para alunos e professores.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="recursos-escolha">
+    <div class="escolha-heading">
+      <span class="section-kicker">EXPLORA A BEMA</span>
+      <h2>Encontra o recurso de que precisas</h2>
+      <p>Escolhe uma das áreas e começa a explorar.</p>
+    </div>
+
+    <div class="recursos-grid">
+      <a class="recurso-card card-tools" href="ferramentas.html">
+        <div class="card-image"><span class="card-icon">🛠️</span><span class="card-tag">CRIAR · INTERAGIR</span></div>
+        <div class="card-body"><h3>Ferramentas Digitais</h3><p>Aplicações para criar apresentações, imagens, vídeos, quizzes, atividades interativas e muito mais.</p><span class="card-link">Explorar ferramentas <b>↗</b></span></div>
+      </a>
+
+      <a class="recurso-card card-guides" href="guioes.html">
+        <div class="card-image"><span class="card-icon">📝</span><span class="card-tag">PESQUISAR · TRABALHAR</span></div>
+        <div class="card-body"><h3>Guiões e colaboração</h3><p>Guias práticos para preparar trabalhos, fazer apresentações, pesquisar e avaliar informação.</p><span class="card-link">Ver guiões <b>↗</b></span></div>
+      </a>
+
+      <a class="recurso-card card-rea" href="rea.html">
+        <div class="card-image"><span class="card-icon">🌐</span><span class="card-tag">DESCOBRIR · APRENDER</span></div>
+        <div class="card-body"><h3>Páginas de interesse e REA</h3><p>Sites educativos, recursos abertos e páginas selecionadas pela BEMA para aprender e pesquisar.</p><span class="card-link">Descobrir recursos <b>↗</b></span></div>
+      </a>
+
+      <a class="recurso-card card-cidadania" href="cidadania.html">
+        <div class="card-image"><span class="card-icon">🌱</span><span class="card-tag">PARTICIPAR · CRESCER</span></div>
+        <div class="card-body"><h3>Cidadania e Desenvolvimento</h3><p>Recursos para refletir, participar e aprender sobre temas importantes para a vida em sociedade.</p><span class="card-link">Explorar cidadania <b>↗</b></span></div>
+      </a>
+    </div>
+  </section>
+</main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>

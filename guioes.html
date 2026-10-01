@@ -1,1 +1,247 @@
-<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guiões/Colaboração Alunos | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css"></head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page"><div class="title"><h1>Guiões/Colaboração Alunos</h1></div><div class="section"><h2>Recursos</h2><h3>Páginas de interesse</h3><div class="resource-list"><a href="https://3be7a5ab-31bb-41ae-a1e9-7a03033ee2ce.filesusr.com/ugd/726444_8bf2a58b67e248779b74c23343103f3d.pdf" target="_blank">Aprende a preparar uma apresentação digital!</a><a href="https://3be7a5ab-31bb-41ae-a1e9-7a03033ee2ce.filesusr.com/ugd/726444_81e2c77d52574f46b6c26de8e684305b.pdf" target="_blank">Aqui damos-te todas as dicas para fazeres um trabalho escrito perfeito!</a><a href="https://3be7a5ab-31bb-41ae-a1e9-7a03033ee2ce.filesusr.com/ugd/726444_3ffc1d2620414f3d988af5f24b55adb7.pdf" target="_blank">Aprende a avaliar a qualidade das páginas que consultas!</a><a href="https://visao.sapo.pt/" target="_blank">Sabe como podes tentar identificar se um perfil é falso numa rede social.</a><a href="https://www.seguranet.pt/" target="_blank">Aprende a navegar de forma segura na internet!</a><a href="https://www.rtp.pt/" target="_blank">Sabe como podes rentabilizar o teu trabalho em casa!</a></div></div></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guiões e colaboração | Biblioteca Escolar de Manhente</title>
+<meta name="description" content="BEMA — recursos para alunos: pesquisa, trabalhos escritos, apresentações e segurança digital.">
+<link rel="stylesheet" href="css/estilo.css">
+
+<style>
+.student-page{max-width:1160px;margin:auto}
+.student-hero{
+  display:flex;align-items:center;gap:22px;
+  padding:34px 38px;margin:4px 0 28px;border-radius:24px;
+  color:#fff;background:linear-gradient(125deg,#155e40,#21895a);
+  box-shadow:0 14px 32px rgba(18,95,62,.16);
+}
+.hero-badge{
+  width:68px;height:68px;min-width:68px;border-radius:19px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.15);font-weight:900;letter-spacing:.05em;
+}
+.hero-small{font-size:.7rem;font-weight:800;letter-spacing:.14em;opacity:.8}
+.student-hero h1{margin:4px 0 7px;font-size:clamp(1.8rem,3.5vw,2.55rem)}
+.student-hero p{margin:0;font-size:1.06rem;line-height:1.5;opacity:.95}
+
+.student-start{
+  display:flex;align-items:center;gap:15px;max-width:760px;margin:0 auto 28px;
+}
+.start-number{
+  font-size:.72rem;font-weight:900;color:#fff;background:#21895a;
+  width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+}
+.student-start h2{margin:0 0 4px;color:#1c4b36;font-size:1.3rem}
+.student-start p{margin:0;color:#68727a;line-height:1.5}
+
+.student-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;
+}
+.student-card{
+  position:relative;display:flex;align-items:flex-start;gap:16px;
+  padding:20px;background:#fff;border:1px solid #e1e9e4;border-radius:19px;
+  text-decoration:none!important;color:inherit!important;
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
+  transition:.2s ease;cursor:pointer;
+}
+.student-card:hover{
+  transform:translateY(-5px);border-color:#9bcbb2;
+  box-shadow:0 12px 27px rgba(20,105,68,.13);
+}
+.student-icon{
+  width:52px;height:52px;min-width:52px;border-radius:15px;
+  background:#eaf5ef;display:flex;align-items:center;justify-content:center;
+  font-size:25px;
+}
+.student-content{min-width:0}
+.student-tag{
+  display:inline-block;margin-bottom:7px;color:#197048;
+  font-size:.62rem;font-weight:850;letter-spacing:.07em;
+}
+.student-card h3{margin:0 0 7px;color:#193d2e;font-size:1.08rem}
+.student-card p{margin:0;color:#69737a;font-size:.88rem;line-height:1.5}
+.student-link{display:inline-block;margin-top:13px;color:#176b45;font-size:.85rem;font-weight:800}
+.student-link b{font-size:1rem}
+
+.student-workflow{
+  margin-top:35px;padding:25px 26px;border-radius:19px;
+  background:#f4f8f5;border:1px solid #dfebe4;
+}
+.student-workflow h2{text-align:center;color:#1b5038;margin:0 0 22px;font-size:1.25rem}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.steps div{text-align:center}
+.steps span{
+  display:flex;margin:0 auto 9px;width:34px;height:34px;border-radius:50%;
+  background:#21895a;color:#fff;align-items:center;justify-content:center;font-weight:900;
+}
+.steps strong{display:block;color:#214b37;font-size:.92rem}
+.steps small{display:block;margin-top:5px;color:#737c82;line-height:1.4}
+
+.student-tip{
+  display:flex;gap:15px;margin:18px 0 5px;padding:20px 22px;
+  border-left:5px solid #21895a;background:#edf7f1;border-radius:14px;
+}
+.tip-symbol{font-size:25px}
+.student-tip h2{margin:0 0 5px;color:#176b45;font-size:1.05rem}
+.student-tip p{margin:0;color:#626d74;line-height:1.5}
+
+
+.presentation-card{
+  padding:0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  overflow:hidden;
+}
+.presentation-card .student-visual{
+  position:relative;
+  height:150px;
+  background:#e8f1eb;
+  overflow:hidden;
+}
+.presentation-card .student-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 18%;
+  mix-blend-mode:multiply;
+}
+.presentation-card .visual-badge{
+  position:absolute;
+  left:12px;
+  bottom:10px;
+  padding:5px 9px;
+  border-radius:999px;
+  background:#176b45;
+  color:#fff;
+  font-size:.62rem;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.presentation-card .student-content{
+  padding:17px 18px 18px;
+}
+.presentation-card:hover .student-visual img{
+  transform:scale(1.025);
+  transition:transform .25s ease;
+}
+
+@media(max-width:900px){
+  .student-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .presentation-card .student-visual{height:175px}
+  .student-hero{padding:27px 21px;border-radius:19px}
+  .hero-badge{width:55px;height:55px;min-width:55px}
+  .student-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .student-card{padding:18px}
+}
+</style>
+
+</head>
+<body>
+<header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header>
+
+<main class="page student-page">
+  <section class="student-hero">
+    <div class="hero-badge">BEMA</div>
+    <div>
+      <span class="hero-small">RECURSOS PARA ALUNOS</span>
+      <h1>Guiões e colaboração</h1>
+      <p>Ferramentas simples para te ajudar a <strong>pesquisar, organizar, escrever e apresentar</strong> os teus trabalhos.</p>
+    </div>
+  </section>
+
+  <section class="student-start">
+    <div class="start-number">01</div>
+    <div>
+      <h2>Antes de começares o trabalho</h2>
+      <p>Escolhe o recurso de que precisas. Cada cartão leva diretamente para o documento ou página.</p>
+    </div>
+  </section>
+
+  <section class="student-grid">
+    
+      <a class="student-card presentation-card" href="apresentacao-digital.html">
+        <div class="student-visual">
+          <img src="https://openclipart.org/image/2000px/227551" alt="Aluno a fazer uma apresentação">
+          <span class="visual-badge">GUIA</span>
+        </div>
+        <div class="student-content">
+          <span class="student-tag">APRESENTAR</span>
+          <h3>Como fazer uma apresentação digital?</h3>
+          <p>Um guia visual para preparar os diapositivos, organizar as ideias e apresentar o trabalho.</p>
+          <span class="student-link">Ver guia <b>↗</b></span>
+        </div>
+      </a>
+      <a class="student-card" href="https://3be7a5ab-31bb-41ae-a1e9-7a03033ee2ce.filesusr.com/ugd/726444_81e2c77d52574f46b6c26de8e684305b.pdf" target="_blank" rel="noopener">
+        <div class="student-icon">📝</div>
+        <div class="student-content">
+          <span class="student-tag">PESQUISAR · ESCREVER</span>
+          <h3>Trabalho escrito</h3>
+          <p>Dicas para planear, estruturar e apresentar um trabalho escrito.</p>
+          <span class="student-link">Abrir recurso <b>↗</b></span>
+        </div>
+      </a>
+      <a class="student-card" href="https://3be7a5ab-31bb-41ae-a1e9-7a03033ee2ce.filesusr.com/ugd/726444_3ffc1d2620414f3d988af5f24b55adb7.pdf" target="_blank" rel="noopener">
+        <div class="student-icon">🔎</div>
+        <div class="student-content">
+          <span class="student-tag">PESQUISA</span>
+          <h3>Avaliar fontes</h3>
+          <p>Aprende a verificar se a informação que encontras na Internet é credível e adequada para um trabalho.</p>
+          <span class="student-link">Abrir recurso <b>↗</b></span>
+        </div>
+      </a>
+      <a class="student-card" href="https://seguranet.pt/recursos" target="_blank" rel="noopener">
+        <div class="student-icon">🛡️</div>
+        <div class="student-content">
+          <span class="student-tag">CIDADANIA DIGITAL</span>
+          <h3>Segurança na Internet</h3>
+          <p>Recursos, atividades e conteúdos para navegar de forma segura, crítica e responsável.</p>
+          <span class="student-link">Abrir recurso <b>↗</b></span>
+        </div>
+      </a>
+      <a class="student-card" href="https://seguranet.pt/recursos/colecao-de-cartazes-5-dicas" target="_blank" rel="noopener">
+        <div class="student-icon">🌐</div>
+        <div class="student-content">
+          <span class="student-tag">LITERACIA DIGITAL</span>
+          <h3>Pesquisar na Internet</h3>
+          <p>Dicas para pesquisar informação, reconhecer sites duvidosos e proteger os teus dados online.</p>
+          <span class="student-link">Abrir recurso <b>↗</b></span>
+        </div>
+      </a>
+      <a class="student-card" href="https://www.rtp.pt/play/estudoemcasa/p7781/e545668/orientacao-para-trabalho-autonomo-1-ao-4-ano" target="_blank" rel="noopener">
+        <div class="student-icon">📚</div>
+        <div class="student-content">
+          <span class="student-tag">MÉTODOS DE ESTUDO</span>
+          <h3>Estudar e trabalhar sozinho</h3>
+          <p>Conteúdos da RTP sobre organização do trabalho autónomo, estratégias de estudo e realização de trabalhos.</p>
+          <span class="student-link">Abrir recurso <b>↗</b></span>
+        </div>
+      </a>
+  </section>
+
+  <section class="student-workflow">
+    <h2>Um bom trabalho começa assim</h2>
+    <div class="steps">
+      <div><span>1</span><strong>Pesquisar</strong><small>Procura informação em fontes credíveis.</small></div>
+      <div><span>2</span><strong>Selecionar</strong><small>Compara e escolhe a informação relevante.</small></div>
+      <div><span>3</span><strong>Organizar</strong><small>Estrutura as ideias antes de escrever.</small></div>
+      <div><span>4</span><strong>Apresentar</strong><small>Explica o que aprendeste de forma clara.</small></div>
+    </div>
+  </section>
+
+  <section class="student-tip">
+    <div class="tip-symbol">💡</div>
+    <div>
+      <h2>Não sabes por onde começar?</h2>
+      <p>Começa pelo guia de <strong>avaliação das fontes</strong>. Uma boa pesquisa começa por saber distinguir informação credível de informação duvidosa.</p>
+    </div>
+  </section>
+</main>
+
+<footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer>
+<script src="js/script.js"></script>
+</body>
+</html>

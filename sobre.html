@@ -1,1 +1,121 @@
-<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Serviços da BE | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css"></head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page "><div class="title"><h1>Olá</h1></div><div class="article-with-image"><img src="imagens/paula-ribeiro.jpg" alt="Paula Ribeiro, professora bibliotecária"><div><p>A biblioteca escolar é um espaço essencial no ambiente educacional, onde os alunos podem expandir os seus horizontes e aprofundar os seus conhecimentos. A nossa biblioteca está determinada em fornecer aos alunos as melhores ferramentas para o sucesso educativo, oferecendo uma vasta seleção de livros, revistas, jornais e outros recursos de informação. A nossa missão é ajudar os alunos a desenvolver as suas capacidades de leitura e pesquisa, promovendo o pensamento crítico.</p><p>Acreditamos que uma boa educação começa com o acesso a informações precisas e confiáveis, e trabalhamos para garantir que os alunos tenham acesso aos melhores recursos educacionais disponíveis, assim como para apoiar os docentes em todo o processo de ensino-aprendizagem.</p><p>Além disso, a nossa biblioteca é um espaço acolhedor e convidativo, onde os alunos podem estar à vontade para estudar, pesquisar e explorar informação e leituras de acordo com os seus interesses pessoais.</p><p>Estamos igualmente de portas abertas a toda a comunidade que nos queira visitar.</p><p><strong>A professora bibliotecária<br>Paula Ribeiro</strong></p></div></div><h2>Os nossos serviços</h2><ul class="service-list"><li>Fornecimento de informação de referência (incluindo apoio aos trabalhos de casa)</li><li>Formação de utilizadores</li><li>Formação nas diferentes literacias (media, informação, leitura)</li><li>Aconselhamento de leitura (individual e em grupo)</li><li>Serviço de empréstimo aos utilizadores</li><li>Encorajamento ao uso da coleção em todos os formatos</li><li>Iniciativas dinâmicas de leitura e escrita</li><li>Organização de palestras e sessões formativas em colaboração com entidades externas e com as diferentes áreas disciplinares</li><li>Facilitação do acesso a recursos exteriores à coleção de referência (empréstimo interbibliotecas)</li><li>Apoio aos utilizadores (presencial e online)</li><li>Empréstimo de tablets para sala de aula e trabalho autónomo</li><li>Disponibilização de computadores para uso no espaço da BE</li><li>Organização de oficinas e atividades criativas na área Makerspace</li><li>Organização de espetáculos para a comunidade, em articulação com as diferentes áreas disciplinares</li><li>Gestão técnica da coleção e aquisição de novos títulos</li></ul></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Serviços da BE | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css">
+<style>
+.sobre-page{max-width:1180px;margin:0 auto;padding:32px 22px 65px}
+.sobre-hero{position:relative;overflow:hidden;min-height:300px;border-radius:28px;padding:48px 55px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(125deg,#103f35,#117455 62%,#55ad83);color:#fff;box-shadow:0 17px 40px rgba(18,72,55,.15)}
+.sobre-hero:before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-150px;top:-230px;background:rgba(255,255,255,.07)}
+.sobre-hero-copy{position:relative;z-index:2}.sobre-kicker{font-size:.72rem;font-weight:800;letter-spacing:.15em;color:#c8eddf}
+.sobre-hero h1{font-size:clamp(2.35rem,5vw,4.3rem);line-height:1.02;letter-spacing:-.04em;margin:13px 0 17px}.sobre-hero h1 em{font-style:normal;color:#d5f1e5}
+.sobre-hero p{font-size:1.08rem;color:rgba(255,255,255,.9);margin:0;line-height:1.6}.hero-mark{position:relative;z-index:2;font-size:7rem;margin-right:40px;transform:rotate(-7deg);filter:drop-shadow(0 12px 10px rgba(0,0,0,.17))}
+.sobre-intro{padding:58px 5px 25px}.paula-card{display:grid;grid-template-columns:330px 1fr;gap:42px;align-items:start}
+.paula-photo{position:relative;border-radius:24px;overflow:hidden;background:#eaf3ef;box-shadow:0 12px 30px rgba(20,60,47,.11)}.paula-photo img{width:100%;height:405px;object-fit:cover;display:block}.paula-photo span{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(13,67,51,.88);color:#fff;text-align:center;border-radius:10px;padding:9px;font-size:.62rem;font-weight:800;letter-spacing:.1em}
+.section-kicker{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:#16835f}.paula-info h2,.services-heading h2{font-size:clamp(2rem,3vw,2.7rem);line-height:1.1;color:#193a31;margin:8px 0 19px}.paula-info p{color:#5e6d67;line-height:1.7;font-size:.95rem;margin:0 0 15px}.paula-info .lead{font-size:1.08rem;color:#36554b}.signature{margin-top:22px;color:#16835f;font-family:cursive;font-size:1.55rem}
+.services-section{padding:42px 0 58px}.services-heading{text-align:center;margin-bottom:31px}.services-heading p{color:#687570;margin:9px 0 0}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.service-card{display:grid;grid-template-columns:62px 1fr;gap:16px;padding:23px;border-radius:19px;border:1px solid #e0e9e5;background:#fff;box-shadow:0 7px 22px rgba(22,55,44,.06);transition:transform .2s,box-shadow .2s,border-color .2s}.service-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(22,55,44,.11);border-color:#b8d7ca}.service-card.featured{background:#f0f7f3;border-color:#d4e8df}
+.service-icon{width:58px;height:58px;border-radius:16px;background:#eaf5f0;display:flex;align-items:center;justify-content:center;font-size:1.7rem}.service-card span{font-size:.61rem;font-weight:800;letter-spacing:.12em;color:#16835f}.service-card h3{font-size:1.18rem;color:#23483d;margin:6px 0 10px}.service-card p{font-size:.84rem;line-height:1.5;color:#687570;margin:0 0 6px}.service-card p:last-child{margin-bottom:0}
+.sobre-final{display:flex;align-items:center;gap:21px;border-radius:22px;padding:27px 31px;background:linear-gradient(120deg,#eff7f3,#f5f8e9);border:1px solid #dce9e3}.final-icon{font-size:2.3rem}.sobre-final span{font-size:.65rem;font-weight:800;letter-spacing:.13em;color:#16835f}.sobre-final h2{font-size:1.45rem;color:#21473b;margin:6px 0}.sobre-final p{color:#687570;margin:0;font-size:.9rem}
+@media(max-width:850px){.paula-card{grid-template-columns:240px 1fr;gap:28px}.paula-photo img{height:330px}.service-grid{grid-template-columns:1fr}.hero-mark{margin-right:0;font-size:5.5rem}}
+@media(max-width:650px){.sobre-page{padding:18px 14px 50px}.sobre-hero{min-height:270px;padding:34px 25px;border-radius:22px}.hero-mark{display:none}.sobre-hero h1{font-size:2.7rem}.sobre-hero p{font-size:.97rem}.sobre-intro{padding-top:42px}.paula-card{grid-template-columns:1fr;gap:25px}.paula-photo img{height:auto;max-height:440px}.paula-info h2{font-size:2rem}.service-card{grid-template-columns:52px 1fr;padding:19px}.service-icon{width:50px;height:50px;font-size:1.45rem}.sobre-final{align-items:flex-start;padding:23px 20px}.sobre-final h2{font-size:1.2rem}}
+</style>
+
+</head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page sobre-page">
+
+  <section class="sobre-hero">
+    <div class="sobre-hero-copy">
+      <span class="sobre-kicker">BEMA · SOBRE NÓS</span>
+      <h1>Mais do que uma biblioteca.<br><em>Um espaço para descobrir.</em></h1>
+      <p>Um lugar para ler, pesquisar, aprender, criar, partilhar e estar.</p>
+    </div>
+    <div class="hero-mark" aria-hidden="true">📚</div>
+  </section>
+
+  <section class="sobre-intro">
+    <div class="paula-card">
+      <div class="paula-photo">
+        <img src="imagens/paula-ribeiro.jpg" alt="Paula Ribeiro, professora bibliotecária">
+        <span>PROFESSORA BIBLIOTECÁRIA</span>
+      </div>
+      <div class="paula-info">
+        <span class="section-kicker">QUEM ESTÁ AQUI</span>
+        <h2>Olá!</h2>
+        <p class="lead">A biblioteca escolar é um espaço essencial no ambiente educacional, onde os alunos podem expandir os seus horizontes e aprofundar os seus conhecimentos.</p>
+        <p>A nossa biblioteca está determinada em fornecer aos alunos as melhores ferramentas para o sucesso educativo, oferecendo uma vasta seleção de livros, revistas, jornais e outros recursos de informação. A nossa missão é ajudar os alunos a desenvolver as suas capacidades de leitura e pesquisa, promovendo o pensamento crítico.</p>
+        <p>Acreditamos que uma boa educação começa com o acesso a informações precisas e confiáveis, e trabalhamos para garantir que os alunos tenham acesso aos melhores recursos educacionais disponíveis, assim como para apoiar os docentes em todo o processo de ensino-aprendizagem.</p>
+        <p>Além disso, a nossa biblioteca é um espaço acolhedor e convidativo, onde os alunos podem estar à vontade para estudar, pesquisar e explorar informação e leituras de acordo com os seus interesses pessoais.</p>
+        <p>Estamos igualmente de portas abertas a toda a comunidade que nos queira visitar.</p>
+        <div class="signature">Paula Ribeiro</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="services-heading">
+      <span class="section-kicker">O QUE FAZEMOS</span>
+      <h2>Os nossos serviços</h2>
+      <p>Descobre tudo aquilo que podes encontrar e fazer na Biblioteca Escolar de Manhente.</p>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card featured">
+        <div class="service-icon">🔎</div>
+        <div><span>INFORMAÇÃO</span><h3>Pesquisar e encontrar</h3>
+        <p>Fornecimento de informação de referência (incluindo apoio aos trabalhos de casa)</p>
+        <p>Formação de utilizadores</p>
+        <p>Apoio aos utilizadores (presencial e online)</p></div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🧠</div>
+        <div><span>LITERACIAS</span><h3>Aprender a aprender</h3>
+        <p>Formação nas diferentes literacias (media, informação, leitura)</p>
+        <p>Iniciativas dinâmicas de leitura e escrita</p></div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">📖</div>
+        <div><span>LEITURA</span><h3>Descobrir livros</h3>
+        <p>Aconselhamento de leitura (individual e em grupo)</p>
+        <p>Serviço de empréstimo aos utilizadores</p>
+        <p>Encorajamento ao uso da coleção em todos os formatos</p></div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">💻</div>
+        <div><span>TECNOLOGIA</span><h3>Recursos digitais</h3>
+        <p>Empréstimo de tablets para sala de aula e trabalho autónomo</p>
+        <p>Disponibilização de computadores para uso no espaço da BE</p></div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🛠️</div>
+        <div><span>CRIATIVIDADE</span><h3>Makerspace</h3>
+        <p>Organização de oficinas e atividades criativas na área Makerspace</p>
+        <p>Organização de espetáculos para a comunidade, em articulação com as diferentes áreas disciplinares</p></div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🎤</div>
+        <div><span>PARTILHA</span><h3>Encontros e formação</h3>
+        <p>Organização de palestras e sessões formativas em colaboração com entidades externas e com as diferentes áreas disciplinares</p>
+        <p>Facilitação do acesso a recursos exteriores à coleção de referência (empréstimo interbibliotecas)</p></div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">📚</div>
+        <div><span>COLEÇÃO</span><h3>Cuidar e renovar</h3>
+        <p>Gestão técnica da coleção e aquisição de novos títulos</p></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="sobre-final">
+    <div class="final-icon">💚</div>
+    <div>
+      <span>UMA BIBLIOTECA PARA TODOS</span>
+      <h2>Entra, explora e fica à vontade.</h2>
+      <p>A BEMA está de portas abertas para alunos, professores e toda a comunidade.</p>
+    </div>
+  </section>
+
+</main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>

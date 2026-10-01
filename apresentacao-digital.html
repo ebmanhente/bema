@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Como fazer uma apresentação digital | BEMA</title>
+<meta name="description" content="Guia da Biblioteca Escolar de Manhente para elaboração de uma apresentação em suporte digital.">
+<link rel="stylesheet" href="css/estilo.css">
+
+<style>
+.presentation-page{max-width:1160px;margin:auto}
+.guide-hero{
+ display:flex;align-items:center;gap:23px;padding:34px 38px;margin-bottom:24px;
+ border-radius:24px;color:#fff;background:linear-gradient(125deg,#155f40,#238c5c);
+ box-shadow:0 14px 30px rgba(21,95,64,.16)
+}
+.hero-icon{
+ width:68px;height:68px;min-width:68px;border-radius:19px;
+ display:flex;align-items:center;justify-content:center;
+ background:rgba(255,255,255,.15);font-size:31px
+}
+.eyebrow,.side-label,.pdf-label{
+ font-size:.68rem;font-weight:900;letter-spacing:.13em
+}
+.eyebrow{opacity:.78}
+.guide-hero h1{font-size:clamp(1.8rem,3.5vw,2.6rem);margin:5px 0 8px}
+.guide-hero p{margin:0;max-width:780px;font-size:1.05rem;line-height:1.55;opacity:.95}
+
+.golden-rule{
+ display:flex;align-items:center;gap:16px;margin-bottom:34px;padding:18px 22px;
+ border-radius:16px;background:#eef7f1;border:1px solid #d8eae0
+}
+.rule-icon{font-size:25px}
+.golden-rule strong{display:block;color:#155f40;font-size:1rem}
+.golden-rule span{display:block;color:#66727a;margin-top:3px;font-size:.9rem}
+
+.content-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;align-items:start}
+.section-heading{margin-bottom:17px}
+.section-heading span{font-size:.67rem;font-weight:900;letter-spacing:.13em;color:#21885a}
+.section-heading h2{margin:4px 0 0;color:#193f30;font-size:1.5rem}
+
+.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.guide-card{
+ display:flex;gap:14px;padding:18px;background:#fff;border:1px solid #e1e9e4;
+ border-radius:16px;box-shadow:0 4px 13px rgba(0,0,0,.045)
+}
+.guide-card .num{
+ width:36px;height:36px;min-width:36px;border-radius:11px;
+ display:flex;align-items:center;justify-content:center;
+ background:#e8f4ed;color:#176b45;font-weight:900;font-size:.76rem
+}
+.guide-card h3{margin:0 0 5px;color:#1c4935;font-size:1rem}
+.guide-card p{margin:0;color:#68737a;font-size:.87rem;line-height:1.5}
+
+.structure-box{
+ padding:23px;background:#193f30;color:#fff;border-radius:19px;
+ box-shadow:0 10px 24px rgba(20,63,48,.13)
+}
+.structure-box .side-label{color:#9fd4b8}
+.structure-box h2{font-size:1.3rem;margin:5px 0 20px}
+.structure-item{display:flex;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.13)}
+.structure-item b{
+ width:28px;height:28px;min-width:28px;border-radius:50%;
+ background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;
+ font-size:.68rem
+}
+.structure-item strong{font-size:.9rem}
+.structure-item p{margin:3px 0 0;color:#d1e1d8;font-size:.79rem;line-height:1.4}
+.rule-mini{margin-top:14px;padding:13px;border-radius:11px;background:rgba(255,255,255,.09)}
+.rule-mini strong{display:block;font-size:.78rem;color:#9fd4b8}
+.rule-mini span{display:block;margin-top:3px;font-size:.78rem;line-height:1.4;color:#e0ebe5}
+
+.do-dont{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.do,.dont{display:flex;gap:14px;padding:21px;border-radius:17px;border:1px solid #e1e8e3}
+.do{background:#f0f8f3}
+.dont{background:#faf5f4}
+.circle{
+ width:34px;height:34px;min-width:34px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900
+}
+.do .circle{background:#d5eddf;color:#197149}
+.dont .circle{background:#f2dddd;color:#a04444}
+.do h2,.dont h2{margin:0 0 8px;font-size:1.08rem}
+.do h2{color:#176b45}.dont h2{color:#994040}
+.do ul,.dont ul{margin:0;padding-left:18px;color:#5f696f;font-size:.87rem;line-height:1.65}
+
+.final-check{
+ display:flex;align-items:center;gap:15px;margin-top:20px;padding:20px 22px;
+ border-left:5px solid #21895a;background:#edf7f1;border-radius:13px
+}
+.check-icon{
+ width:37px;height:37px;min-width:37px;border-radius:50%;
+ background:#21895a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900
+}
+.final-check h2{margin:0 0 3px;color:#176b45;font-size:1.05rem}
+.final-check p{margin:0;color:#606c73;font-size:.9rem}
+
+.original-pdf{
+ margin-top:22px;padding:22px 24px;border-radius:17px;
+ background:#f7f8f7;border:1px solid #e2e7e4;
+ display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.pdf-label{color:#77817d}
+.original-pdf h2{margin:4px 0;color:#214a37;font-size:1.1rem}
+.original-pdf p{margin:0;color:#6a7378;font-size:.86rem}
+.pdf-button{
+ display:inline-flex;align-items:center;white-space:nowrap;padding:12px 16px;
+ border-radius:10px;background:#176b45;color:#fff!important;text-decoration:none!important;
+ font-weight:800;font-size:.85rem
+}
+.pdf-button:hover{background:#125638}
+
+@media(max-width:900px){
+ .content-layout{grid-template-columns:1fr}
+ .structure-box{order:2}
+}
+@media(max-width:650px){
+ .guide-hero{padding:26px 21px;border-radius:19px}
+ .hero-icon{width:54px;height:54px;min-width:54px;font-size:26px}
+ .guide-grid,.do-dont{grid-template-columns:1fr}
+ .original-pdf{align-items:flex-start;flex-direction:column}
+ .pdf-button{width:100%;justify-content:center}
+}
+
+.visual-intro{
+ display:grid;grid-template-columns:42% 58%;min-height:285px;margin:0 0 30px;
+ border-radius:21px;overflow:hidden;background:#f1f7f3;border:1px solid #dce9e1
+}
+.visual-main{
+ background:#e4eee8;display:flex;align-items:center;justify-content:center;
+ min-height:285px;overflow:hidden
+}
+.visual-main img{
+ width:100%;height:100%;object-fit:cover;object-position:center top;
+ mix-blend-mode:multiply
+}
+.visual-message{padding:30px 34px;display:flex;flex-direction:column;justify-content:center}
+.visual-label,.visual-break span{
+ color:#21885a;font-size:.68rem;font-weight:900;letter-spacing:.13em
+}
+.visual-message h2{margin:6px 0 9px;color:#194633;font-size:1.55rem;line-height:1.2}
+.visual-message p{margin:0;color:#68737a;line-height:1.55;max-width:500px}
+.mini-slides{display:flex;gap:10px;margin-top:20px}
+.mini-slide{
+ display:flex;align-items:center;gap:7px;padding:9px 11px;border-radius:9px;
+ background:#fff;border:1px solid #dce8e1;color:#315644;font-size:.78rem
+}
+.mini-slide b{
+ width:24px;height:24px;border-radius:7px;background:#21885a;color:#fff;
+ display:flex;align-items:center;justify-content:center;font-size:.64rem
+}
+
+.visual-break{
+ display:grid;grid-template-columns:30% 70%;min-height:190px;margin:30px 0 18px;
+ border-radius:18px;overflow:hidden;background:#193f30;color:#fff
+}
+.break-image{overflow:hidden;background:#e7efe9;display:flex;align-items:center;justify-content:center}
+.break-image img{
+ width:100%;height:100%;object-fit:cover;object-position:center;
+ mix-blend-mode:multiply
+}
+.break-copy{padding:27px 31px;display:flex;flex-direction:column;justify-content:center}
+.break-copy h2{margin:5px 0 7px;font-size:1.3rem;line-height:1.25}
+.break-copy p{margin:0;color:#d4e4db;line-height:1.5;max-width:600px}
+
+@media(max-width:700px){
+ .visual-intro{grid-template-columns:1fr}
+ .visual-main{height:210px;min-height:210px}
+ .visual-message{padding:23px}
+ .visual-break{grid-template-columns:1fr}
+ .break-image{height:175px}
+ .break-copy{padding:24px}
+ .mini-slides{flex-wrap:wrap}
+}
+
+</style>
+
+</head>
+<body>
+<header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header>
+
+<main class="page presentation-page">
+
+<section class="guide-hero">
+  <div class="hero-icon">🎤</div>
+  <div>
+    <span class="eyebrow">BEMA · GUIA PARA ALUNOS</span>
+    <h1>Como fazer uma boa apresentação digital?</h1>
+    <p>Um guia simples para preparares os teus diapositivos e apresentares o teu trabalho com clareza e confiança.</p>
+  </div>
+</section>
+
+<section class="visual-intro">
+  <div class="visual-main">
+    <img src="https://openclipart.org/image/2000px/227551" alt="Aluno a fazer uma apresentação na sala de aula">
+  </div>
+  <div class="visual-message">
+    <span class="visual-label">APRESENTAR É COMUNICAR</span>
+    <h2>Os teus diapositivos devem ajudar-te a explicar.</h2>
+    <p>Uma boa apresentação não é um texto para ler. É uma forma visual de apoiar aquilo que estás a dizer.</p>
+    <div class="mini-slides">
+      <div class="mini-slide"><b>01</b><span>Título claro</span></div>
+      <div class="mini-slide"><b>02</b><span>Ideias-chave</span></div>
+      <div class="mini-slide"><b>03</b><span>Imagem útil</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="golden-rule">
+  <div class="rule-icon">💬</div>
+  <div>
+    <strong>O texto suporta a comunicação oral — não a substitui.</strong>
+    <span>Não leias os diapositivos. Usa-os para apoiar aquilo que estás a explicar.</span>
+  </div>
+</section>
+
+<div class="content-layout">
+  <section>
+    <div class="section-heading">
+      <span>PASSO A PASSO</span>
+      <h2>Prepara a tua apresentação</h2>
+    </div>
+    <div class="guide-grid">
+<article class="guide-card">
+  <div class="num">01</div>
+  <div>
+    <h3>Antes de começares</h3>
+    <p>Reúne o material necessário: pesquisa, leituras, informação selecionada, imagens e outros elementos que vais precisar para a apresentação.</p>
+  </div>
+</article>
+
+<article class="guide-card">
+  <div class="num">02</div>
+  <div>
+    <h3>Planeia os diapositivos</h3>
+    <p>Organiza primeiro o conteúdo. Define o que queres dizer e distribui a informação pelos diapositivos antes de começares a criar a apresentação.</p>
+  </div>
+</article>
+
+<article class="guide-card">
+  <div class="num">03</div>
+  <div>
+    <h3>Cria uma estrutura clara</h3>
+    <p>Começa com um diapositivo de rosto, apresenta depois um sumário ou resumo, desenvolve o tema e termina com uma conclusão.</p>
+  </div>
+</article>
+
+<article class="guide-card">
+  <div class="num">04</div>
+  <div>
+    <h3>Usa pouco texto</h3>
+    <p>Prefere tópicos e palavras-chave em vez de frases longas. O diapositivo deve apoiar a tua comunicação oral, não substituí-la.</p>
+  </div>
+</article>
+
+<article class="guide-card">
+  <div class="num">05</div>
+  <div>
+    <h3>Escolhe bem as imagens</h3>
+    <p>Usa imagens e gráficos para ilustrar ideias e não apenas para criar um efeito visual.</p>
+  </div>
+</article>
+
+<article class="guide-card">
+  <div class="num">06</div>
+  <div>
+    <h3>Cuida da leitura</h3>
+    <p>Usa tipos de letra simples, tamanhos legíveis, espaçamento adequado e cores que contrastem com o fundo.</p>
+  </div>
+</article>
+
+<article class="guide-card">
+  <div class="num">07</div>
+  <div>
+    <h3>Evita distrações</h3>
+    <p>Não uses animações ou efeitos distrativos. Prefere transições suaves e evita excesso de elementos no mesmo diapositivo.</p>
+  </div>
+</article>
+
+<article class="guide-card">
+  <div class="num">08</div>
+  <div>
+    <h3>Revê tudo</h3>
+    <p>Verifica ortografia, construção frásica, repetições, pontuação, sequência das animações e funcionamento das hiperligações e aplicações multimédia.</p>
+  </div>
+</article>
+
+<article class="guide-card">
+  <div class="num">09</div>
+  <div>
+    <h3>Treina antes</h3>
+    <p>Testa previamente a apresentação e treina a forma como vais comunicar. Fala de forma clara, audível e com entusiasmo.</p>
+  </div>
+</article>
+</div>
+  </section>
+
+  <aside class="structure-box">
+    <span class="side-label">ESTRUTURA</span>
+    <h2>Os diapositivos essenciais</h2>
+
+    <div class="structure-item">
+      <b>01</b><div><strong>Rosto</strong><p>Título, subtítulo, autor, disciplina, professor e data.</p></div>
+    </div>
+    <div class="structure-item">
+      <b>02</b><div><strong>Sumário / resumo</strong><p>Apresenta brevemente os assuntos que vais abordar.</p></div>
+    </div>
+    <div class="structure-item">
+      <b>03</b><div><strong>Corpo do trabalho</strong><p>Distribui a informação pelas diferentes partes do tema.</p></div>
+    </div>
+    <div class="structure-item">
+      <b>04</b><div><strong>Conclusão</strong><p>Sintetiza as ideias principais e deixa tópicos para reflexão.</p></div>
+    </div>
+
+    <div class="rule-mini">
+      <strong>Regra prática</strong>
+      <span>O guia recomenda um máximo de <b>4 a 6 tópicos</b> por diapositivo.</span>
+    </div>
+  </aside>
+</div>
+
+<section class="do-dont">
+  <div class="do">
+    <div class="circle">✓</div>
+    <div>
+      <h2>Usa</h2>
+      <ul>
+        <li>Tópicos e palavras-chave</li>
+        <li>4 a 6 tópicos por diapositivo</li>
+        <li>Tipos de letra simples</li>
+        <li>Tamanhos de letra legíveis</li>
+        <li>Cores com bom contraste</li>
+        <li>Espaçamento que facilite a leitura</li>
+      </ul>
+    </div>
+  </div>
+  <div class="dont">
+    <div class="circle">×</div>
+    <div>
+      <h2>Evita</h2>
+      <ul>
+        <li>Texto corrido e demasiado extenso</li>
+        <li>Cores demasiado suaves</li>
+        <li>Demasiados estilos de letra</li>
+        <li>Palavras em maiúsculas sem necessidade</li>
+        <li>Animações e efeitos distrativos</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="final-check">
+  <div class="check-icon">✓</div>
+  <div>
+    <h2>Antes de apresentares</h2>
+    <p><strong>Revê. Testa. Treina.</strong> Confirma se tudo funciona e pratica a apresentação antes do momento final.</p>
+  </div>
+</section>
+
+<section class="original-pdf">
+  <div>
+    <span class="pdf-label">DOCUMENTO ORIGINAL</span>
+    <h2>Queres consultar o guia completo?</h2>
+    <p>O conteúdo desta página foi organizado a partir do guia da Biblioteca Escolar de Manhente.</p>
+  </div>
+  <a href="https://3be7a5ab-31bb-41ae-a1e9-7a03033ee2ce.filesusr.com/ugd/726444_8bf2a58b67e248779b74c23343103f3d.pdf" target="_blank" rel="noopener" class="pdf-button">📄 Abrir PDF original ↗</a>
+</section>
+
+</main>
+
+<footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer>
+<script src="js/script.js"></script>
+</body>
+</html>

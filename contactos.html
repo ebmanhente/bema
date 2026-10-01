@@ -1,12 +1,122 @@
-<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contactos | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css"></head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page "><div class="title"><h1>Contacte-nos!</h1></div><div class="contact-grid">
-<div><h2>Telefone</h2><p class="bigtext">253 849 410</p><h2>Email</h2><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a></p><h2>Morada</h2><p>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div>
-<form class="contact-form" data-form-type="contacto" onsubmit="return submitBemaForm(this)">
-<label>Nome<input name="nome" required type="text" autocomplete="name"></label>
-<label>Sobrenome<input name="sobrenome" type="text" autocomplete="family-name"></label>
-<label>Email<input name="email" required type="email" autocomplete="email"></label>
-<label>Mensagem<textarea name="mensagem" required rows="6" placeholder="Escreve aqui a tua mensagem..."></textarea></label>
-<input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp">
-<button class="btn" type="submit">Enviar</button>
-<p class="form-status" aria-live="polite"></p>
-</form>
-</div></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contactos | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css">
+<style>
+.contactos-page{max-width:1180px;margin:0 auto;padding:32px 22px 65px}
+.contact-hero{position:relative;overflow:hidden;min-height:235px;border-radius:27px;padding:43px 50px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(125deg,#0c5f49,#148a66 62%,#4cae83);color:#fff;box-shadow:0 16px 38px rgba(18,82,63,.15)}
+.contact-hero:before{content:"";position:absolute;width:370px;height:370px;border-radius:50%;right:-105px;top:-170px;background:rgba(255,255,255,.08)}
+.contact-hero>div:first-child{position:relative;z-index:2;max-width:700px}
+.contact-kicker,.section-kicker{font-size:.72rem;font-weight:800;letter-spacing:.15em}
+.contact-kicker{color:#c9eddf}.contact-hero h1{font-size:clamp(2.6rem,6vw,4.1rem);line-height:1;margin:10px 0 13px;letter-spacing:-.035em}.contact-hero h1 span{color:#d7f3e7}
+.contact-hero p{font-size:1.05rem;line-height:1.6;color:rgba(255,255,255,.91);margin:0;max-width:620px}.contact-hero-icon{position:relative;z-index:2;font-size:6rem;margin-right:45px;transform:rotate(-8deg);filter:drop-shadow(0 10px 10px rgba(0,0,0,.16))}
+.contact-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:27px;margin-top:34px}
+.contact-info{padding:15px 5px}.info-heading{margin-bottom:23px}.section-kicker{color:#16835f}.info-heading h2,.form-top h2{font-size:1.9rem;line-height:1.1;color:#193a31;margin:8px 0 0}
+.contact-card{position:relative;display:flex;align-items:center;gap:16px;padding:19px 21px;margin-bottom:13px;border:1px solid #e0e9e5;border-radius:17px;background:#fff;text-decoration:none;color:inherit;box-shadow:0 6px 18px rgba(22,55,44,.055);transition:transform .2s,box-shadow .2s,border-color .2s}
+a.contact-card:hover{transform:translateX(4px);border-color:#afd4c5;box-shadow:0 10px 24px rgba(22,55,44,.1)}
+.contact-icon{width:48px;height:48px;flex:none;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.45rem;background:#eaf5f0;color:#137655}
+.contact-card>div:nth-child(2){min-width:0;display:flex;flex-direction:column;gap:3px}.contact-card span{font-size:.62rem;font-weight:800;letter-spacing:.12em;color:#16835f}.contact-card strong{font-size:.98rem;color:#24473c;overflow-wrap:anywhere}.contact-card small{font-size:.78rem;line-height:1.45;color:#77827e}.arrow{margin-left:auto;color:#16835f;font-size:1.1rem}.address-card{align-items:flex-start}.place{background:#f0f5e9;color:#5b7d39}
+.contact-note{display:flex;gap:13px;align-items:center;margin-top:21px;padding:18px 19px;border-radius:17px;background:#f1f7f4;border:1px solid #dcebe4}.contact-note>span{font-size:1.8rem}.contact-note p{font-size:.82rem;line-height:1.5;color:#65736e;margin:0}.contact-note strong{color:#24483c}
+.contact-form-wrap{background:#fff;border:1px solid #dfe8e4;border-radius:24px;padding:31px 32px;box-shadow:0 12px 30px rgba(22,55,44,.08)}
+.form-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.form-envelope{width:53px;height:53px;border-radius:15px;background:#eaf5f0;display:flex;align-items:center;justify-content:center;font-size:1.55rem}
+.contact-form{display:flex;flex-direction:column;gap:16px}.contact-form label{display:flex;flex-direction:column;gap:7px;font-size:.76rem;font-weight:800;color:#345248}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.contact-form input,.contact-form textarea{width:100%;box-sizing:border-box;border:1px solid #d9e4df;border-radius:12px;background:#fbfdfc;padding:12px 14px;font:inherit;font-size:.91rem;color:#25453b;outline:none;transition:border-color .2s,box-shadow .2s,background .2s}
+.contact-form input{height:46px}.contact-form textarea{resize:vertical;min-height:145px;line-height:1.5}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#a0aaa6;font-weight:400}.contact-form input:focus,.contact-form textarea:focus{border-color:#4ba382;background:#fff;box-shadow:0 0 0 3px rgba(42,143,108,.1)}
+.contact-submit{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;border:0!important;border-radius:12px!important;padding:13px 18px!important;cursor:pointer;font-weight:800;transition:transform .2s,box-shadow .2s}.contact-submit b{font-size:1.15rem}.contact-submit:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(18,105,77,.18)}
+.form-status{min-height:20px;margin:0;text-align:center;font-size:.82rem}.hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important}
+@media(max-width:850px){.contact-hero{padding:38px 35px}.contact-hero-icon{margin-right:5px}.contact-layout{grid-template-columns:1fr}.contact-info{padding:8px 0}}
+@media(max-width:600px){.contactos-page{padding:18px 14px 48px}.contact-hero{min-height:230px;padding:31px 24px;border-radius:21px}.contact-hero-icon{display:none}.contact-hero h1{font-size:3rem}.contact-hero p{font-size:.96rem}.contact-layout{margin-top:25px}.info-heading h2,.form-top h2{font-size:1.6rem}.contact-form-wrap{padding:24px 19px;border-radius:20px}.form-row{grid-template-columns:1fr}.contact-card{padding:17px 16px}.contact-card strong{font-size:.91rem}}
+</style>
+
+</head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page contactos-page">
+
+  <section class="contact-hero">
+    <div>
+      <span class="contact-kicker">BEMA · ESTAMOS AQUI</span>
+      <h1>Contacte-nos<span>!</span></h1>
+      <p>Tem uma dúvida, uma sugestão ou simplesmente quer falar connosco? Envie-nos uma mensagem.</p>
+    </div>
+    <div class="contact-hero-icon" aria-hidden="true">✉️</div>
+  </section>
+
+  <section class="contact-layout">
+
+    <div class="contact-info">
+      <div class="info-heading">
+        <span class="section-kicker">FALE CONNOSCO</span>
+        <h2>Como nos pode encontrar</h2>
+      </div>
+
+      <a class="contact-card" href="tel:253849410">
+        <div class="contact-icon phone">☎</div>
+        <div>
+          <span>TELEFONE</span>
+          <strong>253 849 410</strong>
+          <small>Ligue-nos diretamente</small>
+        </div>
+        <b class="arrow">↗</b>
+      </a>
+
+      <a class="contact-card" href="mailto:bibliotecademanhente@aeaf.edu.pt">
+        <div class="contact-icon mail">✉</div>
+        <div>
+          <span>EMAIL</span>
+          <strong>bibliotecademanhente@aeaf.edu.pt</strong>
+          <small>Envie-nos uma mensagem</small>
+        </div>
+        <b class="arrow">↗</b>
+      </a>
+
+      <div class="contact-card address-card">
+        <div class="contact-icon place">⌖</div>
+        <div>
+          <span>MORADA</span>
+          <strong>Biblioteca Escolar de Manhente</strong>
+          <small>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</small>
+        </div>
+      </div>
+
+      <div class="contact-note">
+        <span>📚</span>
+        <p><strong>A BEMA é a tua biblioteca.</strong><br>Estamos disponíveis para ouvir ideias, sugestões e dúvidas.</p>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <div class="form-top">
+        <div>
+          <span class="section-kicker">ENVIA UMA MENSAGEM</span>
+          <h2>Fale connosco</h2>
+        </div>
+        <span class="form-envelope" aria-hidden="true">💬</span>
+      </div>
+
+      <form class="contact-form" data-form-type="contacto" onsubmit="return submitBemaForm(this)">
+        <div class="form-row">
+          <label>Nome
+            <input name="nome" required type="text" autocomplete="name" placeholder="O teu nome">
+          </label>
+          <label>Sobrenome
+            <input name="sobrenome" type="text" autocomplete="family-name" placeholder="Sobrenome">
+          </label>
+        </div>
+
+        <label>Email
+          <input name="email" required type="email" autocomplete="email" placeholder="nome@exemplo.pt">
+        </label>
+
+        <label>Mensagem
+          <textarea name="mensagem" required rows="6" placeholder="Escreve aqui a tua mensagem..."></textarea>
+        </label>
+
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp">
+
+        <button class="btn contact-submit" type="submit">
+          <span>Enviar mensagem</span>
+          <b>→</b>
+        </button>
+
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+
+  </section>
+</main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
