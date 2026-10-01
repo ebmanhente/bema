@@ -7,11 +7,35 @@
 .card{background:#fff;border:1px solid #e3ebe8;border-radius:20px;padding:26px;margin:16px 0;box-shadow:0 7px 22px #213e3a0b}.card h2{margin:0 0 18px;color:var(--d);font-size:1.35rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.f{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}.f label,.q{font-weight:700;color:var(--i);font-size:.92rem}.f input,.f textarea{box-sizing:border-box;width:100%;border:1px solid #ccd9d5;border-radius:10px;padding:11px 12px;background:#fbfdfc;font:inherit}.f textarea{min-height:100px;resize:vertical}.checks{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0}.checks label{background:var(--l);border-radius:999px;padding:8px 12px;font-size:.88rem}.challenge{background:var(--l)}.identity{background:var(--c)}
 .stars{display:flex;flex-direction:row-reverse;justify-content:flex-end}.stars input{display:none}.stars label{font-size:2rem;color:#ccd6d3;cursor:pointer}.stars label:hover,.stars label:hover~label,.stars input:checked~label{color:#d3a52d}.draw{height:250px;border:2px dashed #b9cec8;border-radius:16px;display:grid;place-items:center;color:#84918e;text-align:center}
 @media(max-width:700px){.g{padding:20px 13px 45px}.hero{padding:30px 23px}.grid{grid-template-columns:1fr}.full{grid-column:auto}.card{padding:21px}}
-@media print{header,footer,.actions{display:none!important}.g{max-width:none;padding:0}.hero{background:#fff!important;color:#111!important;border-bottom:2px solid var(--b);padding:20px}.card{box-shadow:none;break-inside:avoid;margin:9px 0;padding:16px}}
+@media print{
+  @page{size:A4;margin:12mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  header,footer,.actions{display:none!important}
+  body{background:#fff!important;color:#111!important}
+  .g{max-width:none;padding:0}
+  .hero{background:#fff!important;color:#111!important;border-bottom:2px solid var(--b);padding:10px 0 14px;margin-bottom:10px}
+  .hero h1{font-size:2rem;margin:4px 0 6px}
+  .hero p{font-size:.9rem;margin:0}
+  .card{box-shadow:none;break-inside:avoid;page-break-inside:avoid;margin:8px 0;padding:12px;border:1px solid #ccd9d5}
+  .card h2{font-size:1.15rem;margin-bottom:10px}
+  .f input,.f textarea{background:#fff!important;color:#111!important;border:1px solid #999}
+  .f textarea{min-height:70px}
+  .draw{height:170px}
+  .checks label{background:#f3f6f5!important;border:1px solid #ccd9d5}
+  .stars label{color:#999}
+  .stars input:checked~label{color:#d3a52d}
+  input[type="checkbox"],input[type="radio"]{accent-color:#397f76}
+  input[type="date"]{color:#111}
+  /* Most browsers print form values naturally; keep controls visible. */
+}
 </style></head><body>
 <header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div>
 <nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header>
-<main class="g"><section class="hero"><div class="tag">BEMA · BIBLIOTECA ESCOLAR DE MANHENTE</div><h1>📖 Guião de leitura</h1><p>Leste um livro? Agora é a tua vez de falar sobre ele. Preenche o guião, pensa sobre a história e regista aquilo que mais te marcou.</p><div class="actions"><button class="btn" onclick="window.print()">🖨️ Imprimir guião</button><button class="btn alt" onclick="limpar()">↺ Limpar respostas</button></div></section>
+<main class="g"><section class="hero"><div class="tag">BEMA · BIBLIOTECA ESCOLAR DE MANHENTE</div><h1>📖 Guião de leitura</h1><p>Leste um livro? Agora é a tua vez de falar sobre ele. Preenche o guião, pensa sobre a história e regista aquilo que mais te marcou.</p><div class="actions">
+<button class="btn" onclick="imprimirPreenchido()">🖨️ Imprimir preenchido</button>
+<button class="btn" onclick="imprimirBranco()">📄 Imprimir guião em branco</button>
+<button class="btn alt" onclick="limpar()">↺ Limpar respostas</button>
+</div></section>
 <form id="form">
 <section class="card identity"><h2>👤 Antes de começar</h2><div class="grid"><div class="f"><label>Nome</label><input></div><div class="f"><label>Turma</label><input></div><div class="f"><label>Data</label><input type="date"></div></div></section>
 <section class="card"><h2>📚 1. O livro</h2><div class="grid"><div class="f full"><label>Título da obra</label><input></div><div class="f"><label>Autor(a)</label><input></div><div class="f"><label>Ilustrador(a)</label><input></div><div class="f"><label>Editora</label><input></div><div class="f"><label>Ano de publicação</label><input></div></div></section>
@@ -25,4 +49,62 @@
 <section class="card challenge"><h2>💚 Desafio BEMA</h2><div class="f"><label>Escolhe uma frase do livro que gostarias de guardar.</label><textarea></textarea></div><div class="f" style="margin-top:14px"><label>O que esta leitura te fez pensar?</label><textarea></textarea></div></section>
 </form></main>
 <footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer>
-<script src="js/script.js"></script><script>function limpar(){if(confirm("Queres limpar todas as respostas do guião?"))document.getElementById("form").reset()}</script></body></html>
+<script src="js/script.js"></script>
+<script>
+let modoImpressaoBranco = false;
+let valoresAntesDaImpressao = [];
+
+function guardarRespostas(){
+  valoresAntesDaImpressao = Array.from(document.querySelectorAll('#form input, #form textarea')).map(function(el){
+    return {
+      el: el,
+      value: el.value,
+      checked: el.checked
+    };
+  });
+}
+
+function restaurarRespostas(){
+  valoresAntesDaImpressao.forEach(function(item){
+    item.el.value = item.value;
+    item.el.checked = item.checked;
+  });
+  valoresAntesDaImpressao = [];
+}
+
+function prepararImpressao(){
+  if(modoImpressaoBranco){
+    document.querySelectorAll('#form input, #form textarea').forEach(function(el){
+      el.value = '';
+      el.checked = false;
+    });
+  }
+}
+
+function imprimirPreenchido(){
+  modoImpressaoBranco = false;
+  window.print();
+}
+
+function imprimirBranco(){
+  guardarRespostas();
+  modoImpressaoBranco = true;
+  window.print();
+}
+
+window.addEventListener('beforeprint', prepararImpressao);
+
+window.addEventListener('afterprint', function(){
+  if(modoImpressaoBranco){
+    restaurarRespostas();
+    modoImpressaoBranco = false;
+  }
+});
+
+function limpar(){
+  if(confirm("Queres limpar todas as respostas do guião?")){
+    document.getElementById("form").reset();
+  }
+}
+</script>
+</body></html>
