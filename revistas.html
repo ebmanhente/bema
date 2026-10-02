@@ -746,6 +746,36 @@ main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
   }
 }
 </style>
+<style id="bema-header-home-system">
+/* ===== CABEÇALHO BEMA + EB MANHENTE ===== */
+.bema-topbar{max-width:1180px !important;padding:14px 24px !important;gap:24px !important;}
+.bema-brand{display:flex !important;align-items:center;min-width:0;}
+.bema-brand img{display:block;width:235px;height:auto;max-height:88px;object-fit:contain;}
+.school-identity{margin-left:auto;display:flex;align-items:center;gap:12px;padding:7px 13px 7px 9px;border:1px solid #dfe9e6;border-radius:16px;background:#fbfdfc;color:#245e58;text-decoration:none;transition:.18s;}
+.school-identity:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 6px 18px rgba(33,62,58,.08);border-color:#b9d9d3;}
+.school-identity img{width:62px;height:62px;object-fit:contain;flex:none;}
+.school-identity span{display:flex;flex-direction:column;gap:2px;}
+.school-identity strong{font-size:1rem;line-height:1.1;}
+.school-identity small{font-size:.72rem;color:#66706e;line-height:1.2;}
+.bema-welcome{grid-template-columns:1fr;max-width:900px;}
+@media(max-width:800px){
+ .bema-topbar{padding:10px 16px !important;gap:10px !important;}
+ .bema-brand img{width:190px;max-height:72px;}
+ .school-identity{padding:5px 8px;gap:7px;border-radius:12px;}
+ .school-identity img{width:45px;height:45px;}
+ .school-identity strong{font-size:.82rem;}
+ .school-identity small{display:none;}
+}
+@media(max-width:520px){
+ .bema-brand img{width:155px;max-height:60px;}
+ .school-identity img{width:38px;height:38px;}
+ .school-identity strong{font-size:.7rem;}
+ .school-identity{padding:4px;}
+}
+
+.bema-brand{display:flex!important;align-items:center!important;visibility:visible!important;opacity:1!important;}
+.bema-brand img{display:block!important;width:235px!important;height:auto!important;max-height:88px!important;object-fit:contain!important;visibility:visible!important;opacity:1!important;}
+</style>
 </head>
 
 
@@ -757,281 +787,24 @@ main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
      ===================================================== -->
 
 <header class="site-header">
-
-
-  <div class="topbar bema-topbar">
-
-
-    <!-- LOGO BEMA -->
-
-    <a
-      class="brand bema-brand"
-      href="index.html"
-      aria-label="BEMA — Biblioteca Escolar de Manhente">
-
-      <img
-        src="imagens/logo-bema.jpg"
-        alt="BEMA — Biblioteca Escolar de Manhente">
-
-    </a>
-
-
-    <!-- EB DE MANHENTE -->
-
-    <a
-      class="school-identity"
-      href="https://ebmanhente.github.io/ebm/"
-      target="_blank"
-      rel="noopener"
-      aria-label="Ir para o site da EB de Manhente">
-
-
-      <img
-        src="imagens/logo-eb-manhente.png"
-        alt="Escola Básica de Manhente">
-
-
-      <span>
-
-        <strong>
-          EB de Manhente
-        </strong>
-
-        <small>
-          Uma Escola Para a Vida ↗
-        </small>
-
-      </span>
-
-
-    </a>
-
-
-    <!-- MENU MOBILE -->
-
-    <button
-      class="hamb"
-      aria-label="Abrir menu">
-
-      ☰
-
-    </button>
-
-
-  </div>
-
-
-
-  <!-- PESQUISA -->
-
-  <div class="searchbar">
-
-    <input
-      id="siteSearch"
-      type="search"
-      placeholder="Pesquisa">
-
-    <button onclick="searchSite()">
-      Pesquisar
-    </button>
-
-  </div>
-
-
-
-  <!-- MENU PRINCIPAL -->
-
-  <nav class="mainnav">
-
-    <ul>
-
-
-      <li>
-
-        <a href="index.html">
-          Início
-        </a>
-
-      </li>
-
-
-      <!-- RECURSOS EDUCATIVOS -->
-
-      <li class="drop">
-
-        <a href="recursos.html">
-          Recursos Educativos
-        </a>
-
-
-        <ul>
-
-          <li>
-            <a href="ferramentas.html">
-              Ferramentas Digitais
-            </a>
-          </li>
-
-          <li>
-            <a href="guioes.html">
-              Guiões/Colaboração Alunos
-            </a>
-          </li>
-
-          <li>
-            <a href="rea.html">
-              Páginas de interesse/REA
-            </a>
-          </li>
-
-          <li>
-            <a href="cidadania.html">
-              Cidadania e Desenvolvimento
-            </a>
-          </li>
-
-        </ul>
-
-      </li>
-
-
-      <!-- LIVROS E LEITURAS -->
-
-      <li class="drop">
-
-        <a href="leituras.html">
-          Livros e leituras
-        </a>
-
-
-        <ul>
-
-          <li>
-            <a href="pnl.html">
-              PNL
-            </a>
-          </li>
-
-          <li>
-            <a href="digitais.html">
-              Livros digitais online
-            </a>
-          </li>
-
-          <li>
-            <a href="guioes-leitura.html">
-              Guiões de leitura
-            </a>
-          </li>
-
-          <li>
-            <a href="revistas.html">
-              Revistas e jornais
-            </a>
-          </li>
-
-        </ul>
-
-      </li>
-
-
-      <!-- CONTACTOS -->
-
-      <li>
-
-        <a href="contactos.html">
-          Contactos
-        </a>
-
-      </li>
-
-
-      <!-- MAIS -->
-
-      <li class="drop more">
-
-        <a href="#">
-          Mais
-        </a>
-
-
-        <ul>
-
-          <li>
-            <a href="sobre.html">
-              Sobre nós / Serviços
-            </a>
-          </li>
-
-          <li>
-            <a href="agenda.html">
-              Agenda
-            </a>
-          </li>
-
-          <li>
-            <a href="documentos.html">
-              Documentos
-            </a>
-          </li>
-
-          <li>
-            <a href="atividades.html">
-              Atividades/Notícias
-            </a>
-          </li>
-
-          <li>
-            <a href="projetos.html">
-              Projetos
-            </a>
-          </li>
-
-          <li>
-            <a href="atrevete.html">
-              Atreve-te!
-            </a>
-          </li>
-
-          <li>
-            <a href="cultura.html">
-              + Cultura
-            </a>
-          </li>
-
-          <li>
-            <a href="arquivo.html">
-              Arquivo
-            </a>
-          </li>
-
-          <li>
-            <a href="faq.html">
-              FAQ
-            </a>
-          </li>
-
-          <li>
-
-            <span
-              class="bema-link bema-link-disabled">
-
-              Galeria
-
-            </span>
-
-          </li>
-
-        </ul>
-
-      </li>
-
-
-    </ul>
-
-  </nav>
-
-
+ <div class="topbar bema-topbar">
+  <a class="brand bema-brand" href="index.html" aria-label="BEMA — Biblioteca Escolar de Manhente">
+    <img src="imagens/logo-bema.jpg" alt="BEMA — Biblioteca Escolar de Manhente">
+  </a>
+  <a class="school-identity" href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener" aria-label="Ir para o site da EB de Manhente">
+    <img src="imagens/logo-eb-manhente.png" alt="Escola Básica de Manhente">
+    <span><strong>EB de Manhente</strong><small>Uma Escola Para a Vida ↗</small></span>
+  </a>
+  <button class="hamb" aria-label="Abrir menu">☰</button>
+ </div>
+  <div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div>
+ <nav class="mainnav"><ul>
+  <li><a href="index.html">Início</a></li>
+  <li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li>
+  <li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li>
+  <li><a href="contactos.html">Contactos</a></li>
+  <li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="horario.html">Horário</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+ </ul></nav>
 </header>
 
 

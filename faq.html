@@ -21,4 +21,120 @@ main [class*="hero"] h6 {
   color: #ffffff !important;
 }
 </style>
-</head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page "><div class="title"><h1>FAQs</h1><p>BE Manhente</p></div><div class="faq"><details><summary>Como posso contactar a Biblioteca?</summary><p>Podes contactar-nos pelo telefone 253 849 410 ou pelo email bibliotecademanhente@aeaf.edu.pt.</p></details><details><summary>Posso pedir livros?</summary><p>Sim. A Biblioteca disponibiliza serviço de empréstimo aos utilizadores e aconselhamento de leitura.</p></details><details><summary>Posso usar os computadores e tablets?</summary><p>A Biblioteca disponibiliza computadores no espaço da BE e empréstimo de tablets para sala de aula e trabalho autónomo.</p></details><details><summary>Posso visitar a Biblioteca?</summary><p>Sim. A Biblioteca está de portas abertas à comunidade.</p></details></div></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+<style>
+.faq-page{max-width:1180px;margin:0 auto;padding:34px 22px 60px}
+.faq-hero{position:relative;overflow:hidden;min-height:245px;border-radius:26px;padding:42px 48px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#0b6b50,#15966d);color:#fff;box-shadow:0 14px 35px rgba(0,0,0,.12);margin-bottom:1.5rem}
+.faq-hero:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:-110px;top:-150px;background:rgba(255,255,255,.09)}
+.faq-hero .hero-content{position:relative;z-index:2;max-width:720px}.faq-hero .eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.14em}.faq-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:9px 0 12px;line-height:1;color:#fff!important}.faq-hero p{font-size:1.08rem;line-height:1.6;margin:0;max-width:680px;color:rgba(255,255,255,.92)}.faq-hero .hero-symbol{position:relative;z-index:2;font-size:6rem;filter:drop-shadow(0 10px 10px rgba(0,0,0,.15));transform:rotate(-5deg)}
+.faq-intro{background:linear-gradient(135deg,#f4f8f5,#eef7f5);border:1px solid #dcebe5;border-radius:22px;padding:1.2rem 1.4rem;margin-bottom:1.4rem;color:#4d625f}
+.faq-intro p{margin:0;font-size:1.05rem;line-height:1.6}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.faq-group{background:#fff;border:1px solid #e2ebe7;border-radius:22px;padding:1.2rem;box-shadow:0 6px 20px rgba(25,70,60,.06)}
+.faq-group h2{font-size:1.15rem;margin:.15rem 0 1rem;color:#245e58!important}
+.faq-group details{border-top:1px solid #e7eeeb;padding:.85rem 0}
+.faq-group details:first-of-type{border-top:0;padding-top:.1rem}
+.faq-group summary{cursor:pointer;font-weight:700;color:#245e58;list-style:none;padding-right:1.5rem;position:relative}
+.faq-group summary::-webkit-details-marker{display:none}
+.faq-group summary:after{content:'+';position:absolute;right:0;top:-.1rem;font-size:1.35rem;font-weight:400}
+.faq-group details[open] summary:after{content:'−'}
+.faq-group details p{color:#5d6b69;line-height:1.55;margin:.7rem 0 0}
+.faq-group a{color:#245e58;font-weight:700}
+.faq-note{margin-top:1.4rem;background:#fff6d9;border-radius:18px;padding:1rem 1.2rem;text-align:center;color:#245e58}
+@media(max-width:760px){.faq-grid{grid-template-columns:1fr}.faq-intro,.faq-group{border-radius:18px}.faq-hero{min-height:210px;padding:32px 26px}.faq-hero .hero-symbol{font-size:4.5rem}.faq-hero h1{font-size:clamp(2rem,9vw,3rem)}}
+</style>
+<style id="bema-header-home-system">
+/* ===== CABEÇALHO BEMA + EB MANHENTE ===== */
+.bema-topbar{max-width:1180px !important;padding:14px 24px !important;gap:24px !important;}
+.bema-brand{display:flex !important;align-items:center;min-width:0;}
+.bema-brand img{display:block;width:235px;height:auto;max-height:88px;object-fit:contain;}
+.school-identity{margin-left:auto;display:flex;align-items:center;gap:12px;padding:7px 13px 7px 9px;border:1px solid #dfe9e6;border-radius:16px;background:#fbfdfc;color:#245e58;text-decoration:none;transition:.18s;}
+.school-identity:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 6px 18px rgba(33,62,58,.08);border-color:#b9d9d3;}
+.school-identity img{width:62px;height:62px;object-fit:contain;flex:none;}
+.school-identity span{display:flex;flex-direction:column;gap:2px;}
+.school-identity strong{font-size:1rem;line-height:1.1;}
+.school-identity small{font-size:.72rem;color:#66706e;line-height:1.2;}
+.bema-welcome{grid-template-columns:1fr;max-width:900px;}
+@media(max-width:800px){
+ .bema-topbar{padding:10px 16px !important;gap:10px !important;}
+ .bema-brand img{width:190px;max-height:72px;}
+ .school-identity{padding:5px 8px;gap:7px;border-radius:12px;}
+ .school-identity img{width:45px;height:45px;}
+ .school-identity strong{font-size:.82rem;}
+ .school-identity small{display:none;}
+}
+@media(max-width:520px){
+ .bema-brand img{width:155px;max-height:60px;}
+ .school-identity img{width:38px;height:38px;}
+ .school-identity strong{font-size:.7rem;}
+ .school-identity{padding:4px;}
+}
+
+.bema-brand{display:flex!important;align-items:center!important;visibility:visible!important;opacity:1!important;}
+.bema-brand img{display:block!important;width:235px!important;height:auto!important;max-height:88px!important;object-fit:contain!important;visibility:visible!important;opacity:1!important;}
+</style>
+</head><body><header class="site-header">
+ <div class="topbar bema-topbar">
+  <a class="brand bema-brand" href="index.html" aria-label="BEMA — Biblioteca Escolar de Manhente">
+    <img src="imagens/logo-bema.jpg" alt="BEMA — Biblioteca Escolar de Manhente">
+  </a>
+  <a class="school-identity" href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener" aria-label="Ir para o site da EB de Manhente">
+    <img src="imagens/logo-eb-manhente.png" alt="Escola Básica de Manhente">
+    <span><strong>EB de Manhente</strong><small>Uma Escola Para a Vida ↗</small></span>
+  </a>
+  <button class="hamb" aria-label="Abrir menu">☰</button>
+ </div>
+  <div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div>
+ <nav class="mainnav"><ul>
+  <li><a href="index.html">Início</a></li>
+  <li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li>
+  <li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li>
+  <li><a href="contactos.html">Contactos</a></li>
+  <li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="horario.html">Horário</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+ </ul></nav>
+</header><main class="page faq-page">
+  <section class="faq-hero">
+    <div class="hero-content">
+      <span class="eyebrow">BEMA · INFORMAÇÃO ÚTIL</span>
+      <h1>Perguntas frequentes</h1>
+      <p>Respostas simples para usar e aproveitar a BEMA.</p>
+    </div>
+    <div class="hero-symbol" aria-hidden="true">❓</div>
+  </section>
+
+  <section class="faq-intro">
+    <p>A BEMA está aberta para <strong>ler, estudar, requisitar livros, jogar</strong> e passar algum tempo nos intervalos e ao longo do dia. Há algumas regras e novidades importantes a conhecer.</p>
+  </section>
+
+  <div class="faq-grid">
+    <section class="faq-group">
+      <h2>📚 Utilização da BEMA</h2>
+      <details open><summary>Posso visitar a Biblioteca?</summary><p>Sim. A BEMA está aberta para ler, estudar, requisitar livros, jogar e passar algum tempo nos intervalos e ao longo do dia.</p></details>
+      <details><summary>Tenho de registar a entrada durante os intervalos?</summary><p><strong>Não.</strong> Durante os intervalos, não precisas de registar a tua entrada na biblioteca. Só deves fazer o registo se ficares na BEMA para além do intervalo.</p><p>Em <strong>1 ou 2 dias por mês</strong>, todas as entradas serão registadas para podermos conhecer melhor a utilização da biblioteca.</p></details>
+      <details><summary>O que acontece se a BEMA estiver cheia?</summary><p>A BEMA tem uma <strong>lotação máxima</strong>. Quando a biblioteca estiver cheia, só podes entrar para <strong>requisitar ou devolver livros</strong>.</p></details>
+      <details><summary>Posso pedir livros?</summary><p>Sim. A Biblioteca disponibiliza serviço de empréstimo aos utilizadores e aconselhamento de leitura.</p></details>
+    </section>
+
+    <section class="faq-group">
+      <h2>🎲 Jogos e computadores</h2>
+      <details><summary>Que jogos posso utilizar nos intervalos?</summary><p>Nos intervalos, estão disponíveis apenas <strong>jogos individuais, xadrez e abalone</strong>.</p><p>Os jogos de pares ou equipa só podem ser utilizados <strong>fora dos intervalos</strong>.</p></details>
+      <details><summary>Posso usar os computadores durante os intervalos?</summary><p><strong>Não.</strong> Durante os intervalos, os computadores não estão disponíveis.</p></details>
+      <details><summary>Posso usar os computadores e tablets?</summary><p>A Biblioteca disponibiliza computadores no espaço da BE e empréstimo de tablets para sala de aula e trabalho autónomo. <strong>Durante os intervalos, os computadores não estão disponíveis.</strong></p></details>
+    </section>
+
+    <section class="faq-group">
+      <h2>💡 Desafios e atividades</h2>
+      <details><summary>O que posso fazer na BEMA?</summary><p>Na BEMA podes <strong>ler, estudar, requisitar e devolver livros, jogar e passar algum tempo</strong> durante os intervalos e ao longo do dia.</p>
+<p>Também podes participar nas <strong>atividades, concursos e desafios</strong> que forem sendo dinamizados pela biblioteca.</p>
+<p>Nos intervalos, estão disponíveis <strong>jogos individuais, xadrez e abalone</strong>. Os jogos de pares ou de equipa podem ser utilizados fora dos intervalos.</p></details>
+    </section>
+
+    <section class="faq-group">
+      <h2>🕐 Horário e contactos</h2>
+      <details><summary>Qual é o horário da BEMA?</summary><p>O horário atualizado está disponível na página <a href="horario.html"><strong>Horário da BEMA</strong></a> e também está afixado na porta da biblioteca.</p></details>
+      <details><summary>Como posso contactar a Biblioteca?</summary><p>Podes contactar-nos pelo telefone <a href="tel:253849410">253 849 410</a> ou pelo email <a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a>.</p></details>
+      <details><summary>A BEMA está aberta à comunidade?</summary><p>Sim. A Biblioteca está de portas abertas à comunidade.</p></details>
+    </section>
+  </div>
+
+  <div class="faq-note"><strong>A BEMA também é tua — usa-a, cuida dela e aproveita-a.</strong></div>
+</main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>

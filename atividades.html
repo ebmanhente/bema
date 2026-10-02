@@ -1,9 +1,40 @@
-<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atividades / Notícias | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css"><style>
+<!DOCTYPE html>
+<html lang="pt-PT"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Ferramentas Digitais | Biblioteca Escolar de Manhente</title><meta content="Biblioteca Escolar de Manhente — BEMA" name="description"/><link href="css/estilo.css" rel="stylesheet"/>
+<style>
+.ferramentas-page{max-width:1180px;margin:auto;padding:0 24px 70px}
+.ft-hero{margin:0 0 30px;padding:55px clamp(25px,6vw,70px);border-radius:0 0 28px 28px;background:linear-gradient(135deg,#245e58,#397f76);color:#fff}
+.ft-overline{font-size:.75rem;letter-spacing:.14em;font-weight:800;opacity:.82}
+.ft-hero h1{font-size:clamp(2.25rem,5vw,4rem);line-height:1.03;margin:10px 0 14px}
+.ft-hero p{max-width:760px;margin:0;font-size:1.08rem;line-height:1.6;color:rgba(255,255,255,.93)}
+.ft-intro{display:flex;align-items:baseline;gap:12px;margin:28px 2px 18px;color:#66706e}
+.ft-intro strong{font-size:1.35rem;color:#25302f}
+.ft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ft-card{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #e1e8e6;border-radius:20px;text-decoration:none;color:inherit;box-shadow:0 7px 22px rgba(33,62,58,.055);transition:transform .18s,box-shadow .18s,border-color .18s}
+.ft-card:hover{transform:translateY(-4px);border-color:#b9d9d3;box-shadow:0 14px 32px rgba(33,62,58,.12);text-decoration:none}
+.ft-logo{height:145px;background:#f5f8f7;display:grid;place-items:center;padding:18px;border-bottom:1px solid #e7eeec}
+.ft-logo img{max-width:82%;max-height:112px;width:auto;height:auto;object-fit:contain;display:block}
+.ft-text-logo{font-size:5rem;font-weight:900;color:#245e58}
+.ft-content{padding:21px 22px 20px;display:flex;flex-direction:column;flex:1}
+.ft-type{font-size:.68rem;letter-spacing:.12em;font-weight:800;color:#397f76;margin-bottom:7px}
+.ft-content h2{margin:0 0 8px;color:#245e58;font-size:1.3rem}
+.ft-content p{margin:0 0 20px;color:#66706e;line-height:1.52;flex:1}
+.ft-link{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid #e7eeec;color:#245e58;font-weight:800}
+.ft-link b{font-size:1.15rem;transition:transform .18s}
+.ft-card:hover .ft-link b{transform:translate(3px,-2px)}
+.ft-note{display:flex;gap:16px;align-items:flex-start;margin-top:32px;padding:25px 27px;border-radius:20px;background:#eaf5f2;border-left:5px solid #397f76}
+.ft-note-icon{font-size:1.7rem}
+.ft-note h2{margin:0 0 7px;color:#245e58;font-size:1.25rem}
+.ft-note p{margin:0;color:#66706e;line-height:1.55}
+@media(max-width:850px){.ft-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ferramentas-page{padding:0 14px 45px}.ft-hero{padding:40px 23px}.ft-grid{grid-template-columns:1fr}.ft-intro{display:block}.ft-intro strong{display:block;margin-bottom:4px}.ft-logo{height:135px}}
+
 /* BEMA — hierarquia visual dos cabeçalhos */
 main h1, main h2, main h3 { color:#245e58 !important; }
 /* Títulos dentro dos blocos HERO: branco para garantir contraste */
 main .hero h1, main .student-hero h1, main .revistas-hero h1, main .leituras-hero h1, main .contact-hero h1, main .sobre-hero h1, main .recursos-hero h1, main .ferramentas-hero h1, main .cidadania-hero h1, main .rea-hero h1, main .digital-hero h1, main .pnl-hero h1, main .student-hero h2 { color:#ffffff !important; }
 </style>
+
+
 <!-- BEMA: normalização visual dos cabeçalhos -->
 <style id="bema-heading-system">
 /* Todos os cabeçalhos do conteúdo seguem a mesma cor BEMA */
@@ -21,4 +52,182 @@ main [class*="hero"] h6 {
   color: #ffffff !important;
 }
 </style>
-</head><body><header class="site-header"><div class="topbar"><a class="brand" href="index.html"><img src="imagens/logo2.jpg" alt="Logo da BEMA"><span>Biblioteca Escolar de Manhente</span></a><button class="hamb" aria-label="Abrir menu">☰</button></div><div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div><nav class="mainnav"><ul><li><a href="index.html">Início</a></li><li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li><li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li><li><a href="contactos.html">Contactos</a></li><li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="documentos.html">Documentos</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="atrevete.html">Atreve-te!</a></li><li><a href="cultura.html">+ Cultura</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li><li><a href="imagens.html">Galeria</a></li></ul></li></ul></nav></header><main class="page "><div class="title"><h1>Atividades / Notícias</h1></div><div class="news-grid"><article class="card"><img src="imagens/IMG_20190312_132221.jpg" alt="Dia do Pi"><h3>Dia do Pi</h3><p>No âmbito da comemoração do Dia Internacional de Matemática, também conhecido como o Dia do Pi, duas turmas da EB de Manhente receberam a visita do professor e autor Lino Sá, que apresentou o seu livro “Continuidade”.</p></article><article class="card"><img src="imagens/CNLbanner.jpg" alt="Concurso Nacional de Leitura"><h3>Concurso Nacional de Leitura</h3><p>Decorreu no passado dia 10 de março, na Biblioteca Municipal de Barcelos, a Fase Municipal do Concurso Nacional de Leitura.</p></article><article class="card"><img src="imagens/P_20181120_104616.jpg" alt="Fábrica H2O"><h3>Fábrica H2O</h3><p>Os alunos de 8.º ano da EB de Manhente assistiram à palestra “Fábrica H2O”, dinamizada pelo engenheiro Rui Pedro Sousa, das Águas do Norte.</p></article><article class="card"><img src="imagens/miúdos a votos.jpg" alt="Miúdos a Votos"><h3>Miúdos a Votos</h3><p>Os alunos da EB de Manhente escolheram os seus livros favoritos. A votação decorreu no dia 7 de março.</p></article></div><p class="center"><a class="btn" href="arquivo.html">Ver arquivo histórico</a></p></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+<style id="bema-header-uniform">
+/* BEMA — sistema visual dos cabeçalhos baseado em recursos.html */
+main .revistas-hero,
+main .student-hero,
+main .pnl-hero,
+main .leitura-hero,
+main .ft-hero,
+main .rea-hero,
+main .hero {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 245px !important;
+  border-radius: 26px !important;
+  box-sizing: border-box !important;
+  padding: 42px 48px !important;
+  background: linear-gradient(135deg,#0b6b50,#15966d) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 35px rgba(0,0,0,.12) !important;
+}
+main .revistas-hero::after,
+main .student-hero::after,
+main .pnl-hero::after,
+main .leitura-hero::after,
+main .ft-hero::after,
+main .rea-hero::after,
+main .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 340px !important;
+  height: 340px !important;
+  border-radius: 50% !important;
+  right: -110px !important;
+  top: -150px !important;
+  background: rgba(255,255,255,.09) !important;
+  pointer-events: none !important;
+}
+main .revistas-hero > *,
+main .student-hero > *,
+main .pnl-hero > *,
+main .leitura-hero > *,
+main .ft-hero > *,
+main .rea-hero > *,
+main .hero > * {
+  position: relative;
+  z-index: 2;
+}
+main .revistas-hero h1, main .revistas-hero h2,
+main .student-hero h1, main .student-hero h2,
+main .pnl-hero h1, main .pnl-hero h2,
+main .leitura-hero h1, main .leitura-hero h2,
+main .ft-hero h1, main .ft-hero h2,
+main .rea-hero h1, main .rea-hero h2,
+main .hero h1, main .hero h2 { color:#fff !important; }
+main .revistas-hero p, main .student-hero p, main .pnl-hero p,
+main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
+  color: rgba(255,255,255,.92) !important;
+}
+@media (max-width: 700px) {
+  main .revistas-hero, main .student-hero, main .pnl-hero, main .leitura-hero,
+  main .ft-hero, main .rea-hero, main .hero {
+    min-height: 220px !important;
+    padding: 32px 24px !important;
+    border-radius: 22px !important;
+  }
+}
+</style>
+<style id="bema-header-home-system">
+/* ===== CABEÇALHO BEMA + EB MANHENTE ===== */
+.bema-topbar{max-width:1180px !important;padding:14px 24px !important;gap:24px !important;}
+.bema-brand{display:flex !important;align-items:center;min-width:0;}
+.bema-brand img{display:block;width:235px;height:auto;max-height:88px;object-fit:contain;}
+.school-identity{margin-left:auto;display:flex;align-items:center;gap:12px;padding:7px 13px 7px 9px;border:1px solid #dfe9e6;border-radius:16px;background:#fbfdfc;color:#245e58;text-decoration:none;transition:.18s;}
+.school-identity:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 6px 18px rgba(33,62,58,.08);border-color:#b9d9d3;}
+.school-identity img{width:62px;height:62px;object-fit:contain;flex:none;}
+.school-identity span{display:flex;flex-direction:column;gap:2px;}
+.school-identity strong{font-size:1rem;line-height:1.1;}
+.school-identity small{font-size:.72rem;color:#66706e;line-height:1.2;}
+.bema-welcome{grid-template-columns:1fr;max-width:900px;}
+@media(max-width:800px){
+ .bema-topbar{padding:10px 16px !important;gap:10px !important;}
+ .bema-brand img{width:190px;max-height:72px;}
+ .school-identity{padding:5px 8px;gap:7px;border-radius:12px;}
+ .school-identity img{width:45px;height:45px;}
+ .school-identity strong{font-size:.82rem;}
+ .school-identity small{display:none;}
+}
+@media(max-width:520px){
+ .bema-brand img{width:155px;max-height:60px;}
+ .school-identity img{width:38px;height:38px;}
+ .school-identity strong{font-size:.7rem;}
+ .school-identity{padding:4px;}
+}
+
+.bema-brand{display:flex!important;align-items:center!important;visibility:visible!important;opacity:1!important;}
+.bema-brand img{display:block!important;width:235px!important;height:auto!important;max-height:88px!important;object-fit:contain!important;visibility:visible!important;opacity:1!important;}
+</style>
+
+<style id="atividades-only">
+.atividades-intro{text-align:center;max-width:760px;margin:28px auto 30px}
+.atividades-intro .eyebrow{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#2f8068;margin-bottom:8px}
+.atividades-intro h2{margin:0 0 10px;color:#245e58;font-size:2rem}
+.atividades-intro p{margin:0;color:#667570;line-height:1.6}
+.activity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.activity-card{background:#fff;border:1px solid #dfe9e4;border-radius:24px;overflow:hidden;box-shadow:0 10px 26px rgba(35,88,73,.08);display:flex;flex-direction:column}
+.activity-image{height:220px;background:#edf5f1;overflow:hidden}
+.activity-image img{width:100%;height:100%;object-fit:cover;display:block}
+.activity-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.activity-tag{display:inline-block;align-self:flex-start;padding:6px 10px;border-radius:999px;background:#edf7f2;color:#26745d;font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
+.activity-card h2{font-size:1.35rem;line-height:1.18;color:#245e58;margin:0 0 10px}
+.activity-card p{font-size:.96rem;line-height:1.58;color:#60706b;margin:0 0 22px}
+.activity-link{margin-top:auto;color:#176a57;text-decoration:none;font-weight:800}
+.activity-link:hover{text-decoration:underline}
+@media(max-width:900px){.activity-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.activity-grid{grid-template-columns:1fr}.activity-image{height:210px}.atividades-intro h2{font-size:1.65rem}}
+</style>
+
+</head><body><header class="site-header">
+ <div class="topbar bema-topbar">
+  <a class="brand bema-brand" href="index.html" aria-label="BEMA — Biblioteca Escolar de Manhente">
+    <img src="imagens/logo-bema.jpg" alt="BEMA — Biblioteca Escolar de Manhente">
+  </a>
+  <a class="school-identity" href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener" aria-label="Ir para o site da EB de Manhente">
+    <img src="imagens/logo-eb-manhente.png" alt="Escola Básica de Manhente">
+    <span><strong>EB de Manhente</strong><small>Uma Escola Para a Vida ↗</small></span>
+  </a>
+  <button class="hamb" aria-label="Abrir menu">☰</button>
+ </div>
+  <div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div>
+ <nav class="mainnav"><ul>
+  <li><a href="index.html">Início</a></li>
+  <li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li>
+  <li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li>
+  <li><a href="contactos.html">Contactos</a></li>
+  <li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="horario.html">Horário</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+ </ul></nav>
+</header><main class="ferramentas-page">
+  <section class="ft-hero">
+    BEMA · ATIVIDADES
+    <h1>📚 O que acontece na BEMA?</h1>
+    <p>Projetos, desafios e atividades que dão vida à biblioteca ao longo do ano letivo.</p>
+  </section>
+
+  <section class="atividades-intro">
+    <div class="eyebrow">Em destaque</div>
+    <h2>Projetos que acontecem na BEMA</h2>
+    <p>Ao longo do ano letivo, a biblioteca abre espaço a ideias, desafios, leituras e projetos.</p>
+  </section>
+
+  <section class="activity-grid" aria-label="Atividades da BEMA">
+    
+    <article class="activity-card">
+      <div class="activity-image"><img src="assets/atividades/detetives-informacao.png" alt="Detetives da Informação — Isto é Verdade?"></div>
+      <div class="activity-body">
+        <span class="activity-tag">Literacia da informação</span>
+        <h2>Detetives da Informação — Isto é Verdade?</h2>
+        <p>Desafios para observar, questionar, investigar e verificar a informação.</p>
+        <a class="activity-link" href="detetives-da-informacao.html">Saber mais <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+    <article class="activity-card">
+      <div class="activity-image"><img src="assets/atividades/muitas-vozes.png" alt="Muitas Vozes, Uma História"></div>
+      <div class="activity-body">
+        <span class="activity-tag">MIBE · DAC</span>
+        <h2>Muitas Vozes, Uma História</h2>
+        <p>Um projeto sobre histórias, línguas, memórias e percursos da comunidade escolar.</p>
+        <a class="activity-link" href="muitas-vozes.html">Saber mais <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+    <article class="activity-card">
+      <div class="activity-image"><img src="assets/atividades/sabores-do-mundo.png" alt="Sabores do Mundo"></div>
+      <div class="activity-body">
+        <span class="activity-tag">Dia Mundial da Alimentação</span>
+        <h2>Sabores do Mundo</h2>
+        <p>Uma viagem pelos sabores e culturas do mundo através de desafios às turmas.</p>
+        <a class="activity-link" href="sabores-do-mundo.html">Saber mais <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </section>
+</main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br/>Rua Manuel Maria Barbosa du Bocage nº 67<br/>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br/><a href="https://www.aeaf.edu.pt/" rel="noopener" target="_blank">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br/><a href="faq.html">FAQs</a><br/><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>

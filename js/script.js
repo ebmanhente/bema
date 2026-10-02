@@ -20,5 +20,40 @@ document.addEventListener('DOMContentLoaded',()=>{const h=document.querySelector
   }finally{if(button)button.disabled=false;}
   return false;
 }
-function filterArchive(){const q=(document.getElementById('archiveSearch').value||'').toLowerCase();document.querySelectorAll('.archive-item').forEach(x=>x.style.display=x.innerText.toLowerCase().includes(q)?'grid':'none')}function searchSite(){const q=(document.getElementById('siteSearch').value||'').trim();if(!q)return;location.href='arquivo.html?q='+encodeURIComponent(q)}
-document.addEventListener('DOMContentLoaded',()=>{const p=new URLSearchParams(location.search);const q=p.get('q');const s=document.getElementById('archiveSearch');if(q&&s){s.value=q;filterArchive()}});
+function normalizeSearchText(value){return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
+function searchSite(){const q=(document.getElementById('siteSearch').value||'').trim();if(!q)return;location.href='arquivo.html?q='+encodeURIComponent(q)}
+function renderGlobalSearch(q){
+  const box=document.getElementById('globalSearchResults');
+  const archive=document.getElementById('archive');
+  if(!box||!window.BEMA_SEARCH_INDEX)return;
+  const terms=normalizeSearchText(q).split(/\s+/).filter(Boolean);
+  const results=window.BEMA_SEARCH_INDEX.filter(item=>{
+    const hay=normalizeSearchText(item.title+' '+item.text);
+    return terms.every(term=>hay.includes(term));
+  });
+  box.innerHTML='';
+  const heading=document.createElement('div');
+  heading.className='search-results-heading';
+  heading.innerHTML='<h2>Resultados da pesquisa</h2><p>'+results.length+' resultado'+(results.length===1?'':'s')+' para <strong>“'+escapeHtml(q)+'”</strong></p>';
+  box.appendChild(heading);
+  if(archive) archive.style.display='none';
+  if(!results.length){
+    const empty=document.createElement('div');
+    empty.className='search-empty';
+    empty.innerHTML='<h3>Não encontrámos resultados</h3><p>Tenta outra palavra ou expressão.</p>';
+    box.appendChild(empty);
+    return;
+  }
+  const list=document.createElement('div');
+  list.className='global-search-list';
+  results.forEach(item=>{
+    const article=document.createElement('article');
+    article.className='global-search-result';
+    article.innerHTML='<h3><a href="'+encodeURI(item.url)+'">'+escapeHtml(item.title)+'</a></h3><p>'+escapeHtml(item.excerpt)+'</p><a class="search-result-link" href="'+encodeURI(item.url)+'">Abrir página →</a>';
+    list.appendChild(article);
+  });
+  box.appendChild(list);
+}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
+function filterArchive(){const q=(document.getElementById('archiveSearch').value||'').trim();if(q)renderGlobalSearch(q);else{const box=document.getElementById('globalSearchResults');const archive=document.getElementById('archive');if(box)box.innerHTML='';if(archive)archive.style.display='';}}
+document.addEventListener('DOMContentLoaded',()=>{const p=new URLSearchParams(location.search);const q=p.get('q');const s=document.getElementById('archiveSearch');if(q&&s){s.value=q;renderGlobalSearch(q)}});

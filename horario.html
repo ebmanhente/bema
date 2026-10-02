@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BEMA | Biblioteca Escolar de Manhente</title>
+<title>Horário da BEMA | Biblioteca Escolar de Manhente</title>
+<meta name="description" content="Horário da Biblioteca Escolar de Manhente — BEMA">
 <meta name="description" content="BEMA — Biblioteca Escolar de Manhente">
 <link rel="stylesheet" href="css/estilo.css">
 <style>
@@ -171,43 +172,82 @@ main [class*="hero"] h6 {
  </ul></nav>
 </header>
 
-<main class="bema-home bema-minimal-home">
+<main class="horario-page">
+  <section class="horario-hero">
+    <div class="horario-hero-copy">
+      <span class="horario-kicker">INFORMAÇÃO ÚTIL</span>
+      <h1>Horário da BEMA</h1>
+      <p>Estamos aqui para te receber.</p>
+    </div>
+    <div class="horario-hero-symbol" aria-hidden="true">⌚</div>
+  </section>
 
-  <section class="bema-hero">
-    <div class="bema-hero-content">
-      <div class="bema-kicker">📚 BIBLIOTECA ESCOLAR DE MANHENTE</div>
-      <h1>Um lugar para <span>ler, descobrir e criar.</span></h1>
-      <p>Um espaço da escola onde podes encontrar histórias, ideias, conhecimento e inspiração.</p>
-      <div class="bema-actions">
-        <a class="bema-btn" href="leituras.html">📖 Descobrir leituras</a>
-        <a class="bema-btn alt" href="atividades.html">O que acontece na BEMA →</a>
+  <section class="horario-content">
+    <div class="horario-intro">
+      <span class="horario-kicker">QUANDO NOS ENCONTRAS</span>
+      <h2>Escolhe o dia e aparece por cá.</h2>
+      <p>Consulta os períodos em que a BEMA está aberta para ler, estudar, descobrir e partilhar.</p>
+    </div>
+
+    <div class="horario-cards">
+      <article class="horario-card horario-card-green">
+        <div class="horario-card-head">
+          <div class="horario-card-icon" aria-hidden="true">◷</div>
+          <h3>2.ª, 3.ª e 5.ª feira</h3>
+        </div>
+        <div class="horario-periodos">
+          <div class="periodo"><span>Manhã</span><strong>08h15 – 13h15</strong></div>
+          <div class="periodo"><span>Tarde</span><strong>14h00 – 17h00</strong></div>
+        </div>
+      </article>
+
+      <article class="horario-card horario-card-blue">
+        <div class="horario-card-head">
+          <div class="horario-card-icon" aria-hidden="true">◷</div>
+          <h3>4.ª e 6.ª feira</h3>
+        </div>
+        <div class="horario-periodos">
+          <div class="periodo"><span>Manhã</span><strong>08h15 – 13h00</strong></div>
+          <div class="periodo"><span>Tarde</span><strong>14h00 – 16h30</strong></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="horario-bottom">
+      <div class="horario-note horario-note-book">
+        <div class="note-icon" aria-hidden="true">📖</div>
+        <div><h3>Leitura e estudo</h3><p>Um espaço para ler, estudar e descobrir novas histórias.</p></div>
+      </div>
+      <div class="horario-note horario-note-books">
+        <div class="note-icon" aria-hidden="true">📚</div>
+        <div><h3>Livros e recursos</h3><p>Livros, revistas, recursos digitais e muito mais.</p></div>
+      </div>
+      <div class="horario-note horario-note-idea">
+        <div class="note-icon" aria-hidden="true">💡</div>
+        <div><h3>Ideias bem-vindas</h3><p>Sugere um livro, partilha uma ideia ou ajuda a tornar a BEMA ainda melhor.</p></div>
       </div>
     </div>
-  </section>
 
-  <section class="bema-welcome">
-    <div>
-      <span class="bema-overline">BEM-VINDO</span>
-      <h2>A BEMA é mais do que uma biblioteca.</h2>
-      <p>É um espaço para ler, pesquisar, aprender, criar e partilhar. Entra, fica à vontade e descobre o que temos para ti.</p>
-    </div></section>
-
-  <section class="bema-info-row">
-    <div>
-      <span class="bema-overline">INFORMAÇÃO ÚTIL</span>
-      <h2>Horário da BEMA</h2>
-      <p>Consulta o horário da BEMA e planeia a tua visita.</p>
-      <a class="bema-link" href="horario.html">Ver horário →</a>
-    </div>
-    <div>
-      <span class="bema-overline">FALA CONNOSCO</span>
-      <h2>Tens uma ideia?</h2>
-      <p>Sugere um livro, deixa uma mensagem ou entra em contacto com a biblioteca.</p>
-      <a class="bema-link" href="contactos.html">Contactar a BEMA →</a>
+    <div class="horario-cta">
+      <span>📚</span><strong>Esperamos por ti na BEMA!</strong><span>♥</span>
     </div>
   </section>
-
 </main>
+
+<style>
+.horario-page{max-width:1180px;margin:0 auto;padding:30px 22px 65px}
+.horario-hero{position:relative;overflow:hidden;min-height:235px;border-radius:28px;padding:42px 54px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#0b6b50 0%,#15966d 100%);color:#fff;box-shadow:0 14px 35px rgba(25,80,64,.13)}
+.horario-hero:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;right:-170px;top:-245px;background:rgba(255,255,255,.09)}
+.horario-hero:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;left:-100px;bottom:-115px;background:rgba(255,255,255,.07)}
+.horario-hero-copy{position:relative;z-index:2}.horario-kicker{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:#16835f;display:inline-block}.horario-hero .horario-kicker{color:rgba(255,255,255,.88)}
+.horario-hero h1{font-size:clamp(2.25rem,5vw,3.7rem);margin:10px 0 10px;line-height:1;color:#fff}.horario-hero p{font-size:1.18rem;line-height:1.5;margin:0;color:rgba(255,255,255,.93)}
+.horario-hero-symbol{position:relative;z-index:2;width:105px;height:105px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);font-size:3.7rem;transform:rotate(-7deg);box-shadow:0 12px 25px rgba(0,0,0,.09)}
+.horario-content{padding:44px 5px 0}.horario-intro{text-align:center;max-width:760px;margin:0 auto}.horario-intro h2{font-size:clamp(1.7rem,3vw,2.35rem);margin:8px 0 9px;color:#18352d;line-height:1.15}.horario-intro p{color:#687570;line-height:1.65;margin:0}
+.horario-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}.horario-card{border-radius:25px;padding:25px 27px 28px;box-shadow:0 10px 28px rgba(33,62,58,.07);overflow:hidden;position:relative}.horario-card:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;right:-65px;bottom:-85px;background:rgba(255,255,255,.16)}.horario-card-green{background:#e8f6e8;border:1px solid #d7ead9}.horario-card-blue{background:#e8f5fb;border:1px solid #d7eaf2}.horario-card-head{display:flex;align-items:center;gap:16px;position:relative;z-index:1}.horario-card-icon{width:58px;height:58px;border-radius:18px;background:#238653;color:#fff;display:grid;place-items:center;font-size:2rem;box-shadow:0 6px 15px rgba(26,103,66,.15)}.horario-card-blue .horario-card-icon{background:#2878a6}.horario-card h3{margin:0;color:#18352d;font-size:1.35rem;line-height:1.2}.horario-periodos{margin-top:21px;background:rgba(255,255,255,.78);border-radius:18px;position:relative;z-index:1;overflow:hidden}.periodo{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 20px}.periodo+ .periodo{border-top:1px solid rgba(40,90,75,.12)}.periodo span{font-size:.86rem;font-weight:700;color:#557068;text-transform:uppercase;letter-spacing:.06em}.periodo strong{font-size:1.55rem;color:#102f4d;white-space:nowrap}
+.horario-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.horario-note{display:flex;gap:15px;align-items:flex-start;padding:23px 20px;border-radius:20px}.horario-note-book{background:#fff7df}.horario-note-books{background:#edf7f3}.horario-note-idea{background:#edf5fb}.note-icon{font-size:2rem;line-height:1;flex:none}.horario-note h3{margin:0 0 5px;color:#18352d;font-size:1.08rem}.horario-note p{margin:0;color:#687570;line-height:1.45;font-size:.91rem}.horario-cta{margin:25px auto 0;max-width:680px;padding:20px 25px;border-radius:18px;background:#fff8df;display:flex;justify-content:center;align-items:center;gap:14px;color:#163a31;font-size:1.35rem;box-shadow:0 7px 20px rgba(33,62,58,.05)}.horario-cta span:last-child{color:#e95b59;font-size:1.45rem}
+@media(max-width:800px){.horario-page{padding:24px 14px 48px}.horario-hero{padding:36px 30px;min-height:215px}.horario-cards,.horario-bottom{grid-template-columns:1fr}.horario-bottom{gap:12px}.horario-cta{font-size:1.15rem;text-align:center}}
+@media(max-width:560px){.horario-hero{display:block;border-radius:23px;padding:32px 25px}.horario-hero-symbol{margin-top:22px;width:72px;height:72px;font-size:2.7rem}.horario-content{padding-top:35px}.horario-card{padding:21px 18px 22px}.horario-card-head{gap:12px}.horario-card-icon{width:50px;height:50px;border-radius:15px;font-size:1.7rem}.horario-card h3{font-size:1.15rem}.periodo{display:block;padding:15px 16px}.periodo span{display:block;margin-bottom:4px}.periodo strong{font-size:1.35rem}.horario-note{padding:19px 17px}.horario-cta{padding:17px 15px}}
+</style>
 
 <footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <a href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener">EB de Manhente</a> · <span id="ano"></span></div></footer>
 <script src="js/script.js"></script>
