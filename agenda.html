@@ -51,6 +51,100 @@ main [class*="hero"] h6 {
 .bema-brand{display:flex!important;align-items:center!important;visibility:visible!important;opacity:1!important;}
 .bema-brand img{display:block!important;width:235px!important;height:auto!important;max-height:88px!important;object-fit:contain!important;visibility:visible!important;opacity:1!important;}
 </style>
+<style id="bema-header-uniform">
+/* BEMA — sistema visual dos cabeçalhos baseado em recursos.html */
+main .revistas-hero,
+main .student-hero,
+main .pnl-hero,
+main .leitura-hero,
+main .ft-hero,
+main .rea-hero,
+main .hero {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 245px !important;
+  border-radius: 26px !important;
+  box-sizing: border-box !important;
+  padding: 42px 48px !important;
+  background: linear-gradient(135deg,#0b6b50,#15966d) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 35px rgba(0,0,0,.12) !important;
+}
+main .revistas-hero::after,
+main .student-hero::after,
+main .pnl-hero::after,
+main .leitura-hero::after,
+main .ft-hero::after,
+main .rea-hero::after,
+main .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 340px !important;
+  height: 340px !important;
+  border-radius: 50% !important;
+  right: -110px !important;
+  top: -150px !important;
+  background: rgba(255,255,255,.09) !important;
+  pointer-events: none !important;
+}
+main .revistas-hero > *,
+main .student-hero > *,
+main .pnl-hero > *,
+main .leitura-hero > *,
+main .ft-hero > *,
+main .rea-hero > *,
+main .hero > * {
+  position: relative;
+  z-index: 2;
+}
+main .revistas-hero h1, main .revistas-hero h2,
+main .student-hero h1, main .student-hero h2,
+main .pnl-hero h1, main .pnl-hero h2,
+main .leitura-hero h1, main .leitura-hero h2,
+main .ft-hero h1, main .ft-hero h2,
+main .rea-hero h1, main .rea-hero h2,
+main .hero h1, main .hero h2 { color:#fff !important; }
+main .revistas-hero p, main .student-hero p, main .pnl-hero p,
+main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
+  color: rgba(255,255,255,.92) !important;
+}
+@media (max-width: 700px) {
+  main .revistas-hero, main .student-hero, main .pnl-hero, main .leitura-hero,
+  main .ft-hero, main .rea-hero, main .hero {
+    min-height: 220px !important;
+    padding: 32px 24px !important;
+    border-radius: 22px !important;
+  }
+}
+</style>
+
+<style id="agenda-standard-layout">
+.ferramentas-page{max-width:1180px;margin:auto;padding:0 24px 70px}
+.ft-overline{font-size:.76rem;letter-spacing:.14em;font-weight:800;opacity:.84}
+.ft-hero h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.05;margin:10px 0 14px}
+.ft-hero p{max-width:760px;margin:0;font-size:1.05rem;line-height:1.6;color:rgba(255,255,255,.92)}
+@media(max-width:700px){.ferramentas-page{padding:0 14px 45px}}
+</style>
+
+<style id="agenda-events-design">
+.agenda-intro{margin:0 0 26px;display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.agenda-intro h2{margin:0;font-size:clamp(1.55rem,3vw,2.1rem);color:#245e58}
+.agenda-intro p{margin:6px 0 0;color:#66706e;max-width:760px;line-height:1.55}
+.agenda-year{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:#eaf6f2;color:#176a57;font-weight:800;font-size:.88rem;white-space:nowrap}
+.agenda-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.agenda-card{position:relative;display:grid;grid-template-columns:82px 1fr;gap:18px;align-items:start;padding:20px;border:1px solid #e0ebe7;border-radius:20px;background:#fff;box-shadow:0 7px 22px rgba(35,74,66,.07);transition:transform .18s,box-shadow .18s,border-color .18s;overflow:hidden}
+.agenda-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#0b6b50,#15966d)}
+.agenda-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(35,74,66,.11);border-color:#c9e1da}
+.agenda-date{width:82px;min-height:82px;border-radius:17px;background:linear-gradient(145deg,#0b6b50,#15966d);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1}
+.agenda-date .day{font-size:1.75rem;font-weight:900}
+.agenda-date .month{font-size:.72rem;letter-spacing:.12em;font-weight:800;margin-top:6px;text-transform:uppercase;opacity:.92}
+.agenda-date .range{font-size:.68rem;letter-spacing:.04em;font-weight:800;margin-top:5px}
+.agenda-card h3{margin:1px 0 8px;color:#245e58;font-size:1.14rem;line-height:1.25}
+.agenda-card p{margin:0;color:#66706e;font-size:.92rem;line-height:1.45}
+.agenda-tag{display:inline-block;margin-bottom:8px;padding:4px 9px;border-radius:999px;background:#f0f7f5;color:#176a57;font-size:.68rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:760px){.agenda-grid{grid-template-columns:1fr}.agenda-card{grid-template-columns:74px 1fr;padding:17px;gap:15px}.agenda-date{width:74px;min-height:74px}.agenda-date .day{font-size:1.55rem}}
+@media(max-width:520px){.agenda-intro{display:block}.agenda-year{margin-top:12px}.agenda-card{grid-template-columns:64px 1fr;gap:13px}.agenda-date{width:64px;min-height:68px;border-radius:14px}.agenda-date .day{font-size:1.4rem}.agenda-date .month{font-size:.62rem}.agenda-card h3{font-size:1rem}.agenda-card p{font-size:.88rem}}
+</style>
 </head><body><header class="site-header">
  <div class="topbar bema-topbar">
   <a class="brand bema-brand" href="index.html" aria-label="BEMA — Biblioteca Escolar de Manhente">
@@ -70,4 +164,59 @@ main [class*="hero"] h6 {
   <li><a href="contactos.html">Contactos</a></li>
   <li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="horario.html">Horário</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
  </ul></nav>
-</header><main class="page "><div class="title"><h1>A acontecer perto de ti...</h1></div><div class="agenda-list"><article><h2>Semana da Leitura</h2><p>Vê a programação desta semana na página do PNL!</p><a class="btn" target="_blank" href="https://www.pnl2027.gov.pt/">Ver programação</a></article><article><h2>Semana Concelhia da Leitura</h2><p>Vê a programação para Barcelos!</p><a class="btn" target="_blank" href="https://redebibliotecas.cm-barcelos.pt/">Agenda Barcelos</a></article><article><h2>Teatro Gil Vicente</h2><p>Consulta a programação do Teatro Gil Vicente (Barcelos).</p><a class="btn" target="_blank" href="https://www.cm-barcelos.pt/">Consultar</a></article></div></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+</header><main class="ferramentas-page">
+  <section class="ft-hero">
+    <span class="ft-overline">BEMA · AGENDA</span>
+    <h1>📅 A acontecer perto de ti...</h1>
+    <p>As principais datas, iniciativas e momentos da BEMA ao longo do ano letivo.</p>
+  </section>
+
+  <section class="agenda-intro">
+    <div>
+      <h2>Guarda estas datas!</h2>
+      <p>Uma agenda simples para saberes rapidamente o que acontece e quando acontece.</p>
+    </div>
+    <span class="agenda-year">📚 Ano letivo 2026/2027</span>
+  </section>
+
+  <section class="agenda-grid" aria-label="Agenda de atividades da BEMA">
+    <article class="agenda-card">
+      <div class="agenda-date"><span class="day">21</span><span class="month">OUT</span></div>
+      <div><span class="agenda-tag">Atividade</span><h3>Sabores do Mundo</h3><p>Uma viagem pelos sabores, culturas e histórias do mundo.</p></div>
+    </article>
+
+    <article class="agenda-card">
+      <div class="agenda-date"><span class="day">26</span><span class="month">OUT</span></div>
+      <div><span class="agenda-tag">Biblioteca</span><h3>Dia Internacional da Biblioteca Escolar</h3><p>Um dia para celebrar a biblioteca, a leitura e tudo o que nela acontece.</p></div>
+    </article>
+
+    <article class="agenda-card">
+      <div class="agenda-date"><span class="day">24</span><span class="month">NOV</span></div>
+      <div><span class="agenda-tag">Ciência</span><h3>Dia Concelhio da Ciência</h3><p>Um momento dedicado à ciência, à descoberta e à curiosidade.</p></div>
+    </article>
+
+    <article class="agenda-card">
+      <div class="agenda-date"><span class="day">10</span><span class="month">DEZ</span></div>
+      <div><span class="agenda-tag">Cidadania</span><h3>Dia dos Direitos Humanos</h3><p>Uma data para conhecer, refletir e valorizar os direitos de todos.</p></div>
+    </article>
+
+    <article class="agenda-card">
+      <div class="agenda-date"><span class="day">1–5</span><span class="month">MAR</span></div>
+      <div><span class="agenda-tag">Leitura</span><h3>Semana Concelhia da Leitura</h3><p>Uma semana dedicada aos livros, à leitura e à participação da comunidade escolar.</p></div>
+    </article>
+
+    <article class="agenda-card">
+      <div class="agenda-date"><span class="day">5</span><span class="month">MAR</span></div>
+      <div><span class="agenda-tag">Concurso</span><h3>Final Concelhia do Concurso Intermunicipal de Leitura</h3><p>O momento final da etapa concelhia do concurso de leitura.</p></div>
+    </article>
+
+    <article class="agenda-card">
+      <div class="agenda-date"><span class="day">9</span><span class="month">MAR</span></div>
+      <div><span class="agenda-tag">Miúdos a Votos</span><h3>Votação Nacional — “Qual o livro mais fixe?”</h3><p>É dia de votar e escolher o livro preferido.</p></div>
+    </article>
+
+    <article class="agenda-card">
+      <div class="agenda-date"><span class="day">16</span><span class="month">ABR</span></div>
+      <div><span class="agenda-tag">Escrita</span><h3>Concurso Concelhio Pequenos Grandes Poetas</h3><p>Um encontro com a poesia, a criatividade e as palavras.</p></div>
+    </article>
+  </section></main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>

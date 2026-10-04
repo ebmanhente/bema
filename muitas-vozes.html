@@ -41,6 +41,213 @@ main h1, main h2, main h3 { color:#245e58 !important; }
 /* Títulos dentro dos blocos HERO: branco para garantir contraste */
 main .hero h1, main .student-hero h1, main .revistas-hero h1, main .leituras-hero h1, main .contact-hero h1, main .sobre-hero h1, main .recursos-hero h1, main .ferramentas-hero h1, main .cidadania-hero h1, main .rea-hero h1, main .digital-hero h1, main .pnl-hero h1, main .student-hero h2 { color:#ffffff !important; }
 </style>
+<style id="atividade-hero-exato">
+/* ===== BEMA — hero das atividades, igual à página atividades.html ===== */
+.ferramentas-page{max-width:1180px;margin:auto;padding:0 24px 70px}
+.ft-hero{
+  margin:0 0 30px;
+  padding:55px clamp(25px,6vw,70px);
+  border-radius:0 0 28px 28px;
+  background:linear-gradient(135deg,#245e58,#397f76);
+  color:#fff;
+}
+.ft-hero{
+  position:relative!important;
+  overflow:hidden!important;
+  min-height:245px!important;
+  border-radius:26px!important;
+  box-sizing:border-box!important;
+  padding:42px 48px!important;
+  background:linear-gradient(135deg,#0b6b50,#15966d)!important;
+  color:#fff!important;
+  box-shadow:0 14px 35px rgba(0,0,0,.12)!important;
+}
+.ft-hero::after{
+  content:""!important;
+  position:absolute!important;
+  width:340px!important;
+  height:340px!important;
+  border-radius:50%!important;
+  right:-110px!important;
+  top:-150px!important;
+  background:rgba(255,255,255,.09)!important;
+  pointer-events:none!important;
+}
+.ft-hero > *{position:relative;z-index:2}
+.ft-hero h1{
+  color:#fff!important;
+  font-size:clamp(2.25rem,5vw,4rem);
+  line-height:1.03;
+  margin:10px 0 14px;
+}
+.ft-hero p{
+  max-width:760px;
+  margin:0;
+  font-size:1.08rem;
+  line-height:1.6;
+  color:rgba(255,255,255,.93)!important;
+}
+.ft-hero .activity-kicker{
+  font-size:.75rem;
+  letter-spacing:.14em;
+  font-weight:800;
+  opacity:.82;
+}
+@media(max-width:700px){
+  .ferramentas-page{padding:0 14px 45px}
+  .ft-hero{
+    min-height:220px!important;
+    padding:32px 24px!important;
+    border-radius:22px!important;
+  }
+}
+</style>
+<style id="bema-header-reference-only">
+<style id="bema-heading-system">
+/* Todos os cabeçalhos do conteúdo seguem a mesma cor BEMA */
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #245e58 !important;
+}
+
+/* Nos HERO, o título principal é sempre branco */
+main [class*="hero"] h1,
+main [class*="hero"] h2,
+main [class*="hero"] h3,
+main [class*="hero"] h4,
+main [class*="hero"] h5,
+main [class*="hero"] h6 {
+  color: #ffffff !important;
+}
+</style>
+<style id="bema-header-uniform">
+/* BEMA — sistema visual dos cabeçalhos baseado em recursos.html */
+main .revistas-hero,
+main .student-hero,
+main .pnl-hero,
+main .leitura-hero,
+main .ft-hero,
+main .rea-hero,
+main .hero {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 245px !important;
+  border-radius: 26px !important;
+  box-sizing: border-box !important;
+  padding: 42px 48px !important;
+  background: linear-gradient(135deg,#0b6b50,#15966d) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 35px rgba(0,0,0,.12) !important;
+}
+main .revistas-hero::after,
+main .student-hero::after,
+main .pnl-hero::after,
+main .leitura-hero::after,
+main .ft-hero::after,
+main .rea-hero::after,
+main .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 340px !important;
+  height: 340px !important;
+  border-radius: 50% !important;
+  right: -110px !important;
+  top: -150px !important;
+  background: rgba(255,255,255,.09) !important;
+  pointer-events: none !important;
+}
+main .revistas-hero > *,
+main .student-hero > *,
+main .pnl-hero > *,
+main .leitura-hero > *,
+main .ft-hero > *,
+main .rea-hero > *,
+main .hero > * {
+  position: relative;
+  z-index: 2;
+}
+main .revistas-hero h1, main .revistas-hero h2,
+main .student-hero h1, main .student-hero h2,
+main .pnl-hero h1, main .pnl-hero h2,
+main .leitura-hero h1, main .leitura-hero h2,
+main .ft-hero h1, main .ft-hero h2,
+main .rea-hero h1, main .rea-hero h2,
+main .hero h1, main .hero h2 { color:#fff !important; }
+main .revistas-hero p, main .student-hero p, main .pnl-hero p,
+main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
+  color: rgba(255,255,255,.92) !important;
+}
+@media (max-width: 700px) {
+  main .revistas-hero, main .student-hero, main .pnl-hero, main .leitura-hero,
+  main .ft-hero, main .rea-hero, main .hero {
+    min-height: 220px !important;
+    padding: 32px 24px !important;
+    border-radius: 22px !important;
+  }
+}
+</style>
+<style id="bema-header-home-system">
+/* ===== CABEÇALHO BEMA + EB MANHENTE ===== */
+.bema-topbar{max-width:1180px !important;padding:14px 24px !important;gap:24px !important;}
+.bema-brand{display:flex !important;align-items:center;min-width:0;}
+.bema-brand img{display:block;width:235px;height:auto;max-height:88px;object-fit:contain;}
+.school-identity{margin-left:auto;display:flex;align-items:center;gap:12px;padding:7px 13px 7px 9px;border:1px solid #dfe9e6;border-radius:16px;background:#fbfdfc;color:#245e58;text-decoration:none;transition:.18s;}
+.school-identity:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 6px 18px rgba(33,62,58,.08);border-color:#b9d9d3;}
+.school-identity img{width:62px;height:62px;object-fit:contain;flex:none;}
+.school-identity span{display:flex;flex-direction:column;gap:2px;}
+.school-identity strong{font-size:1rem;line-height:1.1;}
+.school-identity small{font-size:.72rem;color:#66706e;line-height:1.2;}
+.bema-welcome{grid-template-columns:1fr;max-width:900px;}
+@media(max-width:800px){
+ .bema-topbar{padding:10px 16px !important;gap:10px !important;}
+ .bema-brand img{width:190px;max-height:72px;}
+ .school-identity{padding:5px 8px;gap:7px;border-radius:12px;}
+ .school-identity img{width:45px;height:45px;}
+ .school-identity strong{font-size:.82rem;}
+ .school-identity small{display:none;}
+}
+@media(max-width:520px){
+ .bema-brand img{width:155px;max-height:60px;}
+ .school-identity img{width:38px;height:38px;}
+ .school-identity strong{font-size:.7rem;}
+ .school-identity{padding:4px;}
+}
+
+.bema-brand{display:flex!important;align-items:center!important;visibility:visible!important;opacity:1!important;}
+.bema-brand img{display:block!important;width:235px!important;height:auto!important;max-height:88px!important;object-fit:contain!important;visibility:visible!important;opacity:1!important;}
+</style>
+</style>
+
+<style id="muitas-vozes-content">
+.many-voices-content{padding-bottom:30px}
+.mv-lead{margin:8px 0 28px!important;padding:18px 21px;border-left:4px solid #39a67d;border-radius:0 15px 15px 0;background:#f1f7f4;color:#245e58!important;font-size:1.08rem!important;line-height:1.6!important;font-weight:600}
+.mv-section{margin:0 0 25px}
+.mv-section h3,.mv-box h3,.mv-timeline h3,.mv-participation h3{margin:0 0 10px!important;font-size:1.3rem!important}
+.mv-section p,.mv-box p,.mv-box li,.mv-timeline p,.mv-timeline-note span,.mv-participation p{color:#596a65;line-height:1.58}
+.mv-section p{margin:0 0 10px}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 25px}
+.mv-box{padding:20px 21px;border:1px solid #dfe9e5;border-radius:18px;background:#fbfdfc}
+.mv-box ul{margin:10px 0 0;padding-left:20px}
+.mv-box li{margin:7px 0}
+.mv-timeline{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;align-items:stretch;margin:0 0 25px}
+.mv-timeline-main{padding:21px 23px;border-radius:19px;background:linear-gradient(135deg,#0b6b50,#15966d);color:#fff}
+.mv-timeline-main h3{color:#fff!important;margin-top:7px!important}
+.mv-timeline-main p{color:rgba(255,255,255,.9)!important;margin:0}
+.mv-period{font-size:.7rem;font-weight:800;letter-spacing:.15em;color:#d9f4e9}
+.mv-timeline-note{display:flex;flex-direction:column;justify-content:center;padding:20px;border:1px solid #dcebe4;border-radius:19px;background:#f1f7f4}
+.mv-timeline-note strong{color:#245e58;margin-bottom:6px}
+.mv-grid-bottom{margin-bottom:25px}
+.mv-final{background:#f7fbef;border-color:#dfe8c8}
+.mv-library{background:#f5f8fc;border-color:#dfe6ef}
+.mv-participation{display:flex;gap:15px;align-items:flex-start;margin:0 0 27px;padding:20px 21px;border-radius:19px;background:#fff;border:1px solid #dfe9e5;box-shadow:0 7px 20px rgba(22,55,44,.05)}
+.mv-participation-icon{width:44px;height:44px;flex:none;border-radius:13px;display:grid;place-items:center;background:#eaf5f0;font-size:1.35rem}
+.mv-participation h3{margin-bottom:6px!important}
+.mv-participation p{margin:0}
+@media(max-width:760px){
+ .mv-grid,.mv-timeline{grid-template-columns:1fr}
+ .mv-lead{font-size:1rem!important}
+ .mv-box{padding:18px}
+}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -63,24 +270,88 @@ main .hero h1, main .student-hero h1, main .revistas-hero h1, main .leituras-her
   <li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="horario.html">Horário</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
  </ul></nav>
 </header>
-<main class="atividades-page">
-<section class="contact-hero">
-    <div>
-      <span class="contact-kicker">BEMA · ATIVIDADES</span>
-      <h1>O que acontece na BEMA?</h1>
-      <p>Projetos, desafios e atividades que dão vida à biblioteca ao longo do ano letivo.</p>
-    </div>
-    <div class="contact-hero-icon" aria-hidden="true">📚</div>
+<main class="ferramentas-page">
+<section class="ft-hero">
+    <span class="activity-kicker">BEMA · ATIVIDADES</span>
+    <h1>Muitas Vozes, Uma História</h1>
+    <p>Um projeto sobre histórias, línguas, memórias e percursos da comunidade escolar.</p>
   </section>
-<section class="activity-detail">
+<section class="activity-detail many-voices-page">
   <article class="detail-card">
     <div class="detail-visual"><img src="assets/atividades/muitas-vozes.png" alt="Muitas Vozes, Uma História"></div>
-    <div class="detail-content">
-      <span class="activity-tag">MIBE · DAC</span>
+    <div class="detail-content many-voices-content">
+      <span class="activity-tag">MIBE · DAC · 2026/2027</span>
       <h2>Muitas Vozes, Uma História</h2>
-      <p>Um DAC transversal, coordenado pela Biblioteca Escolar, que transforma a diversidade cultural e linguística da escola num recurso de aprendizagem.</p>
-      <h3>De onde nasce?</h3><p>A proposta nasce no âmbito do Mês Internacional da Biblioteca Escolar (MIBE), a partir da linha «Diversidade e Vozes Globais: Many Voices, One Story». Inspira-se no projeto «Humans of New York» e adapta-o à escola através de entrevistas, testemunhos, fotografia, ilustração e pequenas narrativas.</p><h3>Para quê?</h3><p>Valorizar diferentes línguas, culturas e percursos; desenvolver empatia, escuta ativa e competência intercultural; reforçar inclusão e sentimento de pertença; e trabalhar leitura, escrita, oralidade, pesquisa, literacia dos média e produção multimodal.</p><h3>Quando e como termina?</h3><p>O projeto decorre de outubro a junho, de forma modular, e culmina numa exposição física/digital: «Muitas Vozes, Uma História: Retratos da nossa escola».</p>
-      <div class="materials"><a href="assets/atividades/muitas-vozes-documento.pdf" target="_blank">↗ Documento de apresentação</a></div>
+      <p class="mv-lead">«Quem somos nós, que histórias trazemos connosco e como podemos construir uma escola onde todas as vozes contam?»</p>
+
+      <div class="mv-section">
+        <h3>De onde nasce?</h3>
+        <p>A proposta nasce no âmbito do <strong>Mês Internacional da Biblioteca Escolar (MIBE)</strong>, a partir da linha «Diversidade e Vozes Globais: Many Voices, One Story». O desafio é olhar para a escola em todas as direções e descobrir as histórias, línguas, memórias e percursos das pessoas que a constituem.</p>
+        <p>Inspira-se no projeto <strong>Humans of New York</strong>, adaptando à escola a ideia de cruzar retratos de pessoas reais com pequenos testemunhos e histórias de vida. Os alunos podem entrevistar, escutar, escrever, traduzir, fotografar, ilustrar e editar pequenas narrativas sobre quem partilha diariamente o mesmo espaço escolar.</p>
+      </div>
+
+      <div class="mv-section">
+        <h3>O que é?</h3>
+        <p>Um <strong>DAC transversal, coordenado pela Biblioteca Escolar</strong>, que transforma a diversidade cultural e linguística da escola num recurso de aprendizagem. A partir de retratos e pequenas histórias de pessoas reais da comunidade escolar, os alunos recolhem e trabalham testemunhos, palavras, lugares, memórias e leituras, construindo progressivamente um retrato coletivo e plural da escola.</p>
+      </div>
+
+      <div class="mv-grid">
+        <div class="mv-box">
+          <h3>Para quê?</h3>
+          <ul>
+            <li>Valorizar as diferentes línguas, culturas e percursos presentes na escola.</li>
+            <li>Desenvolver empatia, escuta ativa, competência intercultural e respeito pela diferença.</li>
+            <li>Reforçar a inclusão, o sentimento de pertença e a coesão da comunidade escolar.</li>
+            <li>Trabalhar leitura, escrita, oralidade, pesquisa, literacia dos média e produção multimodal em contexto real.</li>
+          </ul>
+        </div>
+        <div class="mv-box">
+          <h3>Como pode cada disciplina participar?</h3>
+          <p>Não é necessário desenvolver um projeto paralelo. Cada professor pode integrar uma pequena tarefa curricular, como:</p>
+          <ul>
+            <li>preparar perguntas e realizar entrevistas;</li>
+            <li>escrever ou rever um retrato;</li>
+            <li>traduzir palavras e expressões;</li>
+            <li>construir mapas e trabalhar migrações e Direitos Humanos;</li>
+            <li>tratar dados;</li>
+            <li>produzir fotografia ou ilustração;</li>
+            <li>editar conteúdos digitais;</li>
+            <li>explorar leituras relacionadas com identidade e diversidade.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mv-timeline">
+        <div class="mv-timeline-main">
+          <span class="mv-period">OUTUBRO → JUNHO</span>
+          <h3>Um projeto ao longo do ano</h3>
+          <p>O projeto é lançado no MIBE e desenvolve-se de forma modular ao longo do ano. Cada turma ou disciplina pode participar apenas numa etapa, tornando a participação simples e flexível.</p>
+        </div>
+        <div class="mv-timeline-note">
+          <strong>Sem projeto paralelo</strong>
+          <span>Uma pequena tarefa curricular pode ser suficiente para acrescentar uma nova voz ao retrato da escola.</span>
+        </div>
+      </div>
+
+      <div class="mv-grid mv-grid-bottom">
+        <div class="mv-box mv-final">
+          <h3>Produto final</h3>
+          <p><strong>Exposição «Muitas Vozes, Uma História: Retratos da nossa escola»</strong>, reunindo retratos, pequenos textos, palavras em várias línguas, mapas, leituras e outros elementos produzidos pelos alunos.</p>
+        </div>
+        <div class="mv-box mv-library">
+          <h3>O que assegura a Biblioteca?</h3>
+          <p>Planificação e coordenação global, guiões de entrevista e pesquisa, apoio às literacias, materiais-modelo, curadoria e edição, articulação entre contributos, montagem e divulgação da exposição.</p>
+        </div>
+      </div>
+
+      <div class="mv-participation">
+        <div class="mv-participation-icon">🤝</div>
+        <div>
+          <h3>Participação</h3>
+          <p>Os docentes interessados podem escolher uma tarefa ou etapa compatível com os conteúdos da sua disciplina e articulá-la com a Biblioteca Escolar. O objetivo é que o DAC seja <strong>leve na logística, curricularmente útil e verdadeiramente coletivo</strong>.</p>
+        </div>
+      </div>
+
       <a class="back-link" href="atividades.html">← Voltar às atividades</a>
     </div>
   </article>

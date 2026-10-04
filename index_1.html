@@ -148,71 +148,6 @@ main [class*="hero"] h6 {
 .bema-schedule-mini .bema-link{white-space:nowrap}
 @media(max-width:650px){.bema-schedule-mini{display:block;padding:22px}.bema-schedule-mini .bema-link{display:inline-block;margin-top:16px}}
 </style>
-
-<style id="bema-home-actions-outline">
-/* Botões principais da página inicial — estilo transparente/contornado */
-.bema-actions{
-  display:grid !important;
-  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-  gap:14px !important;
-  width:min(100%,980px) !important;
-  flex-wrap:nowrap !important;
-}
-.bema-actions .bema-btn{
-  min-width:0 !important;
-  width:100% !important;
-  min-height:92px !important;
-  box-sizing:border-box !important;
-  justify-content:flex-start !important;
-  padding:15px 18px !important;
-  border:2px solid rgba(255,255,255,.88) !important;
-  border-radius:20px !important;
-  background:rgba(10,55,49,.16) !important;
-  color:#fff !important;
-  backdrop-filter:blur(3px) !important;
-  -webkit-backdrop-filter:blur(3px) !important;
-  box-shadow:none !important;
-  transition:transform .18s,background .18s,border-color .18s !important;
-}
-.bema-actions .bema-btn:hover{
-  background:rgba(255,255,255,.12) !important;
-  border-color:#fff !important;
-  color:#fff !important;
-  transform:translateY(-3px) !important;
-  box-shadow:none !important;
-}
-.bema-actions .bema-btn > span{
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:flex-start !important;
-  gap:3px !important;
-  flex:1 !important;
-  min-width:0 !important;
-}
-.bema-actions .bema-btn strong{
-  font-size:1.02rem !important;
-  line-height:1.15 !important;
-  color:#fff !important;
-}
-.bema-actions .bema-btn small{
-  font-size:.76rem !important;
-  line-height:1.25 !important;
-  color:rgba(255,255,255,.9) !important;
-  font-weight:500 !important;
-}
-.bema-actions .bema-btn b{
-  font-size:1.45rem !important;
-  line-height:1 !important;
-  color:#72e0b2 !important;
-  font-weight:500 !important;
-  transition:transform .18s !important;
-}
-.bema-actions .bema-btn:hover b{transform:translateX(4px) !important}
-@media(max-width:900px){
-  .bema-actions{grid-template-columns:1fr !important;max-width:520px !important}
-}
-</style>
-
 </head>
 <body>
 <header class="site-header">
@@ -244,9 +179,9 @@ main [class*="hero"] h6 {
       <h1>Um lugar para <span>ler, descobrir e criar.</span></h1>
       <p>Um espaço da escola onde podes encontrar histórias, ideias, conhecimento e inspiração.</p>
       <div class="bema-actions">
-        <a class="bema-btn" href="agenda.html">📅 <span><strong>Agenda</strong><small>Acontece na BEMA</small></span><b aria-hidden="true">→</b></a>
-        <a class="bema-btn" href="leituras.html">📖 <span><strong>Descobrir leituras</strong><small>Livros, sugestões e novidades</small></span><b aria-hidden="true">→</b></a>
-        <a class="bema-btn" href="atividades.html">✨ <span><strong>Projetos e atividades</strong><small>Ideias que ganham vida</small></span><b aria-hidden="true">→</b></a>
+        <a class="bema-btn" href="leituras.html">📖 Descobrir leituras</a>
+        <a class="bema-btn" href="atividades.html">✨ Acontece na BEMA</a>
+        <a class="bema-btn" href="agenda.html">📅 Agenda</a>
       </div>
     </div>
   </section>

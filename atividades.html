@@ -154,18 +154,112 @@ main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
 .atividades-intro .eyebrow{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#2f8068;margin-bottom:8px}
 .atividades-intro h2{margin:0 0 10px;color:#245e58;font-size:2rem}
 .atividades-intro p{margin:0;color:#667570;line-height:1.6}
-.activity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.activity-card{background:#fff;border:1px solid #dfe9e4;border-radius:24px;overflow:hidden;box-shadow:0 10px 26px rgba(35,88,73,.08);display:flex;flex-direction:column}
-.activity-image{height:220px;background:#edf5f1;overflow:hidden}
-.activity-image img{width:100%;height:100%;object-fit:cover;display:block}
-.activity-body{padding:22px;display:flex;flex-direction:column;flex:1}
-.activity-tag{display:inline-block;align-self:flex-start;padding:6px 10px;border-radius:999px;background:#edf7f2;color:#26745d;font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
-.activity-card h2{font-size:1.35rem;line-height:1.18;color:#245e58;margin:0 0 10px}
-.activity-card p{font-size:.96rem;line-height:1.58;color:#60706b;margin:0 0 22px}
-.activity-link{margin-top:auto;color:#176a57;text-decoration:none;font-weight:800}
+
+.activity-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  align-items:stretch;
+}
+
+.activity-card{
+  background:#fff;
+  border:1px solid #dfe9e4;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 9px 24px rgba(35,88,73,.075);
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+
+.activity-card:hover{
+  transform:translateY(-4px);
+  border-color:#b9d9d3;
+  box-shadow:0 15px 32px rgba(35,88,73,.13);
+}
+
+.activity-image{
+  aspect-ratio:16/9;
+  background:#edf5f1;
+  overflow:hidden;
+  flex:none;
+}
+
+.activity-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .35s ease;
+}
+
+.activity-card:hover .activity-image img{transform:scale(1.025)}
+
+.activity-body{
+  padding:20px 21px 21px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.activity-tag{
+  display:inline-block;
+  align-self:flex-start;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#edf7f2;
+  color:#26745d;
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.activity-card h2{
+  font-size:1.28rem;
+  line-height:1.2;
+  color:#245e58;
+  margin:0 0 9px;
+}
+
+.activity-card p{
+  font-size:.93rem;
+  line-height:1.52;
+  color:#60706b;
+  margin:0 0 18px;
+}
+
+.activity-link{
+  margin-top:auto;
+  color:#176a57;
+  text-decoration:none;
+  font-weight:800;
+  font-size:.92rem;
+}
+
 .activity-link:hover{text-decoration:underline}
-@media(max-width:900px){.activity-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.activity-grid{grid-template-columns:1fr}.activity-image{height:210px}.atividades-intro h2{font-size:1.65rem}}
+
+@media(max-width:900px){
+  .activity-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:640px){
+  .activity-grid{grid-template-columns:1fr;gap:18px}
+  .atividade-intro h2,.atividades-intro h2{font-size:1.65rem}
+}
+
+.activity-image{
+  display:block;
+  text-decoration:none;
+  cursor:pointer;
+}
+.activity-image:focus-visible{
+  outline:3px solid #397f76;
+  outline-offset:-3px;
+}
 </style>
 
 </head><body><header class="site-header">
@@ -203,30 +297,27 @@ main .leitura-hero p, main .ft-hero p, main .rea-hero p, main .hero p {
   <section class="activity-grid" aria-label="Atividades da BEMA">
     
     <article class="activity-card">
-      <div class="activity-image"><img src="assets/atividades/detetives-informacao.png" alt="Detetives da Informação — Isto é Verdade?"></div>
+      <a class="activity-image" href="detetives-da-informacao.html" aria-label="Abrir Detetives da Informação — Isto é Verdade?"><img src="assets/atividades/detetives-da-informacao.png" alt="Detetives da Informação — Isto é Verdade?"></a>
       <div class="activity-body">
         <span class="activity-tag">Literacia da informação</span>
         <h2>Detetives da Informação — Isto é Verdade?</h2>
         <p>Desafios para observar, questionar, investigar e verificar a informação.</p>
-        <a class="activity-link" href="detetives-da-informacao.html">Saber mais <span aria-hidden="true">→</span></a>
       </div>
     </article>
     <article class="activity-card">
-      <div class="activity-image"><img src="assets/atividades/muitas-vozes.png" alt="Muitas Vozes, Uma História"></div>
+      <a class="activity-image" href="muitas-vozes.html" aria-label="Abrir Muitas Vozes, Uma História"><img src="assets/atividades/muitas-vozes.png" alt="Muitas Vozes, Uma História"></a>
       <div class="activity-body">
         <span class="activity-tag">MIBE · DAC</span>
         <h2>Muitas Vozes, Uma História</h2>
         <p>Um projeto sobre histórias, línguas, memórias e percursos da comunidade escolar.</p>
-        <a class="activity-link" href="muitas-vozes.html">Saber mais <span aria-hidden="true">→</span></a>
       </div>
     </article>
     <article class="activity-card">
-      <div class="activity-image"><img src="assets/atividades/sabores-do-mundo.png" alt="Sabores do Mundo"></div>
+      <a class="activity-image" href="sabores-do-mundo.html" aria-label="Abrir Sabores do Mundo"><img src="assets/atividades/sabores-do-mundo.png" alt="Sabores do Mundo"></a>
       <div class="activity-body">
         <span class="activity-tag">Dia Mundial da Alimentação</span>
         <h2>Sabores do Mundo</h2>
         <p>Uma viagem pelos sabores e culturas do mundo através de desafios às turmas.</p>
-        <a class="activity-link" href="sabores-do-mundo.html">Saber mais <span aria-hidden="true">→</span></a>
       </div>
     </article>
   </section>
