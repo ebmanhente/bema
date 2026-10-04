@@ -1,32 +1,25 @@
-# BEMA — versão GitHub Pages / gémea do Wix
+# Área reservada a professores — BEMA
 
-Fonte de comparação: site público da Biblioteca Escolar de Manhente no Wix.
+Esta versão prepara a página `professores.html` para autenticação através de um Google Apps Script.
 
-## O que foi afinado nesta versão
+## Porque esta solução
 
-- Navegação principal e submenus alinhados com a estrutura atual do Wix.
-- Página inicial reorganizada segundo a ordem dos blocos atualmente visíveis no Wix.
-- Tipografia, espaçamento, bordas, grelha de cartões e cabeçalho aproximados do desenho visual do Wix.
-- Conteúdos específicos confirmados no Wix mantidos nas páginas correspondentes.
-- Guiões dos alunos ligados aos três PDFs originais disponibilizados pelo site.
-- Regimento Interno BEMA ligado ao PDF original disponibilizado pelo site.
-- Imagens locais usadas em vez das imagens hospedadas no Wix.
-- 521 imagens otimizadas incluídas localmente.
-- Pesquisa local para o arquivo.
-- Layout responsivo para computador, tablet e telemóvel.
+O site BEMA continua alojado no GitHub Pages, mas a validação do acesso acontece fora do HTML público. O Apps Script pode ser publicado como web app restrito ao domínio e executar como o utilizador que está a aceder; o serviço Google Groups permite verificar se esse utilizador pertence ao grupo de professores.
 
-## Verificações
+Documentação oficial:
+- https://developers.google.com/apps-script/guides/web
+- https://developers.google.com/apps-script/reference/groups
 
-- 22 páginas HTML.
-- 521 imagens locais.
-- 0 referências a páginas do Wix.
-- 0 referências locais a imagens inexistentes.
-- 0 ligações internas locais quebradas.
+## O que falta configurar
 
-## Publicação
+1. Criar um projeto Google Apps Script.
+2. Colocar o código de `apps-script/Code.gs` e `appsscript.json` no projeto.
+3. Substituir `professores@aeaf.edu.pt` pelo endereço real do grupo.
+4. Publicar como Web App, limitado ao domínio `aeaf.edu.pt`.
+5. Copiar o URL `/exec` do Web App para o `href` do botão `Entrar com Google` em `professores.html`, substituindo `COLOCAR_AQUI_O_URL_DO_WEB_APP`.
 
-Copiar o conteúdo deste ZIP para um repositório GitHub Pages. O ficheiro `index.html` é a página inicial.
+## Nota de segurança
 
+Não colocar a lista de emails dos professores em JavaScript, HTML ou ficheiros públicos do GitHub.
 
-## Formulários
-Os formulários Contacte-nos e Sugestão de livro usam FormSubmit via AJAX, compatível com GitHub Pages. O endereço de destino é bibliotecademanhente@aeaf.edu.pt. Na primeira utilização, o FormSubmit envia uma mensagem de confirmação para esse endereço; é necessário ativar o formulário.
+A página pública apenas inicia o processo. A autorização deve ocorrer no Apps Script/Google, antes de servir o conteúdo reservado.

@@ -214,9 +214,38 @@ main [class*="hero"] h6 {
 </style>
 
 
+
+<style id="professores-page-style">
+.professores-page{max-width:1180px;margin:auto;padding:0 24px 70px;}
+.professores-hero{position:relative;overflow:hidden;min-height:245px;border-radius:26px;box-sizing:border-box;padding:42px 48px;background:linear-gradient(135deg,#0b6b50,#15966d);color:#fff;box-shadow:0 14px 35px rgba(0,0,0,.12);}
+.professores-hero::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:-110px;top:-150px;background:rgba(255,255,255,.09);pointer-events:none;}
+.professores-hero>*{position:relative;z-index:2;}
+.professores-kicker{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:12px;}
+.professores-hero h1{margin:0 0 12px;color:#fff !important;font-size:clamp(2rem,4vw,3.15rem);line-height:1.08;}
+.professores-hero p{margin:0;max-width:700px;color:rgba(255,255,255,.92);font-size:1.08rem;line-height:1.55;}
+.professores-content{max-width:850px;margin:32px auto 0;}
+.professores-card{display:flex;align-items:center;gap:20px;padding:24px 26px;border:1px solid #dfe9e6;border-radius:20px;background:#fbfdfc;box-shadow:0 7px 22px rgba(33,62,58,.055);}
+.professores-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:16px;background:#eaf5f2;font-size:1.7rem;flex:none;}
+.professores-card h2{margin:0 0 6px;color:#245e58;font-size:1.35rem;}
+.professores-card p{margin:0;color:#66706e;line-height:1.55;}
+@media(max-width:700px){.professores-page{padding:0 14px 45px}.professores-hero{min-height:220px;padding:32px 24px;border-radius:22px}.professores-card{align-items:flex-start;padding:20px}.professores-icon{width:48px;height:48px;font-size:1.5rem}}
+</style>
+
+<style id="professores-login-style">
+.professores-login-card{align-items:flex-start;padding:30px 32px;gap:22px;}
+.professores-login-copy{flex:1;min-width:0;}
+.professores-label{display:block;margin:0 0 7px;font-size:.7rem;letter-spacing:.13em;font-weight:800;color:#397f76;}
+.professores-login-copy h2{font-size:1.55rem;margin:0 0 8px;}
+.professores-login-copy p{max-width:680px;}
+.professores-login-btn{display:inline-flex;align-items:center;gap:11px;margin-top:17px;padding:12px 17px;border-radius:12px;border:1px solid #d6e4e1;background:#fff;color:#245e58;text-decoration:none;font-weight:700;box-shadow:0 5px 16px rgba(33,62,58,.07);transition:.18s;}
+.professores-login-btn:hover{transform:translateY(-1px);border-color:#a9cbc4;background:#f8fcfb;text-decoration:none;box-shadow:0 8px 20px rgba(33,62,58,.10);}
+.google-mark{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#f4f7f6;font-weight:800;font-size:.92rem;}
+.login-arrow{font-size:1.25rem;margin-left:3px;color:#397f76;}
+.professores-note{font-size:.78rem!important;color:#7b8583!important;margin-top:13px!important;}
+@media(max-width:700px){.professores-login-card{padding:23px 20px;gap:16px}.professores-login-btn{width:100%;justify-content:center;box-sizing:border-box}}
+</style>
 </head>
-<body>
-<header class="site-header">
+<body><header class="site-header">
  <div class="topbar bema-topbar">
   <a class="brand bema-brand" href="index.html" aria-label="BEMA — Biblioteca Escolar de Manhente">
     <img src="imagens/logo-bema.jpg" alt="BEMA — Biblioteca Escolar de Manhente">
@@ -236,47 +265,30 @@ main [class*="hero"] h6 {
   <li class="professores-nav"><a href="professores.html">Área reservada a professores</a></li>
   <li class="drop more"><a href="#">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="horario.html">Horário</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
  </ul></nav>
-</header>
+</header><main class="professores-page">
+  <section class="professores-hero">
+    <span class="professores-kicker">BEMA · DOCENTES</span>
+    <h1>Área reservada a professores</h1>
+    <p>Espaço de apoio aos docentes da Escola Básica de Manhente.</p>
+  </section>
 
-<main class="bema-home bema-minimal-home">
-
-  <section class="bema-hero">
-    <div class="bema-hero-content">
-      <div class="bema-kicker">📚 BIBLIOTECA ESCOLAR DE MANHENTE</div>
-      <h1>Um lugar para <span>ler, descobrir e criar.</span></h1>
-      <p>Um espaço da escola onde podes encontrar histórias, ideias, conhecimento e inspiração.</p>
-      <div class="bema-actions">
-        <a class="bema-btn" href="agenda.html">📅 <span><strong>Agenda</strong><small>Acontece na BEMA</small></span><b aria-hidden="true">→</b></a>
-        <a class="bema-btn" href="leituras.html">📖 <span><strong>Descobrir leituras</strong><small>Livros, sugestões e novidades</small></span><b aria-hidden="true">→</b></a>
-        <a class="bema-btn" href="atividades.html">✨ <span><strong>Projetos e atividades</strong><small>Ideias que ganham vida</small></span><b aria-hidden="true">→</b></a>
+  <section class="professores-content">
+    <div class="professores-card professores-login-card">
+      <div class="professores-icon" aria-hidden="true">🔐</div>
+      <div class="professores-login-copy">
+        <span class="professores-label">ACESSO RESTRITO</span>
+        <h2>Área reservada aos docentes</h2>
+        <p>Entre com a sua conta institucional <strong>@aeaf.edu.pt</strong>. O acesso será validado através do grupo Google dos professores.</p>
+        <a class="professores-login-btn" href="__COLOCAR_URL_DO_APPS_SCRIPT_AQUI__">
+          <span class="google-mark" aria-hidden="true">G</span>
+          <span>Entrar com Google</span>
+          <span class="login-arrow" aria-hidden="true">→</span>
+        </a>
+        <p class="professores-note">A lista de professores não fica exposta no site. A validação é feita no lado do serviço de autenticação.</p>
       </div>
     </div>
   </section>
-
-  <section class="bema-welcome">
-    <div>
-      <span class="bema-overline">BEM-VINDO</span>
-      <h2>A BEMA é mais do que uma biblioteca.</h2>
-      <p>É um espaço para ler, pesquisar, aprender, criar e partilhar. Entra, fica à vontade e descobre o que temos para ti.</p>
-    </div></section>
-
-  <section class="bema-info-row">
-    <div>
-      <span class="bema-overline">INFORMAÇÃO ÚTIL</span>
-      <h2>Horário da BEMA</h2>
-      <p>Consulta o horário da BEMA e planeia a tua visita.</p>
-      <a class="bema-link" href="horario.html">Ver horário →</a>
-    </div>
-    <div>
-      <span class="bema-overline">FALA CONNOSCO</span>
-      <h2>Tens uma ideia?</h2>
-      <p>Sugere um livro, deixa uma mensagem ou entra em contacto com a biblioteca.</p>
-      <a class="bema-link" href="contactos.html">Contactar a BEMA →</a>
-    </div>
-  </section>
-
 </main>
-
 <footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <a href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener">EB de Manhente</a> · <span id="ano"></span></div></footer>
 <script src="js/script.js"></script>
 </body></html>
