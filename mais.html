@@ -98,83 +98,45 @@ main [class*="hero"] h6 {
   <li><a href="contactos.html">Contactos</a></li>
   <li class="drop more"><a href="mais.html">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="horario.html">Horário</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="catalogo.html">Catálogo / Área do Utente</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
  </ul></nav>
-</header><main class="page recursos-page">
-  <section class="recursos-hero">
-    <div class="hero-content">
-      <span class="eyebrow">BEMA · RECURSOS</span>
-      <h1>Recursos Educativos</h1>
-      <p>Encontra ferramentas, guiões e páginas úteis para aprender, pesquisar, criar e trabalhar melhor.</p>
+</header><style>
+.mais-page{max-width:1180px;margin:0 auto;padding:34px 22px 60px}
+.mais-hero{position:relative;overflow:hidden;min-height:245px;border-radius:26px;padding:42px 48px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#0b6b50,#15966d);color:#fff;box-shadow:0 14px 35px rgba(0,0,0,.12)}
+.mais-hero:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:-110px;top:-150px;background:rgba(255,255,255,.09)}
+.mais-hero-copy{position:relative;z-index:2;max-width:720px}.mais-eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.14em}.mais-hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin:9px 0 12px;line-height:1;color:#fff!important}.mais-hero p{font-size:1.08rem;line-height:1.6;margin:0;max-width:680px;color:rgba(255,255,255,.92)}
+.mais-mark{position:relative;z-index:2;font-size:6rem;filter:drop-shadow(0 10px 10px rgba(0,0,0,.15));transform:rotate(-5deg)}
+.mais-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center;padding:54px 6px 30px}.mais-kicker{font-size:.75rem;font-weight:800;letter-spacing:.14em;color:#16835f}.mais-intro h2{font-size:clamp(1.7rem,3vw,2.35rem);margin:8px 0 0;color:#18352d;line-height:1.15}.mais-intro-text{border-left:4px solid #16835f;padding-left:27px}.mais-intro-text p{margin:0;color:#586761;font-size:1.03rem;line-height:1.75}
+.mais-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin:10px 0 20px}.mais-card{display:flex;min-height:190px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;border:1px solid #e5ebe8;border-radius:22px;box-shadow:0 8px 24px rgba(20,50,40,.08);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}.mais-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(20,50,40,.14);border-color:#b9d9cd}.mais-card-icon{width:32%;min-width:135px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#0d7b5b,#39a878);color:#fff;font-size:3.5rem}.mais-card-body{padding:25px 27px;display:flex;flex-direction:column;justify-content:center;flex:1}.mais-card-body h3{font-size:1.35rem;margin:0 0 9px;color:#18352d}.mais-card-body p{font-size:.93rem;line-height:1.55;color:#687570;margin:0 0 16px}.mais-link{margin-top:auto;color:#087451;font-weight:800;font-size:.88rem}
+@media(max-width:850px){.mais-intro{grid-template-columns:1fr;gap:18px}.mais-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.mais-page{padding:20px 14px 45px}.mais-hero{border-radius:20px;padding:30px 23px}.mais-mark{display:none}.mais-hero p{font-size:.98rem}.mais-intro{padding-top:40px}.mais-intro-text{padding-left:19px}.mais-card{min-height:175px}.mais-card-icon{width:28%;min-width:95px;font-size:2.8rem}.mais-card-body{padding:21px 18px}.mais-card-body h3{font-size:1.15rem}.mais-card-body p{font-size:.86rem}.mais-link{font-size:.8rem}}
+</style>
+<main class="page mais-page">
+  <section class="mais-hero">
+    <div class="mais-hero-copy">
+      <span class="mais-eyebrow">BEMA · MAIS</span>
+      <h1>Mais <em>na BEMA</em></h1>
+      <p>Descobre outros serviços, informações e recursos da Biblioteca Escolar de Manhente.</p>
     </div>
-    <div class="hero-symbol" aria-hidden="true">📚</div>
+    <div class="mais-mark" aria-hidden="true">✨</div>
   </section>
 
-  <section class="recursos-texto">
-    <div class="texto-intro">
-      <span class="section-kicker">PORQUE SÃO IMPORTANTES?</span>
-      <h2>Recursos educativos ao serviço da aprendizagem</h2>
+  <section class="mais-intro">
+    <div>
+      <span class="mais-kicker">EXPLORA</span>
+      <h2>Outras áreas da BEMA</h2>
     </div>
-
-    <div class="texto-principal">
-      <p>Os recursos educativos são fundamentais tanto para alunos como para professores e são especialmente relevantes no contexto atual, em que a tecnologia desempenha um papel cada vez mais importante na educação.</p>
-    </div>
-  </section>
-
-  <section class="conceitos-grid">
-    <article class="conceito conceito-rea">
-      <div class="conceito-icon">🔓</div>
-      <div>
-        <span>01 · REA</span>
-        <h3>Recursos Educacionais Abertos</h3>
-        <p>Os Recursos Educacionais Abertos (REA) são materiais de ensino, aprendizagem ou pesquisa disponíveis gratuitamente na internet, que podem ser usados, adaptados e distribuídos livremente.</p>
-      </div>
-    </article>
-
-    <article class="conceito conceito-digitais">
-      <div class="conceito-icon">💻</div>
-      <div>
-        <span>02 · DIGITAL</span>
-        <h3>Recursos educativos digitais</h3>
-        <p>Os recursos educativos digitais, como vídeos, infográficos e jogos educativos, proporcionam uma forma mais atraente e interativa de aprender.</p>
-      </div>
-    </article>
-
-    <article class="conceito conceito-curadoria">
-      <div class="conceito-icon">🧭</div>
-      <div>
-        <span>03 · CURADORIA</span>
-        <h3>Curadoria de conteúdos</h3>
-        <p>A curadoria de conteúdos envolve selecionar, avaliar e organizar recursos educativos de forma a maximizar a sua relevância e utilidade para alunos e professores.</p>
-      </div>
-    </article>
-  </section>
-
-  <section class="recursos-escolha">
-    <div class="escolha-heading">
-      <span class="section-kicker">EXPLORA A BEMA</span>
-      <h2>Encontra o recurso de que precisas</h2>
-      <p>Escolhe uma das áreas e começa a explorar.</p>
-    </div>
-
-    <div class="recursos-grid">
-      <a class="recurso-card card-tools" href="ferramentas.html">
-        <div class="card-image"><span class="card-icon">🛠️</span><span class="card-tag">CRIAR · INTERAGIR</span></div>
-        <div class="card-body"><h3>Ferramentas Digitais</h3><p>Aplicações para criar apresentações, imagens, vídeos, quizzes, atividades interativas e muito mais.</p><span class="card-link">Explorar ferramentas <b>↗</b></span></div>
-      </a>
-
-      <a class="recurso-card card-guides" href="guioes.html">
-        <div class="card-image"><span class="card-icon">📝</span><span class="card-tag">PESQUISAR · TRABALHAR</span></div>
-        <div class="card-body"><h3>Guiões e colaboração</h3><p>Guias práticos para preparar trabalhos, fazer apresentações, pesquisar e avaliar informação.</p><span class="card-link">Ver guiões <b>↗</b></span></div>
-      </a>
-
-      <a class="recurso-card card-rea" href="rea.html">
-        <div class="card-image"><span class="card-icon">🌐</span><span class="card-tag">DESCOBRIR · APRENDER</span></div>
-        <div class="card-body"><h3>Páginas de interesse e REA</h3><p>Sites educativos, recursos abertos e páginas selecionadas pela BEMA para aprender e pesquisar.</p><span class="card-link">Descobrir recursos <b>↗</b></span></div>
-      </a>
-
-      <a class="recurso-card card-cidadania" href="cidadania.html">
-        <div class="card-image"><span class="card-icon">🌱</span><span class="card-tag">PARTICIPAR · CRESCER</span></div>
-        <div class="card-body"><h3>Cidadania e Desenvolvimento</h3><p>Recursos para refletir, participar e aprender sobre temas importantes para a vida em sociedade.</p><span class="card-link">Explorar cidadania <b>↗</b></span></div>
-      </a>
+    <div class="mais-intro-text">
+      <p>Encontra aqui informação sobre a Biblioteca, consulta a agenda e o horário, acompanha atividades e notícias, pesquisa o catálogo e acede a outras áreas úteis.</p>
     </div>
   </section>
-</main><footer><div class="footer-inner"><div><h3>Biblioteca Escolar de Manhente</h3><p>Telefone: <a href="tel:253849410">253 849 410</a><br>Rua Manuel Maria Barbosa du Bocage nº 67<br>4750-547 Manhente, Barcelos, Portugal</p></div><div><h3>Contactos</h3><p><a href="mailto:bibliotecademanhente@aeaf.edu.pt">bibliotecademanhente@aeaf.edu.pt</a><br><a href="https://www.aeaf.edu.pt/" target="_blank" rel="noopener">Agrupamento de Escolas Alcaides de Faria</a></p></div><div><h3>Links úteis</h3><p><a href="contactos.html">Contacte-nos</a><br><a href="faq.html">FAQs</a><br><a href="arquivo.html">Arquivo</a></p></div></div><div class="copy">BEMA · Biblioteca Escolar de Manhente · <span id="ano"></span></div></footer><script src="js/script.js"></script></body></html>
+
+  <section class="mais-grid" aria-label="Áreas da BEMA">
+    <a class="mais-card" href="sobre.html"><div class="mais-card-icon">📚</div><div class="mais-card-body"><h3>Sobre nós / Serviços</h3><p>Conhece a BEMA, os seus serviços e a forma como pode apoiar a comunidade escolar.</p><span class="mais-link">Saber mais →</span></div></a>
+    <a class="mais-card" href="agenda.html"><div class="mais-card-icon">📅</div><div class="mais-card-body"><h3>Agenda</h3><p>Consulta as atividades, iniciativas e momentos previstos na Biblioteca.</p><span class="mais-link">Ver agenda →</span></div></a>
+    <a class="mais-card" href="horario.html"><div class="mais-card-icon">🕒</div><div class="mais-card-body"><h3>Horário</h3><p>Consulta os horários de funcionamento da BEMA.</p><span class="mais-link">Ver horário →</span></div></a>
+    <a class="mais-card" href="atividades.html"><div class="mais-card-icon">✨</div><div class="mais-card-body"><h3>Atividades / Notícias</h3><p>Descobre o que acontece na BEMA e acompanha as atividades realizadas.</p><span class="mais-link">Ver atividades →</span></div></a>
+    <a class="mais-card" href="arquivo.html"><div class="mais-card-icon">🗂️</div><div class="mais-card-body"><h3>Arquivo</h3><p>Consulta o arquivo de conteúdos e atividades da Biblioteca.</p><span class="mais-link">Consultar arquivo →</span></div></a>
+    <a class="mais-card" href="catalogo.html"><div class="mais-card-icon">🔎</div><div class="mais-card-body"><h3>Catálogo / Área do Utente</h3><p>Pesquisa o acervo da BEMA e acede à tua área de utente.</p><span class="mais-link">Consultar catálogo →</span></div></a>
+    <a class="mais-card" href="faq.html"><div class="mais-card-icon">❓</div><div class="mais-card-body"><h3>FAQ</h3><p>Encontra respostas às perguntas mais frequentes sobre a BEMA.</p><span class="mais-link">Consultar FAQ →</span></div></a>
+  </section>
+</main>
+</body></html>

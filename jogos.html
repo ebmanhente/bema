@@ -1,0 +1,167 @@
+<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jogos da BEMA | Biblioteca Escolar de Manhente</title><meta name="description" content="Biblioteca Escolar de Manhente — BEMA"><link rel="stylesheet" href="css/estilo.css">
+<style>
+.sobre-page{max-width:1180px;margin:0 auto;padding:32px 22px 65px}
+.sobre-hero{position:relative;overflow:hidden;min-height:300px;border-radius:28px;padding:48px 55px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(125deg,#103f35,#117455 62%,#55ad83);color:#fff;box-shadow:0 17px 40px rgba(18,72,55,.15)}
+.sobre-hero:before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-150px;top:-230px;background:rgba(255,255,255,.07)}
+.sobre-hero-copy{position:relative;z-index:2}.sobre-kicker{font-size:.72rem;font-weight:800;letter-spacing:.15em;color:#c8eddf}
+.sobre-hero h1{font-size:clamp(2.35rem,5vw,4.3rem);line-height:1.02;letter-spacing:-.04em;margin:13px 0 17px}.sobre-hero h1 em{font-style:normal;color:#d5f1e5}
+.sobre-hero p{font-size:1.08rem;color:rgba(255,255,255,.9);margin:0;line-height:1.6}.hero-mark{position:relative;z-index:2;font-size:7rem;margin-right:40px;transform:rotate(-7deg);filter:drop-shadow(0 12px 10px rgba(0,0,0,.17))}
+.sobre-intro{padding:58px 5px 25px}.paula-card{display:grid;grid-template-columns:330px 1fr;gap:42px;align-items:start}
+.paula-photo{position:relative;border-radius:24px;overflow:hidden;background:#eaf3ef;box-shadow:0 12px 30px rgba(20,60,47,.11)}.paula-photo img{width:100%;height:405px;object-fit:cover;display:block}.paula-photo span{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(13,67,51,.88);color:#fff;text-align:center;border-radius:10px;padding:9px;font-size:.62rem;font-weight:800;letter-spacing:.1em}
+.section-kicker{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:#16835f}.paula-info h2,.services-heading h2{font-size:clamp(2rem,3vw,2.7rem);line-height:1.1;color:#193a31;margin:8px 0 19px}.paula-info p{color:#5e6d67;line-height:1.7;font-size:.95rem;margin:0 0 15px}.paula-info .lead{font-size:1.08rem;color:#36554b}.signature{margin-top:22px;color:#16835f;font-family:cursive;font-size:1.55rem}
+.services-section{padding:42px 0 58px}.services-heading{text-align:center;margin-bottom:31px}.services-heading p{color:#687570;margin:9px 0 0}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.service-card{display:grid;grid-template-columns:62px 1fr;gap:16px;padding:23px;border-radius:19px;border:1px solid #e0e9e5;background:#fff;box-shadow:0 7px 22px rgba(22,55,44,.06);transition:transform .2s,box-shadow .2s,border-color .2s}.service-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(22,55,44,.11);border-color:#b8d7ca}.service-card.featured{background:#f0f7f3;border-color:#d4e8df}
+.service-icon{width:58px;height:58px;border-radius:16px;background:#eaf5f0;display:flex;align-items:center;justify-content:center;font-size:1.7rem}.service-card span{font-size:.61rem;font-weight:800;letter-spacing:.12em;color:#16835f}.service-card h3{font-size:1.18rem;color:#23483d;margin:6px 0 10px}.service-card p{font-size:.84rem;line-height:1.5;color:#687570;margin:0 0 6px}.service-card p:last-child{margin-bottom:0}
+.sobre-final{display:flex;align-items:center;gap:21px;border-radius:22px;padding:27px 31px;background:linear-gradient(120deg,#eff7f3,#f5f8e9);border:1px solid #dce9e3}.final-icon{font-size:2.3rem}.sobre-final span{font-size:.65rem;font-weight:800;letter-spacing:.13em;color:#16835f}.sobre-final h2{font-size:1.45rem;color:#21473b;margin:6px 0}.sobre-final p{color:#687570;margin:0;font-size:.9rem}
+@media(max-width:850px){.paula-card{grid-template-columns:240px 1fr;gap:28px}.paula-photo img{height:330px}.service-grid{grid-template-columns:1fr}.hero-mark{margin-right:0;font-size:5.5rem}}
+@media(max-width:650px){.sobre-page{padding:18px 14px 50px}.sobre-hero{min-height:270px;padding:34px 25px;border-radius:22px}.hero-mark{display:none}.sobre-hero h1{font-size:2.7rem}.sobre-hero p{font-size:.97rem}.sobre-intro{padding-top:42px}.paula-card{grid-template-columns:1fr;gap:25px}.paula-photo img{height:auto;max-height:440px}.paula-info h2{font-size:2rem}.service-card{grid-template-columns:52px 1fr;padding:19px}.service-icon{width:50px;height:50px;font-size:1.45rem}.sobre-final{align-items:flex-start;padding:23px 20px}.sobre-final h2{font-size:1.2rem}}
+
+/* BEMA — hierarquia visual dos cabeçalhos */
+main h1, main h2, main h3 { color:#245e58 !important; }
+/* Títulos dentro dos blocos HERO: branco para garantir contraste */
+main .hero h1, main .student-hero h1, main .revistas-hero h1, main .leituras-hero h1, main .contact-hero h1, main .sobre-hero h1, main .recursos-hero h1, main .ferramentas-hero h1, main .cidadania-hero h1, main .rea-hero h1, main .digital-hero h1, main .pnl-hero h1, main .student-hero h2 { color:#ffffff !important; }
+</style>
+
+
+<!-- BEMA: normalização visual dos cabeçalhos -->
+<style id="bema-heading-system">
+/* Todos os cabeçalhos do conteúdo seguem a mesma cor BEMA */
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #245e58 !important;
+}
+
+/* Nos HERO, o título principal é sempre branco */
+main [class*="hero"] h1,
+main [class*="hero"] h2,
+main [class*="hero"] h3,
+main [class*="hero"] h4,
+main [class*="hero"] h5,
+main [class*="hero"] h6 {
+  color: #ffffff !important;
+}
+</style>
+<style id="bema-header-home-system">
+/* ===== CABEÇALHO BEMA + EB MANHENTE ===== */
+.bema-topbar{max-width:1180px !important;padding:14px 24px !important;gap:24px !important;}
+.bema-brand{display:flex !important;align-items:center;min-width:0;}
+.bema-brand img{display:block;width:235px;height:auto;max-height:88px;object-fit:contain;}
+.school-identity{margin-left:auto;display:flex;align-items:center;gap:12px;padding:7px 13px 7px 9px;border:1px solid #dfe9e6;border-radius:16px;background:#fbfdfc;color:#245e58;text-decoration:none;transition:.18s;}
+.school-identity:hover{text-decoration:none;transform:translateY(-1px);box-shadow:0 6px 18px rgba(33,62,58,.08);border-color:#b9d9d3;}
+.school-identity img{width:62px;height:62px;object-fit:contain;flex:none;}
+.school-identity span{display:flex;flex-direction:column;gap:2px;}
+.school-identity strong{font-size:1rem;line-height:1.1;}
+.school-identity small{font-size:.72rem;color:#66706e;line-height:1.2;}
+.bema-welcome{grid-template-columns:1fr;max-width:900px;}
+@media(max-width:800px){
+ .bema-topbar{padding:10px 16px !important;gap:10px !important;}
+ .bema-brand img{width:190px;max-height:72px;}
+ .school-identity{padding:5px 8px;gap:7px;border-radius:12px;}
+ .school-identity img{width:45px;height:45px;}
+ .school-identity strong{font-size:.82rem;}
+ .school-identity small{display:none;}
+}
+@media(max-width:520px){
+ .bema-brand img{width:155px;max-height:60px;}
+ .school-identity img{width:38px;height:38px;}
+ .school-identity strong{font-size:.7rem;}
+ .school-identity{padding:4px;}
+}
+
+.bema-brand{display:flex!important;align-items:center!important;visibility:visible!important;opacity:1!important;}
+.bema-brand img{display:block!important;width:235px!important;height:auto!important;max-height:88px!important;object-fit:contain!important;visibility:visible!important;opacity:1!important;}
+</style>
+<style>.jogos-page{max-width:1120px;margin:auto;padding:28px 24px 65px}.games-content{margin-top:30px}.games-title h2{margin:8px 0 20px;color:#245e58;font-size:1.8rem}.game-block{margin-top:18px;border:1px solid #e1e9e4;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(18,72,55,.04)}.game-block h3{margin:0;padding:15px 18px;background:#f2f8f5;color:#245e58;font-size:1.08rem}.game-block>p{margin:0;padding:10px 18px;color:#68727a}.table-wrap{overflow-x:auto}.game-block table{width:100%;border-collapse:collapse;font-size:.88rem}.game-block th{background:#dcebe7;color:#245e58;text-align:left}.game-block th,.game-block td{padding:9px 11px;border-bottom:1px solid #e7eceb}.game-block tr:last-child td{border-bottom:0}.stars{letter-spacing:1px;white-space:nowrap}.rules-panel{margin-top:42px;border:1px solid #e1e9e4;border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 6px 20px rgba(18,72,55,.05)}.rules-intro{padding:24px 25px;background:#f8faf9;border-bottom:1px solid #e5ece9}.rules-intro h2{margin:8px 0;color:#245e58;font-size:1.7rem}.rules-intro p{margin:0;color:#68727a;line-height:1.55}.rule-section{padding:22px 25px;border-bottom:1px solid #edf1ef}.rule-section:last-of-type{border-bottom:0}.rule-section h3{margin:0 0 12px;color:#245e58;font-size:1.15rem}.rule-section .lead{margin:0 0 12px;color:#333;font-weight:700;line-height:1.5}.rule-section ol,.rule-section ul{margin:0;padding-left:23px;color:#4f5958;line-height:1.55}.rule-section li{margin:7px 0}.rule-motto{text-align:center;padding:20px;background:#f2f8f5;color:#245e58;font-weight:900;letter-spacing:.08em}.back-link{display:inline-block;margin-top:20px;color:#245e58;font-weight:800;text-decoration:none}@media(max-width:650px){.jogos-page{padding:18px 14px 48px}.game-block table{font-size:.8rem}.game-block th,.game-block td{padding:8px 7px}.rules-intro,.rule-section{padding:20px}.games-title h2{font-size:1.55rem}}</style></head><body><header class="site-header">
+ <div class="topbar bema-topbar">
+  <a class="brand bema-brand" href="index.html" aria-label="BEMA — Biblioteca Escolar de Manhente">
+    <img src="imagens/logo-bema.jpg" alt="BEMA — Biblioteca Escolar de Manhente">
+  </a>
+  <a class="school-identity" href="https://ebmanhente.github.io/ebm/" target="_blank" rel="noopener" aria-label="Ir para o site da EB de Manhente">
+    <img src="imagens/logo-eb-manhente.png" alt="Escola Básica de Manhente">
+    <span><strong>EB de Manhente</strong><small>Uma Escola Para a Vida ↗</small></span>
+  </a>
+  <button class="hamb" aria-label="Abrir menu">☰</button>
+ </div>
+  <div class="searchbar"><input id="siteSearch" type="search" placeholder="Pesquisa"><button onclick="searchSite()">Pesquisar</button></div>
+ <nav class="mainnav"><ul>
+  <li><a href="index.html">Início</a></li>
+  <li class="drop"><a href="recursos.html">Recursos Educativos</a><ul><li><a href="ferramentas.html">Ferramentas Digitais</a></li><li><a href="guioes.html">Guiões/Colaboração Alunos</a></li><li><a href="rea.html">Páginas de interesse/REA</a></li><li><a href="cidadania.html">Cidadania e Desenvolvimento</a></li></ul></li>
+  <li class="drop"><a href="leituras.html">Livros e leituras</a><ul><li><a href="pnl.html">PNL</a></li><li><a href="digitais.html">Livros digitais online</a></li><li><a href="guioes-leitura.html">Guiões de leitura</a></li><li><a href="revistas.html">Revistas e jornais</a></li></ul></li>
+  <li><a href="contactos.html">Contactos</a></li>
+  <li class="drop more"><a href="mais.html">Mais</a><ul><li><a href="sobre.html">Sobre nós / Serviços</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="horario.html">Horário</a></li><li><a href="atividades.html">Atividades/Notícias</a></li><li><a href="arquivo.html">Arquivo</a></li><li><a href="catalogo.html">Catálogo / Área do Utente</a></li><li><a href="faq.html">FAQ</a></li></ul></li>
+ </ul></nav>
+</header><main class="page sobre-page jogos-page">
+  <section class="sobre-hero">
+    <div class="sobre-hero-copy">
+      <span class="sobre-kicker">BEMA · JOGOS</span>
+      <h1>Jogos <em>da BEMA</em></h1>
+      <p>Conhece os jogos existentes na Biblioteca e consulta as regras de utilização e empréstimo.</p>
+    </div>
+    <div class="hero-mark" aria-hidden="true">🎲</div>
+  </section>
+
+  <section class="games-content">
+    <div class="games-title"><span class="catalogo-kicker">COLEÇÃO DE JOGOS</span><h2>Jogos disponíveis</h2></div>
+    <div class="game-block"><h3>🧍 Jogos Individuais</h3><p>Para jogar sozinho e desenvolver o raciocínio lógico.</p><div class="table-wrap"><table><thead><tr><th>Jogo</th><th>Tempo</th><th>Idade</th><th>Dificuldade</th></tr></thead><tbody>
+<tr><td>Counting Sheep</td><td>10 min</td><td>7+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>IQ Fit</td><td>10 min</td><td>6+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>IQ Matrix</td><td>10 min</td><td>7+</td><td class="stars">⭐⭐⭐⭐</td></tr>
+<tr><td>Crazy Sudoku</td><td>15 min</td><td>8+</td><td class="stars">⭐⭐⭐⭐</td></tr>
+<tr><td>Batalha de Génios Star</td><td>15 min</td><td>8+</td><td class="stars">⭐⭐⭐⭐</td></tr>
+</tbody></table></div></div>
+<div class="game-block"><h3>👥 Jogos apenas para 2 jogadores</h3><p>Ideal para desafiar um colega.</p><div class="table-wrap"><table><thead><tr><th>Jogo</th><th>Tempo</th><th>Idade</th><th>Dificuldade</th></tr></thead><tbody>
+<tr><td>Connect 4 Grab & Go</td><td>10 min</td><td>6+</td><td class="stars">⭐</td></tr>
+<tr><td>Batik</td><td>15–20 min</td><td>8+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>Quale</td><td>15–20 min</td><td>8+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>Quads</td><td>15–20 min</td><td>8+</td><td class="stars">⭐⭐⭐⭐</td></tr>
+<tr><td>Quarto Classic</td><td>15–20 min</td><td>8+</td><td class="stars">⭐⭐⭐⭐</td></tr>
+<tr><td>Quem Será?</td><td>15–20 min</td><td>6+</td><td class="stars">⭐</td></tr>
+<tr><td>Top Trumps Match – Harry Potter</td><td>15 min</td><td>4+</td><td class="stars">⭐</td></tr>
+<tr><td>Mastermind</td><td>20 min</td><td>8+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>Quem é Quem?</td><td>20 min</td><td>6+</td><td class="stars">⭐</td></tr>
+<tr><td>Abalone</td><td>20–30 min</td><td>7+</td><td class="stars">⭐⭐⭐</td></tr>
+</tbody></table></div></div>
+<div class="game-block"><h3>👨‍👩‍👧 Jogos para 2 ou mais jogadores</h3><p>Perfeitos para jogar a pares ou em pequenos grupos.</p><div class="table-wrap"><table><thead><tr><th>Jogo</th><th>Jogadores</th><th>Tempo</th><th>Idade</th><th>Dificuldade</th></tr></thead><tbody>
+<tr><td>Monopoly Deal</td><td>2–5</td><td>15 min</td><td>8+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Jogo da Forca</td><td>2+</td><td>15 min</td><td>6+</td><td class="stars">⭐</td></tr>
+<tr><td>Quoridor</td><td>2 ou 4</td><td>15–20 min</td><td>8+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>Dominó</td><td>2–4</td><td>15–30 min</td><td>5+</td><td class="stars">⭐</td></tr>
+<tr><td>UNO</td><td>2–10</td><td>15–30 min</td><td>7+</td><td class="stars">⭐</td></tr>
+<tr><td>Ticket to Ride: First Journey</td><td>2–4</td><td>20–30 min</td><td>6+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Jogo da Glória</td><td>2–6</td><td>20 min</td><td>5+</td><td class="stars">⭐</td></tr>
+<tr><td>Jogo das Bandeiras</td><td>2–6</td><td>20–30 min</td><td>7+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Jogo dos Nomes, Países e Objetos</td><td>2–6</td><td>20–30 min</td><td>7+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Damas Chinesas</td><td>2–6</td><td>30 min</td><td>7+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Sobe ou Desce?</td><td>2–6</td><td>30 min</td><td>7+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Rummy-O</td><td>2–4</td><td>30–45 min</td><td>7+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>Hues and Cues</td><td>3–10</td><td>30 min</td><td>8+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Visit Porto</td><td>2–6</td><td>30–45 min</td><td>8+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Viajar por Portugal</td><td>2–6</td><td>40 min</td><td>8+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Monkey Palace</td><td>2–4</td><td>45 min</td><td>10+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>Terra</td><td>2–6</td><td>45 min</td><td>10+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>Scrabble</td><td>2–4</td><td>60 min</td><td>10+</td><td class="stars">⭐⭐⭐⭐</td></tr>
+<tr><td>Monopoly</td><td>2–6</td><td>60–120 min</td><td>8+</td><td class="stars">⭐⭐</td></tr>
+</tbody></table></div></div>
+<div class="game-block"><h3>🎉 Jogos ideais para grupos</h3><p>Mais divertidos quando jogados com vários participantes.</p><div class="table-wrap"><table><thead><tr><th>Jogo</th><th>N.º ideal de jogadores</th><th>Tempo</th><th>Idade</th><th>Dificuldade</th></tr></thead><tbody>
+<tr><td>UNO</td><td>4–10</td><td>15–30 min</td><td>7+</td><td class="stars">⭐</td></tr>
+<tr><td>Jogo da Glória</td><td>4–6</td><td>20 min</td><td>5+</td><td class="stars">⭐</td></tr>
+<tr><td>Jogo dos Nomes, Países e Objetos</td><td>4–6</td><td>20–30 min</td><td>7+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Jogo das Bandeiras</td><td>4–6</td><td>20–30 min</td><td>7+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Hues and Cues</td><td>4–10</td><td>30 min</td><td>8+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Sobe ou Desce?</td><td>4–6</td><td>30 min</td><td>7+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Lobisomens d'Aldeia Velha</td><td>8–18</td><td>30 min</td><td>10+</td><td class="stars">⭐⭐⭐</td></tr>
+<tr><td>Visit Porto</td><td>4–6</td><td>30–45 min</td><td>8+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Viajar por Portugal</td><td>4–6</td><td>40 min</td><td>8+</td><td class="stars">⭐⭐</td></tr>
+<tr><td>Terra</td><td>4–6</td><td>45 min</td><td>10+</td><td class="stars">⭐⭐⭐</td></tr>
+</tbody></table></div></div>
+
+    <section class="rules-panel">
+      <div class="rules-intro"><span class="catalogo-kicker">REGRAS</span><h2>Regras de utilização e empréstimo</h2><p>Informação integrada a partir do Regulamento de Utilização e Empréstimo de Jogos da Biblioteca Escolar de Manhente.</p></div>
+      <div class="rule-section"><h3>1. Utilização dos jogos na Biblioteca</h3><ol><li>Nos intervalos, apenas podem ser utilizados os jogos disponibilizados pela BE na seleção/rotação em vigor.</li><li>Os jogos devem ser utilizados nos espaços indicados para o efeito.</li><li>Antes de iniciar o jogo, qualquer anomalia ou peça em falta que seja detetada deve ser comunicada à funcionária ou à professora bibliotecária.</li><li>Os jogos e todos os seus componentes devem ser utilizados com cuidado e mantidos na respetiva zona de utilização.</li><li>Os utilizadores são responsáveis pela correta utilização e arrumação do jogo.</li><li>Nos intervalos, o jogo deve terminar com antecedência suficiente para ficar devidamente arrumado antes do toque.</li><li>Quando os lugares destinados aos jogos estiverem ocupados, os alunos deverão escolher outra atividade disponível na BE.</li><li>Os jogos de maior duração, mais complexos ou menos adequados ao tempo dos intervalos poderão não integrar a rotação.</li><li>O incumprimento reiterado das regras poderá implicar a suspensão temporária da utilização dos jogos.</li></ol></div>
+      <div class="rule-section"><h3>2. Empréstimo para utilização noutros espaços da escola</h3><p class="lead">O empréstimo de jogos destina-se exclusivamente à sua utilização dentro da escola e durante o próprio dia.</p><ol start="10"><li>Apenas podem sair da BE os jogos identificados como disponíveis para empréstimo.</li><li>O empréstimo destina-se preferencialmente a jogos adequados a grupos maiores e à sua utilização em salas de aula, clubes, espaços de convívio ou outras atividades escolares.</li><li>A saída do jogo deve ser registada na BE antes da sua utilização.</li><li>O jogo deve ser utilizado no local indicado no momento da requisição.</li><li>O responsável pela requisição deve assegurar a correta utilização, recolha e arrumação de todos os componentes.</li><li>Qualquer anomalia, dano ou peça em falta deve ser comunicado à BE logo que seja detetado.</li><li>O jogo não pode ser levado para fora do recinto escolar.</li><li>O jogo deve ser devolvido diretamente na Biblioteca, devidamente arrumado, até ao final do próprio dia.</li><li>Na devolução, a BE poderá verificar o estado geral do jogo e dos respetivos componentes.</li><li>Em caso de perda ou dano, a situação será comunicada à professora bibliotecária e tratada de acordo com os procedimentos da escola.</li><li>O incumprimento reiterado das regras de utilização ou devolução poderá determinar a suspensão temporária do direito de empréstimo.</li></ol></div>
+      <div class="rule-section"><h3>3. Conservação dos jogos</h3><ul><li>Os componentes dos jogos não devem ser misturados com os de outros jogos.</li><li>Quando exista uma ficha de conteúdo na caixa, esta deve ser utilizada como referência para a correta arrumação.</li><li>Não é necessário proceder à contagem exaustiva das peças em cada utilização, salvo quando a BE considere necessário.</li><li>Os jogos devem ser devolvidos com os componentes organizados e a caixa corretamente fechada.</li><li>Qualquer problema deve ser comunicado antes de o jogo voltar a ser guardado.</li></ul></div>
+      <div class="rule-section"><h3>4. Condições de utilização</h3><p class="lead">A Biblioteca Escolar poderá definir quais os jogos disponíveis para utilização nos intervalos, quais os que podem ser requisitados para outros espaços da escola e quais os que, pelas suas características, exigem condições específicas de utilização.</p></div>
+      <div class="rule-motto">JOGAR · PARTILHAR · CUIDAR · ARRUMAR</div>
+    </section>
+    <a class="back-link" href="catalogo.html">← Voltar ao Catálogo / Área do Utente</a>
+  </section>
+</main>
